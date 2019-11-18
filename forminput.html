@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+      #dialog {
+          width: 300px;
+          height: 300px;
+          position: fixed;
+          top:10px;
+          left:200px;
+      }
+    </style>
+    <script>
+      function RegisterClick(){
+          document.getElementById("dialog").style.display="block";
+          document.getElementById("fieldRegister").style.opacity="0.3";
+
+          document.getElementById("lblName").innerHTML = document.getElementById("txtName").value;
+          document.getElementById("lblMfd").innerHTML = document.getElementById("txtMfd").value;
+          document.getElementById("lblStock").innerHTML = frmRegister.stock.value;
+          document.getElementById("lblShipped").innerHTML = document.getElementById("lstCity").value;
+      }
+      function OkClick() {
+        document.getElementById("dialog").style.display="none";
+        document.getElementById("fieldRegister").style.opacity="1.0";
+      }
+    </script>
+    </head>
+    <body>
+        <div class="container">
+            <form name="frmRegister">
+            <fieldset id="fieldRegister">
+                <legend>Register Product</legend>
+                <dl>
+                    <dt>Name</dt>
+                    <dd><input type="text" id="txtName" class="form-control"></dd>
+                    <dt>Manufactured</dt>
+                    <dd><input type="date" id="txtMfd" class="form-control"></dd>
+                    <dt>Is In Stock</dt>
+                    <dd>
+                        <input type="radio" name="stock" value="Available"> Yes
+                        <input type="radio" name="stock" value="Out of Stock"> No
+                    </dd>
+                    <dt>Shipped To</dt>
+                    <dd>
+                        <select class="form-control" id="lstCity">
+                            <option>Delhi</option>
+                            <option>Hyderabad</option>
+                        </select>
+                    </dd>
+                </dl>
+                <input type="button" value="Register" class="btn btn-success" onclick="RegisterClick()">
+            </fieldset>
+            <div id="dialog" style="display: none;" class="card">
+                <div class="card-header">
+                    <h3>Product Details</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <tr>
+                            <td>Name</td>
+                            <td id="lblName"></td>
+                        </tr>
+                        <tr>
+                            <td>Manufactured</td>
+                            <td id="lblMfd"></td>
+                        </tr>
+                        <tr>
+                            <td>Is In Stock</td>
+                            <td id="lblStock"></td>
+                        </tr>
+                        <tr>
+                            <td>Shipped To</td>
+                            <td id="lblShipped"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-body">
+                     <input type="button" value="OK" class="btn btn-danger" onclick="OkClick()">
+                </div>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>
