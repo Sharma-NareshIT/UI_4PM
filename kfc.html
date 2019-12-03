@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+         .setMargin {
+             margin-top: 20px;
+             background-color: maroon;
+             color:white;
+             width:900px;
+             font-size: 2em;
+             text-align: center;
+         }
+        </style>
+        <script>
+         function OrderClick() {
+             document.getElementById("frmRegister").style.display="none";
+             document.getElementById("frmDetails").style.display="block";
+
+            var customerName = document.getElementById("txtName").value;
+            var mealName;
+            var mealCost;
+            var adonName="";
+            var adonCost;
+
+            var optBurger = document.getElementById("optBurger");
+            var optRoller = document.getElementById("optRoller");
+
+            var optWings = document.getElementById("optWings");
+            var optKrusher = document.getElementById("optKrusher");
+
+            if(optBurger.checked) {
+                mealName=optBurger.value;
+                mealCost=130;
+            }
+            if(optRoller.checked) {
+                mealName=optRoller.value;
+                mealCost=100;
+            }
+            if(optWings.checked) {
+                adonName+=optWings.value + "<br>";
+                adonCost=80;
+                mealCost=mealCost + adonCost;
+            }
+            if(optKrusher.checked) {
+                adonName+=optKrusher.value + "<br>";
+                adonCost=40;
+                mealCost=mealCost + adonCost;
+            }
+            document.getElementById("lblName").innerHTML=customerName;
+            document.getElementById("lblMeal").innerHTML=mealName;
+            document.getElementById("lblAdon").innerHTML = adonName;
+            document.getElementById("lblAmount").innerHTML = "&#8377;" + mealCost;
+         }
+         function CloseClick() {
+             document.getElementById("frmRegister").style.display="block";
+             document.getElementById("frmDetails").style.display="none";
+         }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+           <div id="frmRegister">
+            <div class="setMargin">
+                <img height="100" width="900" src="../Images/kfctop.PNG">
+            </div>
+            <div class="setMargin">
+               Customer Details
+            </div>
+            <div class="setMargin form-inline">
+                <label>Customer Name</label>
+                <input type="text" id="txtName" class="form-control">
+            </div>
+            <div class="setMargin">
+                Select a Meal
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../Images/omg1.PNG" class="img-thumbnail">
+                        </div>
+                        <div class="card-footer text-primary">
+                            <input class="form-control" type="radio" id="optBurger" name="Meal" value="OMG Burger"> OMG Burger 
+                            
+                            &#8377; 130/-
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../Images/omg2.PNG" class="img-thumbnail">
+                        </div>
+                        <div class="card-footer text-primary">
+                            <input class="form-control" type="radio" id="optRoller" name="Meal" value="OMG Roller"> OMG Roller
+                            
+                            &#8377; 100/-
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="setMargin">
+                Select AD-ON
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../Images/wings.PNG" class="img-thumbnail">
+                        </div>
+                        <div class="card-footer text-primary">
+                            <input class="form-control" type="checkbox" id="optWings" value="Hot Wings"> Hot Wings
+                            &#8377; 80/-
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="../Images/krusher1.PNG" class="img-thumbnail">
+                        </div>
+                        <div class="card-footer text-primary">
+                            <input class="form-control" type="checkbox" id="optKrusher"  value="Krusher Brownie"> Krusher Brownie
+                            &#8377; 40/-
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div style="margin-top: 20px;" class="text-center form-group">
+                <button class="btn btn-primary btn-lg" onclick="OrderClick()">Place Order</button>
+            </div>
+           </div>
+           <div id="frmDetails" style="display: none;">
+               <h2>Order Details</h2>
+             <table class="table table-hover table-danger" style="font-size: 2em;">
+                <tr>
+                    <td>Customer Name</td>
+                    <td id="lblName"></td>
+                </tr>
+                <tr>
+                    <td>Selected Meal</td>
+                    <td id="lblMeal"></td>
+                </tr>
+                <tr>
+                    <td>Selected Ad-On's</td>
+                    <td id="lblAdon"></td>
+                </tr>
+                <tr>
+                    <td>Total Amount</td>
+                    <td id="lblAmount"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button class="btn btn-danger" onclick="CloseClick()">Close</button>
+                    </td>
+                </tr>
+             </table>
+           </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+          var userDetails = {
+              CardNo: "5555666688887777",
+              Year:"2019",
+              Cvv:"3344"
+          };
+          function VerifyCard() {
+              var cardnumber = document.getElementById("txtCard").value;
+              if(userDetails.CardNo==cardnumber) {
+                  document.getElementById("lstYear").disabled=false;
+              }
+          }
+          function VerifyYear(){
+              var year = document.getElementById("lstYear").value;
+              if(userDetails.Year==year) {
+                  document.getElementById("txtCvv").disabled=false;
+              }
+          }
+          function VerifyCvv(){
+              var cvv = document.getElementById("txtCvv").value;
+              if(userDetails.Cvv==cvv) {
+                  document.getElementById("btnPay").disabled=false;
+              }
+          }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <fieldset>
+                <legend class="text-primary">Payment Details</legend>
+                <dl>
+                    <dt>Card Number</dt>
+                    <dd><input type="text" id="txtCard" class="form-control" onkeyup="VerifyCard()"></dd>
+                    <dt>Expiry Year</dt>
+                    <dd>
+                        <select disabled id="lstYear" class="form-control" onchange="VerifyYear()">
+                            <option>2019</option>
+                            <option>2020</option>
+                            <option>2021</option>
+                        </select>
+                    </dd>
+                    <dt>CVV</dt>
+                    <dd>
+                        <input disabled type="text" id="txtCvv" class="form-control" onkeyup="VerifyCvv()">
+                    </dd>
+                </dl>
+                <button id="btnPay" disabled class="btn btn-primary">Pay</button>
+            </fieldset>
+        </div>
+    </body>
+</html>
