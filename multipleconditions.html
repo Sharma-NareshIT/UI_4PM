@@ -1,0 +1,39 @@
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+     var userDetails = {
+         PIN:5560,
+         OTP:234578
+     };
+     function VerifyClick(){
+        var pin = document.getElementById("txtPin").value;
+        var msg = document.getElementById("msg");
+        if(pin==userDetails.PIN) {
+            msg.className="text-success";
+            msg.innerHTML="Verified Successfully using PIN";
+        } else if(pin==userDetails.OTP) {
+            msg.className="text-success";
+            msg.innerHTML="Verified Successfully using OTP";
+        } else {
+            msg.className="text-danger";
+            msg.innerHTML="Invalid PIN or OTP";
+        }
+     }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Verify PIN</h2>
+        <div class="form-group form-inline">
+            <div>
+                <input type="text" id="txtPin" placeholder="Use OTP if PIN not Available" class="form-control">
+            </div>
+            <div>
+                <button class="btn btn-primary" onclick="VerifyClick()">Verify</button>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <div id="msg"></div>
+        </div>
+    </div>
+</body>

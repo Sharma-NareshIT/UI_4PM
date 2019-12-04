@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+          .alertClass {
+              position: fixed;
+              top:50px;
+          }
+        
+        </style>
+        <script>
+          var userDetails = {
+              UserName:"john",
+              Password:"admin"
+          };
+          function VerifyUser(){
+              var alert= document.getElementById("alert");
+              var username= document.getElementById("txtName").value;
+              var password = document.getElementById("txtPwd").value;
+
+              if(username==userDetails.UserName && password==userDetails.Password) {
+                  location.href="kfc.html";
+              } else {
+                  alert.style.display="block";
+                  document.getElementById("frmLogin").style.opacity="0.4";
+                  alert.className="alertClass";
+              }
+          }
+          function CloseClick() {
+              document.getElementById("alert").style.display="none";
+              document.getElementById("frmLogin").style.opacity="1.0";
+          }
+        </script>
+    </head>    
+    <body>
+        <div class="container">
+           <div id="frmLogin">
+                <h2>User Login</h2>
+                <div class="form-group">
+                    <label>User Name</label>
+                    <div>
+                        <input type="text" id="txtName" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label>Password</label>
+                        <div>
+                            <input type="password" id="txtPwd" class="form-control">
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" onclick="VerifyUser()">Login</button>
+                </div>
+           </div>
+            <div id="alert" style="display: none;" class="alert alert-danger">
+                <h2 class="alert-heading">Invalid UserName / Password</h2>
+                <button class="btn btn-outline-danger" onclick="CloseClick()">X</button>
+            </div>
+        </div>
+    </body>
+</html>
