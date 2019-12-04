@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+          var userDetails = {
+              CardNo: "5555666688887777",
+              Year:"2019",
+              Cvv:"3344"
+          };
+          function VerifyCard() {
+              window.cardnumber = document.getElementById("txtCard").value;
+              if(userDetails.CardNo==cardnumber) {
+                  document.getElementById("lstYear").disabled=false;
+              }
+          }
+          function VerifyYear(){
+              window.year = document.getElementById("lstYear").value;
+              if(userDetails.Year==year) {
+                  document.getElementById("txtCvv").disabled=false;
+              }
+          }
+          function VerifyCvv(){
+              window.cvv = document.getElementById("txtCvv").value;
+              if(userDetails.Cvv==cvv) {
+                  document.getElementById("btnPay").disabled=false;
+              }
+          }
+          function PayClick(){
+             var msg = document.getElementById("msg");
+             msg.className="text-danger";
+             if(cardnumber==userDetails.CardNo){
+                if(year==userDetails.Year) {
+                    if(cvv==userDetails.Cvv){
+                        document.write("Payment Successfull..");
+                    } else {
+                        msg.innerHTML="Invalid CVV";
+                    }
+                } else {
+                    msg.innerHTML="Invalid Year";
+                }
+             } else {
+                 msg.innerHTML="Invalid Card Number";
+             }
+          }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <fieldset>
+                <legend class="text-primary">Payment Details</legend>
+                <dl>
+                    <dt>Card Number</dt>
+                    <dd><input type="text" id="txtCard" class="form-control" onkeyup="VerifyCard()"></dd>
+                    <dt>Expiry Year</dt>
+                    <dd>
+                        <select disabled id="lstYear" class="form-control" onchange="VerifyYear()">
+                            <option>2019</option>
+                            <option>2020</option>
+                            <option>2021</option>
+                        </select>
+                    </dd>
+                    <dt>CVV</dt>
+                    <dd>
+                        <input disabled type="text" id="txtCvv" class="form-control" onkeyup="VerifyCvv()">
+                    </dd>
+                </dl>
+                <button id="btnPay" disabled class="btn btn-primary" onclick="PayClick()">Pay</button>
+            </fieldset>
+            <div class="form-group text-center">
+                <h3 id="msg"></h3>
+            </div>
+        </div>
+    </body>
+</html>
