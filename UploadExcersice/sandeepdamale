@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head><title>index</title>
+        <link rel="shorcut icon" href="/images/favicon.ico">
+    <style>
+        #body{
+    background-color: #b6bec9;
+    margin-left: 44px;
+    margin-right: 44px;
+    padding: 0px;
+}
+#header
+{
+   box-shadow: 0px 5px 10px;
+   height: 100px;
+   background-color:rgb(192, 163, 163);
+   text-align: center;
+   font-size: 5em;
+   font-family: Arial, Helvetica, sans-serif;
+   font-style: italic;
+      
+}
+#section
+{   
+    box-shadow: 0px 5px 10px;
+    height: 500px;
+   
+  }
+#footer
+{
+    box-shadow: 0px 5px 10px;
+    height: 100px;
+    background-color: rgb(192, 163, 163);
+    text-decoration: solid;
+    text-align: center;
+    font-weight: 100px;
+    font-size: 1.5em;
+  }
+  #menu
+ {
+    box-shadow: 0px 5px 10px;
+    width: 100%;
+    height: 40px;
+    background-color:rgb(192, 163, 163);
+    text-decoration: solid;
+    text-align: center;
+    font-weight: 100px;
+    font-size: 1.5em;
+    
+}
+a:link{text-decoration:none;}
+a:visited{color: rgb(14, 15, 15);}
+a:hover{color: rgb(189, 27, 89);}
+a:active{color: rgb(218, 221, 41);}
+
+.iframe{    
+    margin: 40px;
+    padding: 40px;
+}
+
+#subleft{
+    
+    width: 50%;
+    margin: 30px;
+    padding: 30px;
+    height: 450;
+    float: left;
+    box-shadow: 0px 5px 10px darkblue;
+    border-radius:5px darkcyan ;
+}
+
+    </style>
+    <link rel="stylesheet" href="/Resources/css/all.css">
+    </head>
+    <body id="body">
+        <div id="header">
+            <b>Wel-come</b>   
+        </div>
+        <div id="menu">
+            <menu>
+                <span><a href="/home.html" target="fname"><span  class="fa fa-home"></span>Home</a></span>
+                <span>|</span>
+                <span><a href="/about.html" target="fname"><span  class="fa fa-user"></span>About Us</a></span>
+                <span>|</span>
+                <span><a href="/contact.html" target="fname"><span  class="fa fa-address-card"></span>Contact</a></span>
+                <span>|</span>
+                <span><a href="/gallary.html" target="fname"><span  class="fa fa-user"></span>Gallary</a></span>
+                <span>|</span>
+                <span>
+                    <a href="/sitemap.html" target="fname"><span  class="fa fa-map-signs"></span>Sitemap</a>
+                </span>
+                <span>|</span>
+                <span><a href="/feedback.html" target="fname"><span  class="fas fa-comment"></span>feedback</a></span>
+                <span>|</span>
+                <span><a href="/login.html" target="fname"><span  class="fa fa-sign-in-alt"></span>Login</a></span>
+            </menu>
+        </div>
+        <div id="section">
+            <div>
+                <iframe name="fname" height="500px" width="100%" style="border: none;" src="home.html"></iframe>
+            </div>
+        </div>
+        <div id="footer">
+            <div>&copy;copyright reserved 2020</div>
+            <div>
+                <span class="fa fa-facebook-messenger">facebook</span>
+                <span class="fa fa-whatsapp">Whatsapp</span>
+                <span class="fa fa-twitter">Twitter</span>
+            </div>
+                
+
+        </div>
+    </body>
+</html> 
