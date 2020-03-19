@@ -1,0 +1,27 @@
+<style>
+    dt{
+        font-weight: bold;
+        background-color: lightgray;
+    }
+    dd {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+<form oninput="total.value=parseInt(qty.value)*parseFloat(price.value)">
+    <fieldset>
+        <legend>Product Details</legend>
+        <dl>
+            <dt>Name</dt>
+            <dd>Smasung TV</dd>
+            <dt>Price</dt>
+            <dd><input type="text" id="price"></dd>
+            <dt>Quantity</dt>
+            <dd><input type="number" value="1" id="qty"></dd>
+            <dt>Total</dt>
+            <dd>
+                <output name="total" for="price qty"></output>
+            </dd>
+        </dl>
+    </fieldset>
+</form>
