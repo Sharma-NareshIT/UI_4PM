@@ -1,0 +1,100 @@
+	      New HTML 5 Elements
+1. New Semantic / Structural Elements
+
+Tag		Description
+============================================
+<article>      It contains information which is related
+	   to our site.
+<aside>       It defines content that is not releated to
+	   our site.
+<details>         It configures details with summary.
+<summary>    It defines summary for details.
+<dialog>         It defines a dialog box, which you can
+	      open or close.
+<figure>          It is used for images or graphics
+<figcaption>   It is used for captionining images.
+<header>        It defines the top margin
+<footer>          It defines the bottom margin
+<section>       It defines area between header and
+                        footer.
+<nav>              It defines navigation area.
+<menu>           It defines items in navigation area.
+<main>            It is used to define the main content
+	       of document. It contains articles and
+	       dialogs. So that your content will be
+	        more SEO friendly.
+	        Syntax:
+	        <main>
+	           <article>
+	           <h3> Title </h3>
+	           <p> some text... </p>
+	           </article>
+                         </main>
+<mark>	       Defines the marked / highlighted text
+	       Syntax:
+	       <mark> some text </mark>
+<time>             It can display the time value. So that
+	       any message can be configured in 
+	       such a way that it is display only on
+	       the specified time. [requires Javascript]
+	       Syntax:
+	        <time datetime="2020-03-20 16:00">
+	          Message
+	        </time> 
+<wbr>	       Define a possible line-break for lengthy
+	       words. If any lengthy word occurs then
+	       your other wordss will be give with a
+	       break without <br>.
+
+2. New Form Elements in HTML 5
+
+Tag		Description
+==========================================
+<datalist>	        It contains a list of items to display
+	        as auto complete while user is
+	        keying in the text.
+<output>          It is used to perform a calculation
+	        or evaluate any expression. It returns
+	        and presents a value.
+
+Syntax:
+ <output  name="result" for="qty price"> </output>
+ <form oninput="result.value=qty.value*price.value">
+
+Note: The default values are string type you have to convert into number  type, by using JavaScript parsing methods (converting).
+	parseInt()	       - integer
+	parseFloat()    - decimal
+
+Syntax:
+ oninput="result.value=parseInt(qty.value) * parseFloat(price.value)"
+
+<progress>          It is used to display the progres  bar
+	            i.e the status of any task performed
+
+<meter>	            It is used to display the grade meter.
+
+
+3. New Input types in HTML 5
+     - number
+     - color
+     - date
+     - datetime
+     - datetime-local
+     - email
+     - month
+     - range
+     - tel
+     - time
+     - url
+     - week
+     - file
+
+4. Media Elements in HTML 5
+    <embed>
+    <audio>
+    <video> 
+    <picture>
+    <source>
+    <track>
+   
+       	           Flash 2D and 3 Effects
