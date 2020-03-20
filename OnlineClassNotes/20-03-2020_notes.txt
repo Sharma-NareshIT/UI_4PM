@@ -1,0 +1,137 @@
+	         Multi Media in HTML
+- Audio, Video and Animations
+- How animations are created for web?
+- Software "Flash"
+- Flash is used for audio, video, games, ads
+
+	                Flash
+- You have to download  "Marcomedia Flash 8"
+        Key :  WPD800-59935-59132-35408
+
+- Open Flash 8 software
+- In Create New category select "Flash Document"
+
+Document Properties
+- Right Click on Document [ Stage ]
+- Select the option "Document Properties"
+
+      width 	        : 550
+      height	        : 400
+      Background Color : White
+      Frame Rate: 25 frames per second
+
+Flash Tools in ToolBox
+===================
+
+Tool		Description
+----------------------------------------------------------------------------
+Selection Tool       It is used to select any portion of
+	              picture to move.
+
+SubSelection Tool   It used to select nodes in image
+		so that you can change the 		shape.
+		- Click on the border of shape
+		- Reshape from nodes.
+Transform tool	It used for change the  size
+		and roate the image.
+		- Stretch
+		- Skew (Tilt)
+		- Rotate
+		- Resize
+Line Tool		It is used to draw straight line
+		- Open Properties so that
+		  you can change size, color
+		 and style of line.
+
+Lasso Tool	It selects a free form portion
+		of picture. It have options
+		a) Polygon lasso
+		b) Magic wand
+
+Pen Tool		It is used for drawing by joining
+		the end points.
+
+Text Tool		It is used to insert text into
+		picture. You can change the font
+		size, color, alignment from
+		properties.
+
+Oval Tool		It is used for drawing circle and
+		oval.
+
+Rectangle		It is used for drawing rectangle
+		and square.
+
+Pencil		It is used for drawing thin lines
+
+Brush		It is used for drawing thick lines
+		with selected brush shape and 		size.
+Paint Bucket	It is used to fill color within an
+		area
+Eraser		It erases a portion of the picture.
+
+Eye Dropper	It is used to pick a color from
+		picture.
+
+
+Creating Animations in Flash:
+========================
+       Flash animations are categorized into 2 types
+
+1. Frame By Frame Animation
+2. Tweening Animation
+
+Frame By Frame Animation
+======================
+1. Double click on layer1
+2. Rename it as "Text"
+3. Insert text into stage from toolbox
+4. Text is present in Frame1
+5. Insert a "KeyFrame" [Duplicate]  - F6 Function Key
+6. Insert KeyFrame again  [F6] and change the size or position or rotate image.
+7. Repeat the steps  [5 and 6] to complete your animation.
+
+To Run your animation 
+- Press Enter Key	:  Run Once
+- Press "Ctrl+Enter" keys : Run continous
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
