@@ -1,0 +1,64 @@
+Frame by Frame Animation
+- Frame   : It is the location where we have to keep
+	and animate any object. [object is in stage                  and controlled from frame for animation]
+
+- Static Frame:  In this the object will continue but
+	         will not have any animation. You can
+	         insert static frame by using "F5" 
+	         function key.
+
+- Key Frame  : In this the object will continue with
+	       animation. You can insert key frame
+	       by using "F6" function key.
+
+Tweening Animation:
+ - In tween animation we have to design only the starting and changing points. 
+ - Flash will design all other frames in between the points automatically.
+ - Tween animation is 2 types
+            a) Motion Tween
+            b) Shape Tween
+ - Motion tween to change position, size, roate.
+ - Shape Tween to change the shape i.e from one object to another.
+
+
+Motion Tween Animation:
+=====================
+1. Draw an object in Frame-1
+2. Goto Frame-15 and press "F6" key frame
+3. Change the position, size or rotation of object at 15 Frame.
+4. Goto Frame-30 and press F6 key frame
+5. Give a new position, size, or rotation at 30 frame.
+6. Continue like this until you complete your animation.
+7. Select all Frames in Layers Panel [Click on layer]
+8. Right Click on the selected frames and select the option
+	"Create Motion Tween"
+		or
+    Goto Properties at the bottom of stange and select
+     "Tween : Motion"
+9. TO Run Press
+	"Ctrl + Enter"
+
+Motion Guide:
+- Motion Guide allows to move any object in specified path.
+- By default object moves in a straight line. You can add motion guide to change the path.
+
+1. Create a new Document
+2. Draw an Object in Frame-1
+3. Goto "Frame-40" and insert Key Frame [F6]
+4. Select all frames and : Create Motion Tween
+5. Right Click on the Layer and Select
+	  "Add Motion Guide"
+6. Goto Guide Layer and draw a path with pencil, brush, circle , rectangle. 
+     [Make sure that it is having a start and end ]
+7. Goto the object layer and keep the object
+    starting position at guide layer start position
+    ending position at guide layer end position
+
+8. Ctrl + Enter to run
+
+Note: Object will not change its direction according to path. Inorder to Change direction according to path. You have to define an attribute "Orient to Path"
+
+- Select the Layer with Motion Tween [ All Layers ]
+- Goto Properties at the botton of stage
+- Select the check box
+	"Orient to Path"
