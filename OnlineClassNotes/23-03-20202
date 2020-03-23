@@ -1,0 +1,48 @@
+Masking in Flash
+-It can mask any layer with animation.
+-The mask will display only specific portion and it reveals accoding to the animation.
+
+Ex:
+1. Add Layer-1  and rename as : Background
+2. Draw a rectangle on Background layer-1
+3. Add Layer-2 and rename as : Text
+4. Insert some text on the layer-2
+5. Add Layer-3 and rename as : Masking Layer
+6. Draw an object in layer 3 and create motion tween over the text layer. [ F6 - Create Motion Tween]
+7. Use Static Frames for Text and Background [F5]
+8. Right Click on Masking Layer and Select "Mask" so that it will mask on Text Layer.
+
+Import Pictures into Flash:
+You can import existing images into flash project in 2 locations
+	a) Import to Library
+	b) Import to Stage
+Import to Libary will keep images in library so that we can use for other projects also.
+ 1. Goto File Menu 
+ 2. Select Import → Import to Library
+ 3. Choose your picture from your phisical path and add to library.
+ 4. Drag from library and drop into Stage
+ 5. Select your image in stage
+ 6. Goto document properties window
+ 7. Define the height and width , postion on x and y.
+
+Importing on to stage will directly import picture on to the stage so that you can access and use directly. How ever it is also available in library.
+
+	            Symbols in Flash
+Flash provides 3 types of symbols
+1. Movie Symbol
+2. Graphic Symbol
+3. Button Symbol
+
+- Movie symbol is used for animated symbols.
+- Graphic Symbol is used for pictures without animation.
+- Button Symbol is used for creating buttons for login, register or flash forms.
+
+Creating a Movie Symbol
+1. Goto Insert Menu → New Symbol
+2. Select "Movie Clip"
+3. Name it as "bird"
+4. Click OK
+5. Draw any object and create animation for object
+    Frame by frame or tweening
+6. Click on "Scene-1" to go back to stage
+7. Drag and drop your symbol on to stage and animate.
