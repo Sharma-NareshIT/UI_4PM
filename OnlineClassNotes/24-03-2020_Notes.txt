@@ -1,0 +1,56 @@
+-The area where we are working is Scene
+-Symbol is a part of Scene.
+-We Seperately design the symbol and import into scene.
+
+Working With Scenes in Flash:
+=========================
+- A flash movie contains several scenes.
+- Animation is designed across several scenes.
+
+1. By default when you create a project you will be in "Scene-1"
+2. Draw some background in scene-1
+3. Insert a new Scene [ Insert Menu → Scene ]
+4. Draw some background in scene-2
+5. Similarly add scenes
+6. Create a new symbol [Movie Clip]
+7. Drag the movie clip and animate in all the scenes you created.
+
+Graphic Symbol:
+- It is mostly used for Images
+- By converting an image into graphic symbol  you can change the effects like brightness, alpha etc..
+
+Ex:
+1. Import an Image into Library
+2. Drag and drop Image into stage [scene-1]
+3. Right Click on Image and select
+	 "Convert to Symbol"
+4. Select "Graphic Symbol" , click OK
+5. Goto  Properties window and change the color options, brightness options etc..
+
+Button Symbol
+- It is used mostly in dynamic forms
+- Like Registration and Game Forms
+- For Game Controls like : Play, Jump, Left, Right etc..
+
+1. Insert --> Symbol
+2. Select "Button" 
+3. Name "Play" click OK
+4. Design the button symbol in 4 states
+	a) Up  - Mouse out
+	b) Over - Mouse over
+	c) Down - Mouse down
+	d) Hit - Mouse Click
+5. You can use layers and All animation color, effects for designing button
+
+
+Shape Tween
+- It is the process of changing one object into another.
+- It is transforming the shape.
+
+Ex:
+1. Insert an object in Frame-1
+2. Select Frame-60 , Right Click and Choose "Insert Blank Key Frame"
+3. At frame-60 design a new object
+4. Select a Frames from 1 to 60
+5. Goto Properties and select
+	Tween : Shape
