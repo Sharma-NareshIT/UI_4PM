@@ -1,0 +1,54 @@
+1. Create an Ads in Flash
+    - Create a new Flash Document
+    - Save the document in your project
+	Name : Amazon.fla
+         [.fla is for editing your document]
+         [.fla is not for HTML page]
+
+    - File Menu → Select "Export" → Export Movie
+    - Save with extention ".swf"
+
+     [.swf is to embed into HTML page]
+     [.swf is only to play movie not to make changes]
+
+2. Embed flash animations into HTML page
+    - Goto your HTML Project
+    - Create a new HTML file
+    - Embed the flash animation by using
+	"<embed>" element
+Syntax:
+     <embed src="path/name" width="" height="">
+ 
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animations</title>
+        <style>
+            #box {
+                width: 200px;
+                float: left;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+       <header>
+        <embed src="../Resources/AmazonBanner.swf" width="1000" height="200">
+       </header>
+       <section>
+        <div id="box">
+            <img src="../Images/tv.jpg" width="200" height="200">
+            <h2>Samsung TV</h2>
+        </div>
+        <div id="box">
+            <img src="../Images/earpods.jpg" width="200" height="200">
+            <h2>mobile</h2>
+        </div>
+        <div id="box">
+            <img src="../Images/jblspeaker.jpg" width="200" height="200">
+            <h2>Samsung TV</h2>
+        </div>
+       </section>
+    </body>
+</html>
