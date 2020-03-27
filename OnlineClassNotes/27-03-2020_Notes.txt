@@ -1,0 +1,105 @@
+		Styles
+- HTML Tags have limited set of attributes, which can't make the presentation exactly how the client wants.
+
+- Styles will provide additional attributes, which can applied to HTML tags and Elements to make the presentation more interactive and also responsive.
+
+- Styles are defined in HTML page by using 3 different methods
+
+	a) Inline Styles
+	b) Embeded Styles
+	c) CSS [Cascade Style Sheet]
+
+Inline Styles:
+===========
+- The style attributes are defined to any HTML element with in the Element related tag.
+- The "style" attribute is used for defining styles.
+
+   Syntax:
+    <h2  style="attribute1:value; attribute2:value">
+                       Your Text
+    </h2>
+- Inline styles are faster in applying effects to element as it present within the element tag.
+- Inline styles can't be re-used for other elements.
+- They are individual for specific element tag, we can't re-use.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inline Styles</title>
+    </head>
+    <body>
+        <h2 style="background-color: darkcyan; color: white; text-align: center;">HTML</h2>
+        <h2>Java Script</h2>
+        <h2>JQuery</h2>
+    </body>
+</html>
+
+Embeded Styles:
+==============
+1. In this method the style attributes are written within <style> element and kept in a page.
+2. You can keep in <head> section.
+3. You can keep in <body> selection.
+
+     <head>
+        <style>
+            selector {
+	attribute1 : value;
+	attribute2 : value;
+	}
+        </style>
+     </head>
+
+4. Styles in <head> section are recomended, when we want to load styles into memory on page request and use those style later.
+
+5. Styles in <body> section are recomended when we want the styles to apply to elements immediately on page load.
+
+6. Styles can be re-used.
+7. Styles you defined can be accessed and used to other elements in the page, without re-writing.
+8. Emebed is slow when compared to inline.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Embeded Styles</title>
+        <style>
+            h2 {
+                background-color: green;
+                color:white;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>HTML</h2>
+        <h2>Java Script</h2>
+        <h2>JQuery</h2>
+    </body>
+</html>
+
+CSS : [Cascade Style Sheet]
+- Styles are maintained in a separate "stylesheet" and they are cascaded with our HTML page.
+- Stylesheets are present in the background of HTML page. And their effects are visibile from the foregroud in HTML page.
+- Styles are separated from Markup
+- Styles can be re-used across several pages.
+- Using External file for styles will increase the number of requests for page and also page load time.
+- Stylesheets are maintained in a separate file that have the extention ".css".
+- Stylesheets are linked to HTML page by using
+	<link> element
+
+Ex:
+1. Create a new folder by name
+	"Styles"
+2. Add a new file into styles folder by name
+	  "effects.css"
+h2{
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+3. Goto your HTML page and link the stylesheet
+
+<head>
+   <link rel="stylesheet" href="../Styles/effects.css">
+</head>
