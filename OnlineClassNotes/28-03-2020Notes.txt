@@ -1,0 +1,99 @@
+MIME Type for Styles:
+==================
+- When you write styles embeded or External file (CSS) browser have to understand about the type of content embeded or linked.
+- Browser can understand directly the styles if they are defined inline.
+- Emebed and External files required to define the MIME type.
+- MIME - Multi purpose Internet Mail Extentions
+- Under one MIME type several extentions are defined.
+- The MIME type of styles is "text/css"
+
+Syntax:
+ <link rel="stylesheet" href="../Styles/effects.css" type="text/css">
+ <style type="text/css">
+
+ </style>
+
+
+Minification of CSS
+================
+- CSS files will occupy more space in memory.
+- Minification is a technique used to compress the CSS files and reduce their size.
+     [ZIP or RAR files will not work]
+- Minification is a coding technique where the functionality will be same but the number of lines are reduced.
+- It removes blank spaces, additional line breaks, shorten the lengthy code.
+    Normal			Minified Code
+    ------------		--------------------
+    if(condition)	            (condition)?true:false
+    {
+      true statement;
+    }
+    else
+    {
+     false statement;
+    }
+
+    Normal			Minified
+    color:green		color:#0f0
+
+- Minfication can be handled by using various Tools
+   Ex:
+	Samlify
+	CSS Minifier
+	Ajax Minifier  
+   
+Ex:
+1. Add a new File into "styles" folder by name
+	       effects.css
+     h2{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    }
+
+2. Open the website
+	www.cssminifier.com
+3. Copy and paste your CSS code at "Input CSS"
+4. Click "Minify" button
+5. Copy the Minified Code 
+6. Goto your project and add a new file
+	   "effects.min.css"
+h2{background-color:blue;color:#fff;text-align:center}
+
+7. Link the minified file to your HTML page
+
+<head>
+  <link rel="stylesheet" href="../Styles/effects.min.css" type="text/css">
+</head>
+
+Note: 
+- A developer is provided with both CSS Original file and CSS Minified file.
+- Don't use the minified file directly in Development, you have to use the minified files in Production.
+- In Development always use Original file.
+- If there is any error in minified file you can't track the error location easly.
+
+   Original File	: for Development
+   Minified File	: for Production
+
+CDN : 
+- Content Distribution Network
+- Sometimes we have to use a CSS or JS file across several projects.
+- Downloading and storing in every project is burden for project.
+- We can maintain a remote server where we can store all our CSS and JavaScript files.
+- So that we can access them directly from server without downloading into project. This is called as CDN.
+
+Ex:
+1. Open IIS
+2. Create a new Virtual Directory by name "CDN"
+	C:\CDN
+3. Open Notepad
+4. Type the following code
+	h2{
+	background-color:red;
+	color:white;
+	text-align:center;
+	}
+5. Save in website "styles" folder
+	C:\CDN\Styles\effects.css
+6. You can link the Remote CDN file in head section
+
+<link rel="stylesheet" type="text/css" href="http://localhost/cdn/styles/effects.css">
