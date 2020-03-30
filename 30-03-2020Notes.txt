@@ -1,0 +1,183 @@
+Inline Styles apply effects to the element where the styles are defined.
+ 
+ <div style="">
+ <h2  style="">
+
+Styles Syntax in Embeded and CSS
+=============================
+
+	selector 
+	{
+	  attribute:value;
+	}
+
+A selector defines reference for styles, it specifies where to apply the effects.
+
+    selector [specifies where to apply]
+    {
+         background-color:darkcyan;
+         color:white;
+         text-align:center;
+     }
+
+The selectors are classified into several types
+======================================
+
+1. Type Selector: It specifies directly the tag name where you want to apply the given effects.
+
+Syntax:
+<style>
+     h2, p
+     {
+         background-color:darkcyan;
+         color:white;
+         text-align:center;
+     }
+ </style>
+
+Drawback:  The effects will be applied to every tag in the page that is defined in style. You can't ignore at any specific position. It will apply everywhere where that element occurs.
+
+2. ID Selector: ID selector is defined by using "#" and is accessed by using "Id" attribute. 
+	       Effects can be applied to any specific element. You can also ingore for any element by removing the ID.
+
+   Syntax:
+	<style>
+	 #effects {
+
+	  }
+	</style>
+	<h2  id="effects">
+	<div id="effects">
+
+ Ex:
+<head>
+ <style>
+     #headings
+     {
+         background-color:darkcyan;
+         color:white;
+         text-align:center;
+     }
+ </style>
+</head>
+<body>
+    <h2 id="headings">Web Technologies</h2>
+    <h2>HTML</h2>
+    <p>It is a markup language.</p>
+    <h2>JavaScript</h2>
+    <p id="headings">It is a high level language.</p>
+    <h2>CSS</h2>
+    <p>Cascade style sheets.</p>
+</body>
+
+
+DrawBack: Every Tag can have only one ID reference. If there are effects categorized into multiple groups, you can't apply them to any specific element.
+
+   #textEffect {
+
+   }
+   #borderEffect {
+
+   }
+   <h2  id="textEffect" id="borderEffect">  // invalid
+   <h2  id="textEffect, borderEffect">          // invalid
+   <h2  id="textEffect  borderEffect">          // invalid
+
+3. Class Selector: The class selectors are defined by using "." [dot] and are accessed by using "class" attribute. Every element can use multiple classes. i.e multiple categories of effects can be applied to single element by using class selector.
+
+     <style>
+         .class1 {
+
+          }
+         .class2 {
+
+         }
+   </style>
+   <div  class="class1  class2">
+
+Ex:
+<head>
+ <style>
+    .borderEffects {
+        border:2px solid darkcyan;
+    }
+    .backgroundEffects {
+        background-color: yellow;
+    }
+    .textEffects {
+        color:red;
+        text-align: center;
+    }
+ </style>
+</head>
+<body>
+    <h2 class="borderEffects textEffects backgroundEffects">Web Technologies</h2>
+    <h2>HTML</h2>
+    <p class="textEffects backgroundEffects">It is a markup language.</p>
+    <h2>JavaScript</h2>
+    <p>It is a high level language.</p>
+    <h2>CSS</h2>
+    <p>Cascade style sheets.</p>
+</body>
+
+4. Child Selector: Many times same tag is used for different parent elements in HTML, such as
+   <li>  for   <ol> <ul>
+   <option>  for   <select> <datalist>
+   <tr>     for   <thead> <tbody> <tfoot>
+
+  Syntax:
+	whichParent > whichChild {
+
+	}
+
+Ex:
+<head>
+    <style>
+        ul > li {
+            background-color: lightgray;
+            margin-top: 10px;
+        }
+        tbody > tr {
+            background-color: darkcyan;
+            color:white;
+        }
+        thead, tfoot > tr {
+            background-color: darkorchid;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ol>
+    <ul>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+    </ul>
+    <table width="400">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>TV</td>
+                <td>34000.44</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>45000.33</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">&copy; copyright</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
