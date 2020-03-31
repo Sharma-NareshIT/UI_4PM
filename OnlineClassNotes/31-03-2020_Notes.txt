@@ -1,0 +1,200 @@
+1. Type Selector
+2. ID Selector
+3. Class Selector
+4. Child Selector
+
+The selectors used in CSS are categorized into following groups:
+1. Rational Selectors
+2. Attribute Selectors
+3. Pseudo Selectors
+4. Structural Pseudo Selectors
+
+Rational Selectors : Target elements based on their relationship with other element. Parent and Child , Root and Child hierarchy.
+
+1. Descendent Selector:  It applies effects to all child
+		        element within the parent.
+		       Syntax:
+		       div p { }
+		   
+2. Child Selector	   : It will apply effects to child
+		     elements with in the parent.
+		     It is used for direct child 
+		     elements.
+		    Syntax:
+		       div > p { }
+3. Adjacent Selector     It is used to apply effect to
+		    element that comes 		    		    immediately after the specified
+		    element.
+		    Syntax:
+		     h2+p {  }
+		     - Applies effect to only the 				      first para after heading.		
+
+4. General Child            It is used to apply effect to
+		    all elements that occur after
+		    the specified element.
+		    Syntax:  
+		     h2~p{ }
+		     - Applies effect to all paras
+		       after heading.
+
+Ex:
+<head>
+    <style>
+       h2~p {
+          background-color: yellow;
+       }
+    </style>
+</head>
+<body>
+   <h2>JavaScript</h2>
+   <p>Para-1</p>
+   <p>Para-2</p>
+</body>
+
+Attribute Selectors: Effects can be applied to any element based on an attribute and its value. As many HTML elements appearence depends on attribute not directly on tag.
+
+Syntax:
+             tagName[attribute="value"]
+             {
+
+             }
+
+Ex:
+<head>
+    <style>
+        input[type="button"] {
+            background-color: yellow;
+            border:1px solid black;
+        }
+        input[type="password"] {
+            background-color: lightgoldenrodyellow  ;
+        }
+        input[type="text"] {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>First Name</dt>
+            <dd><input type="text"></dd>
+            <dt>Last Name</dt>
+            <dd><input type="text"></dd>
+            <dt>Password</dt>
+            <dd><input type="password"></dd>
+            <dt>Gender</dt>
+            <dd>
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+            </dd>
+        </dl>
+        <input type="button" value="Register">
+        <input type="button" value="Cancel">
+    </form>
+</body>
+
+Note: You can apply effects based on any attribute of HTML tag. You have to use attribute name and its value.
+
+Ex:
+<head>
+    <style>
+        input[class="uname"] {
+            background-color: yellow;
+            border:1px solid black;
+        }
+        input[class="address"] {
+            background-color: lightgreen;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>First Name</dt>
+        <dd><input type="text" class="uname"></dd>
+        <dt>Last Name </dt>
+        <dd><input type="text" class="uname"></dd>
+        <dt>City</dt>
+        <dd><input type="text" class="address"></dd>
+        <dt>Postal Code</dt>
+        <dd><input type="text" class="address"></dd>
+    </dl>
+</body>
+
+Note: Attribute selector also allows to apply effects only based on attribute without value.
+          <input  type="text"  readonly>
+          <input type="text"   disabled>
+
+Ex:
+<head>
+    <style>
+       input[required] {
+           background-color: red;
+           border:1px solid black;
+       }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>First Name</dt>
+        <dd><input type="text" class="uname" required></dd>
+        <dt>Last Name </dt>
+        <dd><input type="text" class="uname"></dd>
+        <dt>City</dt>
+        <dd><input type="text" class="address"></dd>
+        <dt>Postal Code</dt>
+        <dd><input type="text" class="address" required></dd>
+    </dl>
+</body>
+
+Attribute Selectors with Meta Characters: This will allow to apply based on a pattern or format of value.
+
+tag[attribute="value"]   -  Apply to all attribute whose
+		       value is equal to specified.
+tag[attribute^="value"] - Apply to all attributes whose
+		       value is starting with 		       specified.
+tag[attribute$="value"]  - Apply to all attributes whose
+		        value is ending with 		        specified.
+tag[attribute*="value]    - Apply to all attribute whose
+		       value is matching with 		       specified at any location.
+
+
+Ex:
+<head>
+    <style>
+        p[class*="effect"] {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p class="effect">Para-1</p>
+    <p class="effectText">Para-2</p>
+    <p class="Texteffect">Para-3</p>
+    <p class="TexteffectPara">Para-4</p>
+</body>
+
+  Apply to every paragraph
+  <style>
+        p[class*="effect"] {
+            background-color: yellow;
+        }
+     </style>
+
+   Apply to First and Second
+    <style>
+        p[class^="effect"] {
+            background-color: yellow;
+        }
+    </style>
+
+     Apply to first and third:
+      <style>
+        p[class$="effect"] {
+            background-color: yellow;
+        }
+    </style>
+
+
+
