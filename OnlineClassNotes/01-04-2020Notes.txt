@@ -1,0 +1,203 @@
+Attribute Selectors
+Pseudo Selectors:  They use a name similar to existing element, but they will not apply directly to that element. They apply effects based on the state of element.  
+	The pseudo selectors are defined to id, class or type by using ":"
+	Syntax:
+		h2:PseudoSelector {
+		}
+		#id:PeseudoSelector {
+		}
+
+1.  :link     -  It defines a effects for Hyperlink in normal
+	   state. [untouched - not visited]
+
+2. :visited  - It defines a effects for visited links.
+
+3. :active   -  It defines a effects for active links.
+	    [when mouse pointer is down]
+
+4. :hover   -  It defines effects for elements when
+	   mouse pointer is over the element.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Pesudo Selectors</title>
+     <style>
+         a:link {
+             text-decoration: none;
+             color: green;
+         }
+         a:visited {
+             color:lightgray;
+         }
+         a:active {
+             color: red;
+         }
+         a:hover {
+             text-decoration: underline;
+             color:blue;
+         }
+         button {
+             border:1px solid black;
+             background-color: yellow;
+         }
+         button:hover {
+             border:1px solid black;
+             background-color: lightgreen;
+         }
+         button:active {
+             border: 3px solid blue;
+             background-color: white;
+         }
+         img {
+             width: 50px;
+             height: 50px;
+             transition: 2s;
+         }
+         img:hover {
+             width: 200px;
+             height: 200px;
+             transition: 2s;
+         }
+     </style>
+    </head>
+    <body>
+      <div>
+        <a href="../home.html">Home</a>
+        <span> | </span>
+        <a href="attribute.html">Attribute Selectors</a>
+      </div>
+      <div>
+          <button>Login</button>
+      </div>
+      <div align="center" style="margin-top: 20px; margin:auto">
+          <img src="../Images/earpods.jpg">
+          <img src="../Images/jblspeaker.jpg">
+          <img src="../Images/mob1.jpg">
+      </div>
+    </body>
+</html>
+
+5. :focus   -  It defines styles for any element when
+	    it gets focus.
+
+    Syntax:
+	element : focus {
+
+	}
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head><title>Focus Demo</title>
+     <style>
+         input:focus {
+            box-shadow: 0px 3px 4px darkcyan;
+            border:1px solid darkcyan;
+         }
+         #mobile+span {
+            display:none;
+         }
+         #mobile:focus+span {
+             display: inline;
+         }
+         #uname+span {
+             display:none;
+         }
+         #uname:focus+span {
+             display:inline;
+         }
+     </style>
+    </head>
+    <body>
+        <div>
+            <dl>
+                <dt>Name</dt>
+                <dd>
+                    <input id="uname" type="text">
+                    <span>Name 4 to 10 chars</span>
+                </dd>
+                <dt>Password</dt>
+                <dd>
+                    <input type="password">
+                </dd>
+                <dt>Mobile</dt>
+                <dd>
+                    <input id="mobile" type="text" placeholder="+91 10 digits">
+                    <span>
+                        +91 10 digits number.
+                    </span>
+                </dd>
+            </dl>
+        </div>
+    </body>
+</html>
+
+6.  :enabled  - It is used to define effects when 	      element is enabled.
+
+7.  :disabled - It defines effects when element is 	      disabled. It requires HTML attribute
+	      "disabled".
+Syntax:
+	input : disabled {
+	}
+	button : disabled {
+	}
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Disabled</title>
+        <style>
+            button:disabled {
+                cursor:not-allowed;
+                background-color: darkgray;
+                color:white;
+                border:none;
+            }
+            button:enabled {
+                cursor:grab;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <button disabled >Register</button>
+    </body>
+</html>
+
+8. :read-only  - It defines styles for element that is
+	        specified with readonly attribute.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Disabled</title>
+        <style>
+            button:disabled {
+                cursor:not-allowed;
+                background-color: darkgray;
+                color:white;
+                border:none;
+            }
+            button:enabled {
+                cursor:grab;
+                background-color: yellow;
+            }
+            input:read-only {
+                background-color: lightgray;
+                cursor:not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+        Name:
+        <input type="text" value="John" readonly>
+        <button disabled >Register</button>
+    </body>
+</html>
+
+
+
+
