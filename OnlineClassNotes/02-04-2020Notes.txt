@@ -1,0 +1,161 @@
+:checked  - It is used to define styles for element
+	  when it is checked. You can use for
+	  checkbox, radios.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input[type="checkbox"]+span {
+                color: red;
+            }
+            input[type="checkbox"]:checked+span{
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Terms of Service</legend>
+            <textarea rows="4" cols="40" disabled>
+                Our terms and conditions
+            </textarea>
+            <br>
+            <input type="checkbox"> <span>I Accept</span>
+        </fieldset>
+    </body>
+</html>
+
+:valid	]  They can verify the state of input element  
+:invalid	]   valid or invalid based on the validation
+	    attributes like required, pattern, 	    minlength etc.. and can apply effects
+	    based of validation state.
+
+Ex:
+<head>
+    <style>
+        input:invalid {
+            box-shadow: 0px 2px 3px red;
+            border:1px solid red;
+        }
+        input:valid {
+            box-shadow: 0px 2px 3px green;
+            border:1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>Name</dt>
+        <dd><input type="text" required pattern="[A-Z]{4,10}"></dd>
+        <dt>Mobile</dt>
+        <dd><input type="text" required pattern="\+91[0-9]{10}"></dd>
+    </dl>
+</body>
+
+
+:required   ]    Verify "required" attribute defined for
+:optional   ]     input element and apply effects based
+	       on required or optional state.
+	       If required attribute is not defined
+	       then it is considered as optional.
+
+
+:in-range	       ]  Verify the input value numeric range
+:out-of-range  ]   and apply effects based of in-range
+	           and value out of range. It depends on
+	           min & max attributes defined for
+	           elements like number, range.
+	           [These are browser dependent]
+		test on Edge browser
+
+Ex:
+<head>
+    <style>
+        input:optional {
+            box-shadow: 0px 2px 2px yellow;
+            border:1px solid yellow;
+        }
+        input:required {
+            box-shadow: 0px 2px 2px red;
+            border:1px solid red;
+        }
+        input[type="number"]:in-range {
+            box-shadow: 0px 2px 2px green;
+            border:1px solid green;
+        }
+        input[type="number"]:out-of-range {
+            box-shadow: 0px 2px 2px red;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>Email</dt>
+        <dd><input type="email"  required></dd>
+        <dt>Age</dt>
+        <dd><input type="number" min="15" max="30"></dd>
+    </dl>
+</body>
+
+:target     - It defines styles for any element when
+	 the element becomes target on link click.
+	 When User Clicks on a link, which is intra 	 	 document link, then the target will change
+	 the effect along with scrolling.
+                - It required a Hyperlink navigating to any
+	 specific ID.
+
+Ex:
+<head>
+    <style>
+        div{
+            margin:20px;
+            height: 100px;
+            padding:10px;
+            background-color: lightyellow;
+            border:1px solid black;
+        }
+        div:target{
+            margin:20px;
+            height: 100px;
+            padding:10px;
+            background-color: black;
+            border:1px solid black;
+            color:white;
+        }
+        ol {
+            list-style-type: none;
+           
+        }
+        li {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+   
+        <ol>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#js">JavaScript</a></li>
+        </ol>
+   
+    <div id="html">
+        <h2>HTML</h2>
+        <p>somethig about html</p>
+    </div>
+    <div id="css">
+        <h2>CSS</h2>
+        <p>something about css</p>
+    </div>
+    <div id="js">
+        <h2>JavaScript</h2>
+        <p>something about Js</p>
+    </div>
+</body>
+
+Structural Pseudo Selectors: [Parent-Child]
+
+	
