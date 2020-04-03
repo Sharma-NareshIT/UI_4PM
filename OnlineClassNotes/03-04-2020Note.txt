@@ -1,0 +1,168 @@
+Structural Peseudo Selectors:
+   - structural selectors are used to apply effects to element based on their hierarchial occurance. Paren and child hierarchy.
+
+:first-child  ]  Apply effects to child elements under
+:last-child  ]  a specific parent. But they can apply 
+	     only to first and last occurance.
+
+Syntax:
+     parent > child : first-child {
+       
+     }
+     parent> child :last-child {
+
+     }
+
+:nth-child(levelNumber)  - It will apply effects to element on its specific level number occurance.
+
+Syntax:
+  parent > child : nth-child(number) {
+
+   }
+
+Ex:
+<head>
+    <style>
+        ol>li:first-child {
+            color:red;
+        }
+        ol>li:last-child {
+            color:blue;
+        }
+        ol>li:nth-child(3) {
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+    </ol>
+</body>
+
+:nth-child(odd)	]  Apply effects to child elements
+:nth-child(even)	]  on Even and Odd occurances.
+
+Ex:
+<head>
+    <style>
+        thead{
+            background-color: darkcyan;
+            color:white;
+        }
+        tbody>tr:nth-child(odd) {
+            background-color: thistle;
+        }
+        tbody>tr:nth-child(even) {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" width="400">
+        <thead>
+            <th>Name</th>
+            <th>Price</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>TV</td>
+                <td>34500.55</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>4500.44</td>
+            </tr>
+            <tr>
+                <td>Nike Shoe</td>
+                <td>4200.44</td>
+            </tr>
+            <tr>
+                <td>Jeans</td>
+                <td>3000.53</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+
+:nth-of-type(number)   - It will apply effects to every nth occurance after the current. It repeats at every interval. It repeats effects from top of child hierarchy.
+[Top to Bottom]
+
+    Syntax:
+    ol > li : nth-of-type(3n) { }   - starts with 3
+    ol > li : nth-of-type(3n+1){ } - starts with 1 and apply
+			every 3 occurance.
+
+:nth-last-of-type(n)   - It similar to pervious nth-of-type
+		 but applies effect from bottom
+		 to top in child hierarchy.
+
+Ex:
+<head>
+    <style>
+        ol>li:nth-last-of-type(3n+1) {
+            color:red;
+        }
+        ol>li:nth-of-type(2n) {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Item-1</li>
+        <li>Item-2</li>
+        <li>Item-3</li>
+        <li>Item-4</li>
+        <li>Item-5</li>
+        <li>Item-6</li>
+        <li>Item-7</li>
+        <li>Item-8</li>
+        <li>Item-9</li>
+        <li>Item-10</li>
+    </ol>
+</body> 
+
+:first-line	     ]  Apply effects to the first line in para
+:first-letter     ] Apply effects to first char in sentence.
+
+
+Ex:
+<head>
+    <style>
+        p:first-letter {
+            color:red;
+            font-size: 3em;
+            font-family: Impact;
+        }
+    </style>
+</head>
+<body>
+    <p>
+     some text...
+    </p>
+</body>
+
+Pseudo Element Selectors:  They are defined to elements by using "::"  . They have browser dependency issues.
+
+::placeholder
+::selection
+::progress-bar
+::range-progress
+::range-track
+::check
+::clear
+
+To Handle on different browser you have to use CSS plugins
+
+   Plugin-Name	Browser
+   ==============================
+   -moz		FireFox
+   -o		Opera
+   -ms		IE, Edge
+   -webkit		Chrome
