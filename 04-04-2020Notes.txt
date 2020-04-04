@@ -1,0 +1,159 @@
+		CSS Colors
+- Colors are used for backgrounds, borders and text.
+- CSS supports RGB Colors and HSL Color. These are usually screen colors.
+- Printing colors use "CMYK", which is not available in CSS.
+- So CSS colors are screen colors.
+- The colors in CSS can be defines in 3 ways
+	a) Color Name
+	b) RGB Color
+	c) Hexadecimal Color Code
+
+1. CSS Color Names:
+    -CSS supports 16 million colors
+    -17 colors know by name.
+    -Other colors are defined with Hexacode and RGB
+
+Ex:
+<head>
+  <style>
+      div {
+          width: 200px;
+          height: 200px;
+          background-color: red;
+      }
+  </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+
+2. RGB Color 
+- Red Green and Blue are screen colors
+- Colors value range from 0 to 255.
+- It can also be defiend from 0% to 100%.
+- 0 can be defined as 0%
+- 255  can be defined as 100%
+- 255 allows 16 million color
+- 100% allows only 1 million color.
+- the method "rgb()" is used to apply color
+- It is a set of red, green and blue values in left to right order.
+  Syntax:
+	rgb(redValue, greenValue, blueValue)
+	rgb(0,0,0)   black
+	rgb(255,255,255) white
+	rgb(255,0,0)  red
+	rgb(0,255,0)  green
+	rgb(0,0,255)  blue
+
+Ex:
+<head>
+  <style>
+      div {
+          width: 200px;
+          height: 200px;
+          background-color:rgb(231,112,237);
+          border:2px solid black;
+      }
+  </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+
+Hexadecimal Color Code:
+- Hexadecimal color are rgb color but written in short form.
+- RGB colors use upto 16 chars for defining color.
+- Hexadecimal can apply color with just 3 to 6 chars followed by "#".
+- Hexadecimal is a number system is 16 base number system, we use 16 different values.
+- The range of color value in Hexadecimal
+    0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f
+-  0 is minimum value and f is maximum value.
+- The color code in hexadecimal contains a pair of
+	#RRGGBB;   or   #RGB;
+Syntax
+	#FF0000;     - Red 
+	#f00;
+
+	#00FF00;	   - Green
+	#0F0;
+
+	#0000FF;	    - Blue
+	#00F;
+	
+	#FFFFFF	    - White
+	#fff
+
+	#000000	    - Black
+	#000
+
+Ex:
+<head>
+  <style>
+      div {
+          width: 200px;
+          height: 200px;
+          background-color:#FF00FF;
+          border:2px solid black;
+      }
+  </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+
+HSL Colors or HSLA Color
+- Hue, Saturation, Lightness
+- Hue, Saturation, Lightness, Alpha [Opacity]
+- You change the opacity of color, Increase or decrease the brightness by using HSL
+- HSL values will be from 0 to 359 deg.
+- 0 and 360 both are same.
+- 0 - Red
+- 60- Yellow
+- 120 - Green
+- 180 - Cyan
+- 240 - Blue
+- 300 - Magenta
+- 360 - Red
+
+You can apply HSLA by using the function "hsla()"
+
+Syntax:
+  hsla(hue, saturation, lightness, alpha);
+  hue   - in deg 0 to 359
+  sat    - in %  0 to 100%
+  lightness - in % 0 to 100%
+  alpha - in fractions 0 and 1 [0.2, 0.5, 0.9,]
+               [0 is transparent]
+
+Ex:
+<head>
+  <style>
+      div {
+          width: 200px;
+          height: 200px;
+          background-color:hsla(168,36%,36%,0.22);
+          border:2px solid black;
+      }
+  </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+
+Gradient Color:
+- A gradient is a combination of various color with different patterns defined witin an area.
+- There are so many types of gradients
+1. Linear Gradient
+2. Radial Gradient
+3. Repeating Gradient
+4. Repeating Linear Gradient
+5. Repeating Radial Gradient
+6. Multiple Gradients
