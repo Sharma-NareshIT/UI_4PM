@@ -1,0 +1,133 @@
+	     Styling Text with CSS
+	     ==================
+- Font Styles : Properties that affect the font that is applied to text.
+
+- Text Layout Styles: Properties that affect the spacing and other layout feature of the text.
+
+Styling Fonts:
+1. color : It is used to define text color.
+     <style>
+        p {
+            color:red;
+        }
+    </style>
+
+2. font-family : It defines the appearence of text according to the specified font. You can define single or list of fonts.
+                         All fonts are not supported in web browsers. Hence we use Web safe fonts, which are given below:
+
+Name	      Generic Type	 Description
+----------------------------------------------------------------------------
+Arial	      sans-serif       It is preffered font for
+	                            web, which use alternative
+		            font like sans-serif.
+Courier New   monospace   
+
+Georgia	       serif
+
+Times New Roman	   serif
+
+Trebuchet Ms	sans-serif
+
+Verdana		sans-serif
+
+Default fonts:
+
+The default generic fonts used are "serif, sans-serif, monospace, cursive and fantasy.
+
+Syntax: single font
+              
+p {
+   font-family: Arial;
+   }
+
+Syntax: font stack 
+
+p {
+   font-family: Arial, sans-serif;
+   }
+
+3. Font-Size : It specifies the size of text. To define size for text or any element in CSS we have use the following units, which are classified into 2 categories
+
+a) Relative Length Units
+b) Absolute Length units
+
+
+Absolute Length units in CSS: They define the exact size for element.
+
+Unit	Name		Equivalent to
+===========================================
+cm	Centimeters	1cm=96px/2.54 [37px]
+mm	Millimeters	1mm = 1/10th of 1 cm
+Q	Quarter-Millimeters   1Q = 1/40th of 1 cm
+in	Inches		 1in= 2.54cm = 96px
+pc	Picas		 1pc = 1/6th of 1in
+pt	Points		 1pt = 1/72th of 1in
+px	Pixels		 1px = 1/96th of 1in
+
+Relative Length Units: They define the size based on their parent elements. ie the size will be relative to other elements.
+
+Unit	Relative To
+============================================
+em	Relative to parent, if no parent then it
+	used the default size.
+	ex:
+	<style>
+	  div {
+	         font-size:1cm;
+	   }
+	  p {
+	      font-size:2em;
+	  }
+	</style>
+	<div> 
+	         some text 
+	         <p> some para </p>
+                  </div>
+
+ex	x-height of the elements font.
+
+ch	The width based on the elements font.
+
+rem	Base on root element in parent and child
+
+lh	Line height of the element
+
+vw	1% of Viewports width
+
+vh	1% of Viewports height
+
+vmin	1% of viewports smaller dimension
+
+vmax	1% of viewports larger dimension.
+
+
+Percentages:  Percentage is similar to length. It is relative to other elements. It changes size according the viewport i.e browser width and height or according to the parent element.
+
+p {
+   font-size: 50%;
+  }
+
+Ex:
+<head>
+    <style>
+       div {
+           font-size: 1cm;
+       }
+       p {
+           font-size: 50%;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        Some Div Text
+        <p>
+            Some para text
+        </p>
+    </div>
+</body>
+
+4. Font-Style: It used to define effects like normal, italic, oblique.
+
+5. Font-weight: It used to define effects like normal, bold, lighter, bolders, boldness in number 100-900.
+
