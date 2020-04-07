@@ -1,0 +1,169 @@
+6. text-transform: It is used to transform the text in any container by applying
+	a) uppercase   UPPER CASE
+	b) lowercase    lower case
+	c) capitalize      First Letter Capital
+	d) full-width      Transforms all glyphs to
+		          to writtern inside a fixed
+		          width square. It is mostly
+		          used in monospace font.
+		          [Sets all chars to same
+		            width]
+
+Syntax:
+   <p style="text-transform:capitalize"> some text </p>
+
+7. text-decoration : It is used enable and disable text decorations on fonts, which includes
+	a) underline
+	b) overline
+	c) line-through
+	
+
+  text-decoration-line:underline, overline, line-through
+  text-decoration-style: double, dotted, wavy etc..
+  text-decoration-color: red
+  [short hand]
+  text-decoration: underline wavy red;
+
+Ex:
+<head>
+    <style>
+      dt{
+          background-color: gainsboro;
+      }
+      #upper {
+        text-transform: uppercase;
+        text-decoration: overline underline;
+        text-decoration-style:wavy;        
+      }
+      #lower {
+          text-transform: lowercase;
+          text-decoration-line: underline overline;
+      }
+      #title {
+          text-transform: capitalize;
+          text-decoration: underline wavy red;
+      }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>Upper case</dt>
+        <dd id="upper">welcome to javascript</dd>
+        <dt>Lower case</dt>
+        <dd id="lower">WElcome TO javaScript</dd>
+        <dt>Capitalize</dt>
+        <dd id="title">welcome to javascript</dd>
+    </dl>
+</body>
+
+8. Text Drop Shadows [ text-shadow ]:
+    You can apply drop shadows to your text using text-shadow property. It uses 4 values
+
+        text-shadow : 4px 4px 5px red;
+
+      first value : horizontall offset define in pixels
+		[left to right]
+      second value: vertical offset define in pixels
+		[front and back]
+      third value : blur radius in pixels
+		[blurness of text shadow]
+      forth value : base color
+		[any color value]
+Ex:
+<head>
+    <style>
+        p {
+            font-size: 2cm;
+            font-weight: bold;
+            text-shadow: 10px 10px 5px red;
+        }
+    </style>
+</head>
+<body>
+    <p>Shadow Effect</p>
+</body>
+
+9. Text Alignment
+     You can change the text alignment by using "text-align" property. It changes the alignment of text horizontally:
+	a) left
+	b) right
+	c) center
+	d) justify
+ Syntax:
+   text-align:center
+
+10. Line height : It sets the space between lines in a multiline content. It increases the height of line.
+
+Syntax:
+          p { line-height:2 }
+
+11. letter and word spacing
+       Sets the spacing between letters and words by specified pixels.
+
+     p {
+        letter-spacing:10px;
+        word-spacing:30px;
+       }
+
+ EX:
+  <head>
+    <style>
+        h2 {
+            font-size: 2cm;
+            font-weight: bold;
+            text-shadow: 5px 5px 5px red;
+            text-align: center;
+            letter-spacing: 20px;
+            word-spacing: 40px;
+        }
+        p {
+            line-height: 2;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h2>Shadow Effect</h2>
+    <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. </p>
+</body>
+
+12. text-indent : It specifies the indentation of first line
+	          in a paragraph.
+
+  P {
+         text-indent : 100px
+      }
+
+13. text-overflow: It defines how overflowed text is controlled in a container. You have to define 
+	a) wrapping by using "white-space"
+	b) overflow by using "overflow" attributes
+
+Ex:
+
+<head>
+  <style>
+      div {
+          width: 200px;
+          height: 100px;
+          border:1px solid black;
+          text-overflow:ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+      }
+  </style>
+</head>
+<body>
+    <div>
+        Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. 
+    </div>
+</body>
+
+
+
+	          
+      
+
+
+
+
+
