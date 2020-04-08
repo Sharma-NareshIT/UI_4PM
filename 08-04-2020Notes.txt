@@ -1,0 +1,141 @@
+CSS Font Poperties
+1. Font-Size
+2. Line-Height
+3. Font-Weight
+4. Font-Style
+5. Font-varient
+6. Font-Stretch
+7. Font-Family
+8. Font short hand
+
+font-varient: Normal, Small-Caps : It can apply the captialization without changing the letter size.
+
+font-stretch: It can stretch the font width without changing the height. You can define stretch options with following values
+	- normal
+	- condensed
+	- semi-condensed
+	- ultra-condensed
+	- extra-condensed
+	- expanded
+	- semi-expanded
+	- ultra-expanded
+	- extra-expanded
+
+Ex:
+<head>
+    <style>
+        #p1 {
+            text-transform: uppercase;
+        }
+        #p2 {
+            font-variant: small-caps;
+        }
+        #p3 {
+            font-stretch: extra-expanded;
+        }
+        #p4 {
+            font-stretch: extra-condensed;
+        }
+    </style>
+</head>
+<p id="p1">welcome to css</p>
+<p id="p2">welcome to css</p>
+<p id="p3">welcome to css</p>
+<p id="p4">welcome to css</p>
+
+	    CSS Box Model
+-It is used for layout design.
+-It includes options like
+	a) content
+	b) padding
+	c) border
+	d) margin
+- content : it is the width and height of your content, we have to define by using attributes "width & height"
+- padding : It is the space between content and border. You can define
+	padding-left
+	padding-right
+	padding-top
+	padding-bottom
+	padding
+- Margin : It sets space between border and page.
+	It is relative to exisiting element. you can
+	define
+	- margin-left
+	- margin-right
+	- margin-top
+	- margin-bottom
+	- margin
+- Border : it sets border with specified size, color, style. 
+	- border
+	- border-style: solid, dotted, groove etc..
+	  	border-left-style
+		border-right-style
+		border-top-style
+		border-bottom-style
+	- border-width : thicknes of border
+		border-left-width
+		border-right-width
+		border-top-width
+		border-bottom-width
+	- border-color: specifies color
+		border-left-color
+		border-right-color
+		border-top-color
+		border-bottom-color
+	
+Ex:
+<head>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+            border:2px solid black;
+            padding: 50px;
+            border-left-style: double;
+            border-left-color: red;
+            border-left-width: 13px;
+            border-top-style: double;
+            border-top-color: red;
+            border-top-width: 13px;
+            border-right-style: solid;
+            border-right-color: blue;
+            border-right-width: 13px;
+            border-bottom-style: solid;
+            border-bottom-color: blue;
+            border-bottom-width: 13px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../Images/earpods.jpg" style="margin-left: 30px; margin-top: 30px;">
+    <img src="../Images/jblspeaker.jpg" style="margin-left: 30px;">
+</body>
+
+
+Ex: Short hand style
+
+  img {
+            width: 100px;
+            height: 100px;
+            border:2px solid black;
+            padding: 50px;
+            border-left: 10px green solid;
+            border-top : 10px green solid;
+            border-right: 10px red double;
+            border-bottom: 10px red double;
+        }
+
+	     CSS Float and Clear
+- Float is css positioning property
+- It is used to flow an element to the left or to right.
+- There are 2 options
+	float: left
+	float: right
+- Float usually will be relative in position.
+- clear options
+
+Bootstrap
+
+
+
+
