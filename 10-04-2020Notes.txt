@@ -1,0 +1,176 @@
+Clear: It is a style used to remove left and right wrapping for content and display in a new line.
+          If your content is beside floating elements then you can wrap to next line by using "clear".
+	clear: left
+	clear: right
+	clear: both
+
+Ex:
+<head>
+    <style>
+        .leftPanel {
+            width: 200px;
+            border:2px solid black;
+            height: 300px;
+            float: left;
+        }
+        .rightPanel {
+            width: 400px;
+            border:2px solid black;
+            height: 300px;
+            float: left;
+            margin-left: 20px;
+        }
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-top:100px">
+        <div class="leftPanel">
+
+        </div>
+        <div class="rightPanel">
+
+        </div>
+        <p class="clear">Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+        </p>
+    </div>
+</body>
+
+
+	      CSS Backgrounds
+- CSS provides several properties for control the background of any element.
+- You can set a color, image and change their size, position etc..
+- THe background properties are
+
+1. Background-Color
+2. Background-Image
+3. Background-Repeat
+4. Background-Position
+5. Background-Attachement
+6. Backgroud-size
+7. background-clip
+8. background
+
+background-color: It sets a background color for any element.
+
+Syntax:
+  div {
+            background-color: yellow;
+        }
+
+background-image: It uses a background image for any element.
+
+   div {
+         background-image:url("path");
+      }
+
+background-size: It is used to change the size of background image.
+
+div {
+            background-image: url("../Images/logo1.png");
+            background-size: 100px;
+        }
+
+background-repeat: It controls the repeat style of background image.
+	-repeat
+	-no-repeat
+	-repeat-x
+	-repeat-y
+Syntax:
+div {
+            background-image: url("../Images/logo1.png");
+            background-size: 100px;
+            background-repeat: no-repeat;
+        }
+
+background-position: It specifies where to display the background image.
+	position-x : left, center, right
+	position-y	 : top, center, bottom
+	position    : leftPixels, topPixels
+
+Syntax:
+div {
+            background-image: url("../Images/logo1.png");
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+background-clip: It specifies the span of Image in the background, which can be set to
+	  a) content-box
+	  b) border-box
+	  c) padding-box
+Syntax:
+div {
+            background-image: url("../Images/logo1.png");
+            background-size: 100px;
+            background-repeat: repeat;
+            background-clip: content-box;
+            border:12px double red;
+            padding:20px;
+        }
+
+background-attchement: It specifies how background sholud behave with regard to the scrolling of content		- fixed
+	- scroll
+Ex:
+ body {
+            background-image: url("../Images/shoe.jpg");
+            background-size: 200px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+background: It is a short hand method of applying backgroun effects like url, repeat, position, attachment, color.
+
+Syntax:
+ body {
+            background: url("../Images/shoe.jpg") no-repeat center center fixed;
+            background-size: 200px;
+          
+        }
+
+Background Gradients:
+A gradient is a combination of colors with different orientations in the background or border for any elements.
+
+Types of Gradients:
+1. Linear Gradient
+2. Radial Gradient
+3. Repeating Linear Gradient
+4. Repeating Radial Gradient
+5. Multiple Gradients
+
+Linear Gradient : Two or more color in linear direction. 
+	- top to bottom
+	- left to right
+	- top left corner to bottom right corner
+	- It can in degrees.
+
+Ex:
+ div {
+          background: linear-gradient(green,yellow)
+        }
+
+Ex:
+div {
+          background: linear-gradient(60deg, green 10%,red 60%)
+        }
+
+radial-gradient: It applies multiple colors with circular or elliptical orbits.
+
+Syntax:
+ div {
+          background: radial-gradient(green 20%, yellow)
+        }
+
+Note: Gradients are not supported on every browser  hence you have use pluigns
+	-moz
+	-o
+	-webkit
+	
+Ex:
+ div {
+          background: -moz-radial-gradient(green 20%, yellow)
+        }
