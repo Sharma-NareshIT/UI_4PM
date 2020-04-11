@@ -1,0 +1,213 @@
+	             CSS List Styles
+- These are the attributes used for lists like Ol, ul etc..
+
+Attributes:
+1. list-style-type
+2. list-style-image
+3. list-style-position
+4. list-style
+
+list-style-type : you can define the list numbering or
+	        bullet type.
+	        - disc, circle, square, decimal,
+	          decimal-leading-zero, lower-roman
+	          upper-roman, lower-greek
+	          lower-alpha, upper-alpha,
+	          devanagari [hindi-sanskrit]
+EX:
+<head>
+    <style>
+        ul {
+            list-style-type: devanagari;
+        }
+    </style>
+</head>
+<body>
+    <h2>Web Technologies</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+list-style-image : It is used to display image instead on bullet or numbering.
+
+Syntax:
+ ul {
+            list-style-image: url("../Images/star.png");
+            font-size: 3em;
+        }
+
+list-style-position: It sets the position for numbering with regard to the content. You can define outside, inside.
+
+Ex:
+<head>
+    <style>
+        ul {
+            list-style-image: url("../Images/star.png");
+            font-size: 3em;
+            list-style-position: inside;
+        }
+        li {
+            border:1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Web Technologies</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+Ex: Navigation Bar using List 
+
+<head>
+ <style>
+     *{
+         margin: 0;
+     }
+     a {
+         text-decoration: none;
+     }
+     a:link {
+         color:white;
+     }
+     ul {
+         list-style: none;
+         padding: 0;
+     }
+     ul li {
+         float: left;
+         margin: 0px 20px;
+         background-color: darkcyan;
+         border-radius: 5px;
+         width: 70px;
+         text-align: center;
+     }
+     ul li:hover {
+        background-color: thistle;
+        color: black;
+     }
+ </style>
+</head>
+<body>
+    <h2>Naresh I Technologies</h2>
+    <div>
+        <div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+	
+		CSS Positions
+Positions are used to arrange the position of element with regard to other elements in the page.
+
+Position Attribute Values:
+- Static
+- Absolute
+- Fixed
+- Sticky
+- Relative
+- Initial
+- Inherit
+
+Syntax:
+	{
+	 position:sticky
+	}
+
+Ex: Fixed Position - Element position will be fixed relative to browser window. It will not scroll.
+
+Ex:
+<head>
+    <style>
+        #summary {
+            border:2px solid darkcyan;
+            box-shadow: 2px 4px 4px darkcyan;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            margin-top: 10px;
+            position: fixed;
+            right:10px;
+            background-color: white;
+        }
+        #section {
+            margin-top: 210px;
+        }
+        #title {
+            position:fixed;
+            top:5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="title" style="width: 100%; height: 50px; text-align: center; background-color: darkcyan; color:white; font-size: 2em;">
+        Amazon - Shopping Online
+    </div>
+    <div id="summary">
+        <h2>Bill Summary</h2>
+    </div>
+    <div id="section">
+        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    
+    </div>
+</body>
+
+
+Sticky : The element is positioned based on the users
+	scrolling position.
+              A sticky element scroll upto specified marign
+	and then stops scrolling and fixed with
+	relative content.
+
+Ex:
+<head>
+    <style>
+        #summary {
+            border:2px solid darkcyan;
+            box-shadow: 2px 4px 4px darkcyan;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            margin-top: 10px;
+            position: fixed;
+            right:10px;
+            background-color: white;
+        }
+       
+        #title {
+            position:sticky;
+            top:5px;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="summary">
+        <h2>Bill Summary</h2>
+    </div>
+    <div id="section">
+        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    <div id="title" style="width: 100%; height: 50px; text-align: center; background-color: darkcyan; color:white; font-size: 2em;">
+        Amazon - Shopping Online
+    </div>
+    <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+    </div>
+</body>
