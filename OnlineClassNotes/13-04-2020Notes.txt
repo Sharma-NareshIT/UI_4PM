@@ -1,0 +1,143 @@
+	              CSS Position
+- static
+- relative
+- fixed
+- absolute
+- sticky
+
+position:static : It is the default position of object, it is not affected by left, right , top and bottom properties. However you change is position with margin.
+	          Object will be according to the normal flow of page.
+
+position:relative: It is the position for any element that depends on left , right , top and bottom properties. The position with regard to its adjacent element.
+
+
+position:absolute: It is the position for any element based on left, right, top and bottom properties with regard to parent [body and any existing parent].
+
+Note: Position Requires the properties
+1. bottom
+2. left
+3. right
+4. top
+         Relative position doesn't require the properties like left, right, top and bottom.
+
+Ex:
+<head>
+    <style>
+        .static {
+            width: 300px;
+            height: 100px;
+            border:2px solid darkcyan;
+            position:static;
+        }
+        .relative {
+            width: 300px;
+            height: 100px;
+            border:2px solid red;
+            position:relative;
+            top:40px;
+        }
+        .absolute {
+            width:200px;
+            height:50px;
+            border:2px solid green;
+            right:10px;
+            top:10px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="static">
+
+    </div>
+    <div class="relative">
+        <div class="absolute">
+
+        </div>
+    </div>
+   
+    <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+    </p>
+</body>
+
+	            CSS OverFlow
+It specifies how the content to display in a container. It content is more than the container to display then we control the overflow.
+
+- visible
+- hidden
+- scroll
+- auto
+
+Syntax:
+       section {
+	overflow:auto;
+	}
+
+	                CSS Display
+It controls the display of any element in a page, you can display or hide or change elements display style with following attributes:
+1. inline
+2. inline-block
+3. block
+4. list-item
+5. table
+6. inline-table
+7. none
+
+Ex:
+<head>
+    <style>
+        .form-group {
+            margin-left:20px;
+            display: inline;
+        }
+        ul li {
+            display:inline;
+            list-style-type: none;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>User Login</legend>
+        <div class="form-group">
+        <label>User Name</label>
+        <input type="text">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password">
+        </div>
+        <div class="form-group">
+            <button>Login</button>
+        </div>
+        <div class="form-group">
+            <button>Cancel</button>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>
+         Naresh-IT
+        </legend>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </fieldset>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
