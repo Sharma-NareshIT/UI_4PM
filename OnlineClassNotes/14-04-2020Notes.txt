@@ -1,0 +1,145 @@
+
+	Register Link : http://tiny.cc/yi9zmz
+                  Email : support@nareshit.com
+
+
+Float - It is relative to view-port i.e page layout
+inline - It is relative to the parent element i.e 
+             alignment of child element within the parent
+             container.
+
+	       Display Grids
+- Grid is a collection of horizontal and vertical lines.
+- Purpose of grids in CSS is to create design where elements don't jump around or change the width as we move from one page to another.
+- Grid typicall have columns and rows with margins and padding. The gap between row and column in a grid is called as "gutters".
+- The "grid" value is used with "display" property
+
+	{
+	display:grid;
+	}
+- Grid comprises of special attributes in CSS
+	 1. grid-template-columns
+	 2. grid-gap
+	 3. gap
+	 4. grid-auto-rows
+	 5. grid-column-start
+	 6. grid-column-end
+	 7. grid-row-start	
+	 8. grid-row-end
+	 9. grid-column
+	 10. grid-row
+	 11. grid-area
+	 12. grid-template-areas
+
+
+grid-template-columns : It specifies the number of columns according to the width defined in units.
+
+Syntax:
+     {
+      display:grid;
+      grid-template-columns: col1Size; col2Size;
+     }
+
+Ex:
+<head>
+    <style>
+        body {
+            width: 90%;
+            max-width: 900px;
+            margin: 2em auto;
+            font:20px Arial;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 200px 400px 200px;
+        }
+        .container > div {
+            border:1px solid darkcyan;
+            border-radius: 5px;
+            background-color: lightcyan;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Cell-1</div>
+        <div>Cell-2</div>
+        <div>Cell-3</div>
+        <div>Cell-4</div>
+        <div>Cell-5</div>
+        <div>Cell-6</div>
+    </div>
+</body>
+
+ Note: units you can define in %, pixels
+           To make more fluid in experience you can use 
+              "fr" as units.  [first track]
+
+Syntax:
+ .container {
+            display: grid;
+            grid-template-columns:2fr 1fr 1fr;
+        }
+  
+Gaps between Tracks: You can adjust by using 	 grid-gap
+	 grid-column-gap
+	 grid-row-gap
+
+Syntax:
+  .container {
+            display: grid;
+            grid-template-columns:2fr 1fr 1fr;
+            grid-gap:20px;
+        }
+  .container {
+            display: grid;
+            grid-template-columns:2fr 1fr 1fr;
+            grid-column-gap:20px;
+            grid-row-gap:10px;
+        }
+
+Repeat attribute for grid: It specifies the number of columns to repeat in single row and the size of the columns.
+
+Syntax:
+       grid-template-columns: repeat(number, size);
+
+
+grid-auto-rows: It is used to define Height of all rows  by specified pixels.
+
+ Syntax:
+   .container {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            grid-auto-rows: 200px;
+            grid-gap:20px;
+        }
+ Note : To change the height of all rows you can use
+             the value "minmax()"
+
+Syntax:
+ .container {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap:20px;
+        }
+
+To Display in Single Column with "auto-fill" . How ever when it reaches the maxwidth the spaning will happen to multiple rows.
+
+.container {
+            display: grid;
+            grid-template-columns:repeat(auto-fill, minmax(100px, 1fr));
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap:20px;
+        }
+
+
+
+
+
+
+
+
+
+
