@@ -1,0 +1,60 @@
+                Images, media and Form Elements
+- To make images size responsive define width  and height in percent.
+- The image can be defined to fit into content by using attribute "object-fit".
+
+- object-fit : It allows to fit content into the border or parent element.
+   a) contain : Image will be scaled down untill it is 
+       small enough to fit inside.
+   b) cover : It will fit to the size of parent content it will not scale down the image.
+   c) fill  : It will fill in specified shape.
+
+Note : To draw shapes we need HTML elements like canvas and svg.
+
+Ex:
+<head>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 200px 200px;
+            gap: 20px;
+        }
+        .container > div {
+            border:2px solid darkcyan;
+            
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img src="../Images/shoe.jpg">
+        </div>
+    </div>
+</body>
+
+	         Form Elements
+- Form Validations : The CSS attributes and selectors that are used to validate the form.
+
+    	1.  :valid
+	2.  :invalid
+	3.  :required
+	4.  :optional
+	5.  :disabled
+	6.  :enabled
+	7.  :read-only
+	8.  :in-range
+	9.  :out-of-range
+
+2D and 3D CSS
+
+
+
+
+
+
