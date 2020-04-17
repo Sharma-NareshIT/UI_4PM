@@ -1,0 +1,188 @@
+	Understanding CSS Templates
+1. Breadcrumb Naviation
+2. Card
+3. Center an Element
+4. Column Layouts
+5. Grid wrapper
+6. List group with badges
+7. Pagination
+8. Split Navigation
+9. Sticky Footers
+10. Media Objects
+
+
+Breadcrumb Navigation:
+ It helps the user to understand their location in a website by providing a breadcrumb trail back to the start page. [It is also known as site map]
+
+Attributes:
+  display : flex  → display flexible box inline.
+  ::before	        → display content before any element
+  content	        → to display any custom content.
+
+Note: for special chars --
+numeric key pad on keyboard
+press hold "alt key" - type "2, 6" keys - release alt key
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                width: 90%;
+            }
+            .breadcrumb ul {
+                display:flex;
+                border:1px solid darkcyan;
+                padding:10px;
+            }
+            .breadcrumb li::before {
+                content: "→";
+            }
+            .breadcrumb li:first-child::before {
+                content: "";
+            }
+            ul {
+                list-style-type: none;
+            }
+            a:link {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body class="container">
+        <nav class="breadcrumb">
+            Site Map
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Electronics</a></li>
+                <li><a href="">Mobiles</a></li>
+                <li><a href="">Samsung</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>
+
+
+	                  Card Style
+- Card is a pattern of display component side by side or one below another with header, body and footer.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                width: 90%;
+            }
+            .cards {
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr ;
+                grid-gap:30px;
+            }
+            .card {
+                display:grid;
+                grid-template-rows: max-content 200px 1fr;
+                text-align: center;
+                box-shadow: 2px 4px 4px darkcyan;
+            }
+            img {
+                width: 100%;
+                height:100%;
+                object-fit: contain;
+            }
+            button {
+                background-color: yellow;
+                color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cards">
+            <article class="card">
+                <header>
+                    <h2>Earpods</h2>
+                </header>
+                <section>
+                    <img src="../Images/earpods.jpg">
+                </section>
+                <footer>
+                    <button>Add To Cart</button>
+                    <div>
+                        Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header>
+                    <h2>JBL Speakers</h2>
+                </header>
+                <section>
+                    <img src="../Images/jblspeaker.jpg">
+                </section>
+                <footer>
+                    <button>Add to Cart</button>
+                    <div>
+                        Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header>
+                    <h2>Nike Casuals</h2>
+                </header>
+                <section>
+                    <img src="../Images/shoe.jpg">
+                </section>
+                <footer>
+                    <button>Add To Cart</button>
+                    <div>
+                        Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </body>
+</html>
+
+	           Center an Element
+It is template for placing the contents center to containers or page.
+- align-items
+- justify-content
+
+Ex:
+<!DOCTYPE html>
+<html>
+ <head>
+     <style>
+         .container {
+             height: 200px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border:2px solid darkcyan;
+         }
+         .box {
+             width: 10em;
+             border: 3px solid darkcyan;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="container">
+         <div class="box">
+            <img src="../Images/shoe.jpg" width="50%" height="50%">
+         </div>
+     </div>
+ </body>
+</html>
+
+
+
+
+
+
+
