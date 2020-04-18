@@ -1,0 +1,96 @@
+		Badges
+It provides the spacing between the content with a marker which is used to highlight any item reference with the context. It is used for numbering and content that summarizes the topic.
+
+Ex:
+<head>
+    <style>
+        .list-group li {
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 2px 2px 3px darkcyan;
+            margin-top: 5px;
+            padding: 5px;
+        }
+        .badge {
+            border-radius: 30px;
+            width: 20px;
+            text-align: center;
+            background-color: darkviolet;
+            color:white;
+        }
+        button {
+            background-color: lightcyan;
+            border:1px solid darkviolet;
+            width: 100px;
+            height: 40px;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+        }
+        button:hover {
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <button><span class="badge">4</span><span>Likes<span></span></button>
+    </div>
+    <ul class="list-group">
+        <li>HTML Basics <span class="badge">4</span></li>
+        <li>CSS Tutorials <span class="badge">10</span></li>
+        <li>JavaScript Examples <span class="badge">6</span></li>
+    </ul>
+</body>
+
+		Paginations
+- Navigation between contents , which include data records, pages etc..
+
+Ex:
+<head>
+ <style>
+     nav {
+         display:flex;
+         justify-content: center;
+     }
+     .pagination {
+         list-style-type: none;
+         margin:0px;
+         padding:0px;
+         display: flex;
+     }
+     .pagination li {
+         margin:0px 2px;
+         width:20px;
+         border:1px solid darkcyan;
+        border-radius: 5px;
+        text-align: center;
+     }
+     a:link {
+        text-decoration: none;
+      
+     }
+     .page {
+         width: 40px;
+         font-family: Arial;
+     }
+ </style>
+</head>
+<body>
+    <nav>
+        <ul class="pagination">
+            <li><a href=""><span class="page"> &laquo; </span></a></li>
+            <li><a href=""><span class="page">1</span></a></li>
+            <li><a href=""><span class="page">2</span></a></li>
+            <li><a href=""><span class="page">3</span></a></li>
+            <li><a href=""><span class="page"> &raquo; </span></a></li>
+        </ul>
+    </nav>
+</body>
+
+
+     
+
+
