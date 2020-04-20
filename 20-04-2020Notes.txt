@@ -1,0 +1,190 @@
+	          CSS 2D Transforms
+- It allows the elements to be transformed in 2 Dimensional space.
+- Transform along X and Y axis.
+- Basic transform includes the actions like move, rotate, scale and skew the elements in 2D space.
+- Transform uses a set of transform function to manipulate the co-ordignates [x, y].
+
+Note: CSS 2D and 3D Transforms are not supported on every browser. Hence we have to use plugin's for various browsers.
+
+  Plugin Name	Browser
+  --------------------------------------------------
+   -webkit		chrome, safari
+   -moz		Firefox
+   -ms		IE [Internet Explorer]
+   -o		Opera
+
+Syntax:
+	transform: someMethod();
+	-webkit-transform:method();
+	-moz-transform:method();
+	-o-transform:method();
+	-ms-transform:method();
+
+CSS Transform Functions:
+1. translate() : It is used to move an element from its current position to a new position along x and y axis.
+
+ Syntax:
+            transform:translate(x, y);
+
+ Note: To define delay time you can use "transition"
+	transition : timeInterval;
+
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box {
+                width: 200px;
+                height: 100px;
+                border:2px solid darkcyan;
+                background-color: yellow;
+                transition: 2s;
+            }
+            .box:hover {
+                transform: translate(300px,300px);
+                -webkit-transform: translate(300px, 300px);
+                -moz-transform: translate(200px, 100px );
+                -ms-transform: translate(100px, 100px);
+                transition: 2s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            
+        </div>
+       
+    </body>
+</html>
+
+2. rotate(): It rotates an element around its origin by specified angle. It rotates the elements clockwise direction from its actual origin by an defined angle.
+	You can define a negative value for degree in order transform counter-clockwise.
+	
+	Syntax: transform:rotate(deg);
+	              transform:rotate(-deg);
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box {
+                width: 200px;
+                height: 100px;
+                border:2px solid darkcyan;
+                background-color: yellow;
+                transition: 2s;
+            }
+            .box:hover {
+                transform: rotate(360deg);
+                transition: 2s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <img src="../Images/earpods.jpg" width="100%" height="100%">
+        </div>
+       
+    </body>
+</html>
+
+3.scale() : It increases or decreases the size of an element by specified units. It uses x-for width , y- for height.
+
+Syntax:
+	transform:scale(xUnits, yUnits);
+	
+Note: scale() uses the units which are relative to existing size.
+      transform:scale(2, 2);
+      200% of existing or 2 times size the existing.
+
+scale(2)     → both x and y
+scale(1,2)  → only y [1 is standard 100%]	- height
+scale(2,1)	  → only x -width
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box {
+                width: 200px;
+                height: 100px;
+                border:2px solid darkcyan;
+                background-color: yellow;
+                transition: 2s;
+                margin-left: 200px;
+                margin-top: 100px;
+            }
+            .box:hover {
+                transform: scale(2,1);
+                transition: 2s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <img src="../Images/earpods.jpg" width="100%" height="100%">
+        </div>
+       
+    </body>
+</html>
+
+
+4. skew() : It is used to tilt any element by specified angle along x and y axis.
+
+Syntax:
+	transform:skew(xDeg, yDeg)
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box {
+                width: 200px;
+                height: 100px;
+                border:2px solid darkcyan;
+                background-color: yellow;
+                transition: 2s;
+                margin-left: 200px;
+                margin-top: 100px;
+            }
+            .box:hover {
+                transform: skew(-30deg, -30deg);
+                transition: 2s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <img src="../Images/earpods.jpg" width="100%" height="100%">
+        </div>
+       
+    </body>
+</html>
+
+
+5. matrix():  It is used to perform all of the 2D transformations, which include translate, rotate, scale and skew. 
+	  It uses 6 parameters written as a matrix value.
+ 
+Syntax:
+	matrix(a,b,c,d,e,f);
+
+ Translate Matrix:      matrix(1,0,0,1, tx, ty);
+  Scale Matrix :          matrix(sx, 0, 0, sy, 0, 0);
+  Skew Matrix:	matrix(0, skx, sky, 0, 0, 0);
+
+  last 2 	: Translate [move]
+  1st & 4th : Scale [size]
+  2nd & 3rd: Skew [ tilt]
+
+
+Syntax: Without Matrix
+
+ transform: translate(200px, 100px) rotate(180deg) scale(1.5) skew(0, 30deg);
+
+
+
