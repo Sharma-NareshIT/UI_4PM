@@ -1,0 +1,152 @@
+matrix : It defines as transform effects in 6 values,
+	which represent the transform functions
+	 in following order.
+
+Syntax:
+matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() );
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box {
+                width: 200px;
+                height: 100px;
+                border:2px solid darkcyan;
+                background-color: yellow;
+                transition: 2s;
+            }
+            .box:hover {
+                transform: matrix(1,2,-1,1,80,80);
+                transition: 2s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <img src="../Images/earpods.jpg" width="100%" height="100%">
+        </div>
+       
+    </body>
+</html>
+	        CSS 3D Transforms
+- It is similar to 2D transforms but have a third dimension, usually defined by using a z-axis.
+- It is 3 dimensional effect.
+- It also uses options for move, size, rotate elements.
+- The 3D transform functions are
+	
+1. translated3d() : It moves the element from its current position to a new position along the x,y, and z-axis.
+
+Syntax:
+   translate3d(tx, ty, tz)
+
+Ex:
+<head>
+    <style>
+        .container {
+            width: 150px;
+            height: 150px;
+            border:2px solid darkcyan;
+            margin:30px;
+            background-color: yellow;
+            perspective: 500px;
+        }
+        .transformEffect {
+            transform: translate3d(50px, 50px, 100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../Images/earpods.jpg"  width="100" height="100">
+    </div>
+    <div class="container">
+        <img border="4" class="transformEffect" src="../Images/earpods.jpg"  width="100" height="100">
+    </div>
+</body>
+
+2. rotate3d() : It rotates the element in 3D space by specified angle along x, y and x directions.
+
+Syntax:
+     rotate3d(x, y, z, angle)
+
+Ex
+<head>
+    <style>
+        .container {
+            width: 150px;
+            height: 150px;
+            border:2px solid darkcyan;
+            margin:30px;
+            background-color: yellow;
+            perspective: 200px;
+        }
+        .transformEffectPositive {
+            transform: rotate3d(0,1,0, 30deg);
+        }
+        .transformEffectNegative {
+            transform: rotate3d(0,1,0, -30deg);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../Images/earpods.jpg"  width="100" height="100">
+    </div>
+    <div class="container">
+        <img border="4" class="transformEffectPositive" src="../Images/earpods.jpg"  width="100" height="100">
+        <img border="4" class="transformEffectNegative" src="../Images/earpods.jpg"  width="100" height="100">
+    </div>
+</body>
+
+3. scale3d() : It changes the size in 3 dimensions i.e x, y and z.
+
+Syntax:
+   scale3d(x, y, z);
+
+	CSS 3D Transform  Functions
+
+Function		Description
+=========================================
+translate3d(tx, ty, tz)  Move along x, y and z.
+translateX(tx)
+translateY(ty)
+translateZ(tz)
+
+rotate3d(x,y,z, angle)   Rotate along x y and z
+rotateX(a)
+rotateY(a)
+rotateZ(a)
+
+scale3d(sx,sy,sz)	    Resize the element x,y and z
+scaleX(sx)
+scaleY(sy)
+scaleZ(sz)
+
+perspective(length)      It specifies the view for a 3D
+		    transformed element. with
+		    regard to the existing. If you
+		    define perspective more then
+		    the transform will be more
+		    away from normal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
