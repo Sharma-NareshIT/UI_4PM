@@ -1,0 +1,170 @@
+	                CSS Transition
+- CSS transitions is a module of css that lets you create gradual transitions between the value of specific css properties. 
+- The behavior of transition can be controlled by using timing, duration and other attributes.
+- The module comprises of following properties
+
+ 1. transition
+ 2. transition-delay
+ 3. transition-duration
+ 4. transition-property
+ 5. transition-timing-function
+
+
+transition-delay : It specifies the amount of time to wait between a property's value changing and the start of the transition effects. The time interval from start to or to end.
+
+Syntax:
+  transition-delay : 2s
+  transition-delay : 2s, 4ms;
+
+transition-duration: It specifies the amount of time to take in order to complete the transformation. i.e time take to change from initial state to final state.
+
+Syntax:
+ transition-duration : 2s
+
+Ex:
+<head>
+  <style>
+      .section {
+          width: 300px; height: 150px;
+      }
+      .box {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          color:white;
+          font-size: 20px;
+          left: 0px;
+          top:0px;
+          position: absolute;
+          transition-duration: 2s;
+          transition-delay: 5s;
+      }
+      .box:hover {
+          width: 300px;
+          height: 150px;
+          background-color: yellow;
+          color:black;
+          font-size: 40px;
+          left: 100px;
+          top:100px;
+          position: absolute;
+          transition-duration: 2s;
+          transition-delay: 3s;
+      }
+  </style>
+</head>
+<body>
+    <div class="section">
+        <div class="box">
+            Effects
+        </div>
+    </div>
+</body>
+
+3. transition-property: It sets the css properties to which the transition should be applied. The properties include margin, position, font-size, text effects etc..
+     It can apply the transforms effects only to specific property instead of all.
+
+Syntax:
+      transition-property : height, width;
+      transition-prpperty : all;
+
+Ex:
+<head>
+  <style>
+      .section {
+          width: 300px; height: 150px;
+      }
+      .box {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          color:white;
+          font-size: 20px;
+          left: 0px;
+          top:0px;
+          position: absolute;
+          transition-duration: 2s;
+          transition-property: font-size, width, height, left, right;
+      }
+      .box:hover {
+          width: 300px;
+          height: 150px;
+          background-color: yellow;
+          color:black;
+          font-size: 40px;
+          left: 100px;
+          top:100px;
+          position: absolute;
+          transition-duration: 2s;
+          transition-property: font-size, width, height, left, right;
+      }
+  </style>
+</head>
+<body>
+    <div class="section">
+        <div class="box">
+            Effects
+        </div>
+    </div>
+</body>
+
+
+4. transition-timing-function: It uses pre-defined functions that are used to control the animation effect for any element.	
+	You can use the timing functions like 
+a) ease
+b) linear
+c) ease-in
+d) ease-out
+e) ease-in-out
+f) cubic-beizer()
+g) steps()
+h) start
+i) end
+
+Syntax:
+  transition-timing-function: linear|ease|ease-in
+
+Ex:
+<head>
+    <style>
+        div {
+            width: 100px;
+            height: 50px;
+            margin-top: 20px;
+            background-color:darkcyan;
+            color:white;
+            font-size: 2em;
+            font-weight: bold;
+            transition: width 2s;
+        }
+        div:hover {
+            width: 400px;
+        }
+        #linear {
+            transition-timing-function: linear;
+        }
+        #ease {
+            transition-timing-function: ease;
+        }
+        #easein {
+            transition-timing-function: ease-in;
+        }
+        #easeout {
+            transition-timing-function: ease-out;
+        }
+        #easeio {
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="linear">Linear</div>
+    <div id="ease">ease</div>
+    <div id="easein">ease-in</div>
+    <div id="easeout">ease-out</div>
+    <div id="easeio">ease-in-out</div>
+</body>
+
+
+
+
