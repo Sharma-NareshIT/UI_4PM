@@ -1,0 +1,182 @@
+	        CSS Animations
+- CSS Animations are used to animate transitions from one CSS style configuration to another.
+- The major purpose of CSS animations is to reduce the use of JavaScript for animations and improve the peformance of application.
+- Animations can easily run on lowband width devices also. i.e like mobile.
+- Animations will work even when JavaScript is disabled.
+- To create animation sequence in CSS we need
+	a) @keyframes
+	b) animation
+	c) animation-name
+	d) animation-duration
+	e) animation-timining-function
+	f) animation-dealy
+	g) animation-iteration-count
+	h) animation-direction
+	i) animation-fill-mode
+	j) animation-play-state
+
+@keyframes : It is used to configure the initial, final and intermediate steps in CSS animation.
+
+Syntax-1:
+     @keyframes  identifierName {
+           from {
+ 	// effects for initial state;
+	}
+
+           to {
+	// effects for final state;
+              }
+         }
+
+Syntax-2:
+        @keyframes  identifier {
+               0% {  effects }
+              40% {  effects }
+              80%, 90% { effects }
+             100% { effects }
+        }              
+ 
+ Keyframes are applied to your content by using the attribute
+	"animation-name: IdentifierName"
+
+
+Ex:
+<head>
+    <style>
+        .container {
+            overflow: hidden;
+            height:300px;
+        }
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                color:red;
+                transform: scale(3);
+            }
+            to {
+                margin-left: 0%;
+                color:green;
+                transform: scale(1);
+            }
+        }
+        h2 {
+            animation-name: slidein;
+            animation-duration: 5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>CSS Animations</h2>
+    </div>
+</body>
+
+- You can add frames in between the start and end by using %.
+
+Ex:
+<head>
+    <style>
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+            75% {
+                font-size: 300%;
+                margin-left: 25%;
+                width: 150%;
+            }
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+        p {
+            animation-name: slidein;
+            animation-duration: 5s;
+        }
+        .container {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div  class="container">
+        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device.</p>
+    </div>
+</body>
+
+- You can make animation iterate.
+      "animation-iteration-count"
+
+Ex:
+<head>
+    <style>
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+            75% {
+                font-size: 300%;
+                margin-left: 25%;
+                width: 150%;
+            }
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+        p {
+            animation-name: slidein;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        .container {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div  class="container">
+        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device.</p>
+    </div>
+</body>
+
+- You can control animation direction
+       "animation-direction"
+
+Ex:
+<head>
+    <style>
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                transform: rotate(180deg);
+            }
+            to {
+                margin-left: 0%;
+                transform: rotate(0deg);
+            }
+        }
+        img {
+            width: 20%;
+            height: 70%;
+            animation-name: slidein;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .container {
+            overflow: hidden;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div  class="container">
+        <img src="../Images/jblspeaker.jpg" width="100" height="100">
+    </div>
+</body>
+
+	            Bootstrap
