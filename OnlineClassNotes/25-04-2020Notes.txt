@@ -1,0 +1,145 @@
+	              CSS Rules
+1. How the priority is given for styles when defined  multiple times for same element?
+
+A. If same attribute are used across multiple times then the last defined set of styles are applied.
+    The additional effects, which are not configured in the latest are accessed from the previous.
+
+
+Ex:
+<head>
+    <style>
+        h2 {
+            color:red;
+            background-color: yellow;
+        }
+        h2 {
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Rules</h2>
+</body>
+
+O/P:   Heading will use - Green Color for Text and
+		       Yellow for Background
+
+2. How effects are inherited? How effects are defined for parent and child elements based on priority?
+
+A. If child element is not provided with effects then it will by default access the parent effects.
+    If child element is defined with effects, then the specified effect will apply instead of using parent.
+
+
+3. How to control Inheritence?
+A. Inheritence can be controlled by using CSS values
+	a) inherit
+	b) initial
+	c) unset
+	d) revert (new - not supported on every
+		browser)
+   inherit : It sets the property value applied to a
+	selected element to be the same as the
+	parent. 
+
+   initial:  It set the property value applied to a selected                 element to be the same as the value set for                    that property.
+  
+   unset : It set the default value for property.
+ 
+  Note: initial and unset , if not defined then they by default it is inherit [ inherits the body ].
+
+Ex:
+<head>
+    <style>
+      body {
+          color:red;
+      }
+      ul {
+          color:blue;
+      }
+      .style1 {
+          color:green;
+      }
+      .style2 {
+          color:initial;
+      }
+      .style3 {
+          color:inheirt;
+          background-color: yellow;
+      }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li class="style1">CSS</li>
+        <li class="style2">JavaScript</li>
+        <li class="style3">JQuery</li>
+    </ul>
+</body>
+
+4. The priority of styles for any element based on selector.
+	1st Priority	Id Selector
+	2nd Priority	Class selector
+	3rd Priority	Type Selector
+
+Ex:
+<head>
+    <style>
+      h2 {
+          color:red;
+      }
+      #headColor {
+          color:yellow;
+      }
+      .heading {
+          color:blue;
+      }
+    </style>
+</head>
+<body>
+    <h2 class="heading" id="headColor">CSS Rules</h2>
+</body>
+
+O/p :  Heading is applied with Id effects.
+
+Note: All effects are applied to an element accessed from Id, class and type. If attributes are same then they will be applied according to priority.
+
+		CSS Combinator
+
+1. Decendant Combinator : It is defined with space.
+
+   Syntax:
+	table  tbody  tr {
+
+	 }
+	.box  p {
+	}
+
+2. Child Combinator : It is defined by using ">"
+
+ Syntax:
+                tbody > tr {
+	}
+	ul > li {
+	}
+
+3. Adjacent sibling combinator: It is defiend by using "+" .
+
+Syntax:
+	p + span {
+	}
+	input[type="text"]+span {
+	}
+
+4. General sibling combinator: It is defined by using "~".
+
+Syntax:
+	p~span { }
+	input[type="text"]~span {
+	}
+
+
+
+	              Bootstrap
+
+
