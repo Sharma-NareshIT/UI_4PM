@@ -1,0 +1,99 @@
+	               Bootstrap
+- Bootstrap is an open source toolkit for developing Mobile and Web applications with HTML, CSS and JS.
+- It provides one of the worlds largest repository [library] that helps developers to build complex HTML, CSS and JS pages with less logic and markup.
+- Bootstrap CSS will provide pre-defined CSS class and Stylesheets which you can apply for HTML.
+- Bootstrap JS will provide pre-defined functions to dynamically control HTML.
+
+
+Setup Enironment for Bootstrap:
+1. Download "Node JS" and install on your computer
+	
+    package managers : NPM, Bower, Ruby Gems,
+		    Yarn, NuGet etc..
+
+     npm → Node Package Manager
+
+     - Visit https://nodejs.org/en/download/
+     - Download  ".msi" for windows
+     - Install
+     - Goto command prompt and test
+
+             > node -v
+             > npm -v
+
+2. Download Bootstrap using NPM
+    - Open your project in Visual Studio Code
+    - Open Terminal [ Terminal Menu → New Terminal]
+    - Type the following command
+
+             C:\HtmlProject> npm install bootstrap
+
+3. It will create a new folder by name 
+	       "node_modules"
+	         |_bootstrap
+	            |_dist
+	               |_css
+	               |   |_bootstrap.css
+	               |_js
+     	                   |_bootstrap.js
+
+node_modules/bootstrap/dist/css/bootstrap.css
+node_modules/bootstrap/dist/js/bootstrap.js
+
+ 4. Goto your HTML page and link bootstrap.css
+
+ <head>
+ <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+ </head>
+
+	        Bootstrap Containers
+	       --------------------------------
+- Containers are used for basic layout design.
+- They are used for grid design.
+- Containers are defined with margin and padding.
+- Bootstrap provides 3 different containers
+
+	1. container
+	2. container-fluid
+	3. container-{breakpoint}  based on width.
+
+- Container classes in Bootstrap are
+	
+ClassName	Purpose
+---------------------------------------------------------------------------
+.container		min 540px       1200px [width]
+.container-sm	540px	        1140px [mobile]
+.container-md	100%	        1140px [tab]
+.container-lg	100%	        1140px [laptop]
+.container-xl	100%	        1140px [desktop]
+.container-fluid	100%	         100% responsive
+
+Ex:
+<head>
+ <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+ <style>
+     div {
+         border:2px solid darkcyan;
+         margin-top: 10px;         
+     }
+     .container-sm {
+         padding: 50px;
+         text-align:center;
+     }
+ </style>
+</head>
+<body>
+  <div class="container">
+      container
+  </div>
+  <div class="container-sm">
+      container-sm
+  </div>
+  <div class="container-fluid">
+      container-fluid
+  </div>
+</body>
+
+
+
+
