@@ -1,0 +1,91 @@
+1. Containers
+2. Grid System
+
+Install following plugin for VS Code:
+==============================
+"IntelliSense for CSS class names in HTML"
+
+
+	           Bootstrap Grid Classes
+1.  .col	: Defining a column with specified col 	  width.
+		
+	  .col-sm		: 540px  [mobile]
+	  .col-md		: 720px  [tab]
+	  .col-lg		: 960px  [laptop]
+	  .col-xl		: 1140px [desktop]
+
+	  Columns must be defined with size 	  number explicitly, which can be 1 to 12
+
+	  .col-sm-1	.col-lg-1
+	  .col-sm-2
+	  .col-sm-6 
+	  .col-sm-12	.col-lg-12
+
+	  You configure the column size directly
+	  by using col-number [1 to 12]
+	   
+	  .col-6
+	  .col-12
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">Row-1 Col-1</div>
+            <div class="col-6">Row-1 Col-2</div>
+        </div>
+        <div class="row">
+            <div class="col-6">Row-2 Col-1</div>
+            <div class="col-6">Row-2 Col-2</div>
+        </div>
+    </div>
+</body>
+
+Note:  You can use "auto" as attribute for "col" in order adjust according to width of device.
+	    "col-md-auto"
+	
+Syntax:
+<div class="row">
+            <div class="col-md-auto">
+                Auto width
+            </div>
+</div>
+
+2.  .row	: Defining a row in grid with various 
+	  span options.
+
+	 .row		single row
+	 .row-cols-number	how many columns in
+			row.
+	 .row-cols-sm-number
+	 .row-cols-md-number
+
+	 number from 1 to 6 only.
+
+Syntax:
+         <div class="row row-cols-4"> </div>
+ 
+	You can configure vertical alignment for 	content in a row, when height is changed.
+
+          	.align-items-start	  [top]	 ]
+	.align-items-center	  [center]   ]  use in row
+	.align-items-end	  [bottom]  ]
+
+ 	Every column can be self aligned in a row
+	
+	.align-self-start	]
+	.align-self-center	] to be used in col
+	.align-self-end	]
+
+Syntax:
+ <div class="row row-cols-4">
+  <div class="col align-self-start">Column-1</div>
+  <div class="col align-self-center">Column-2</div>
+  <div class="col align-self-end">Column-3</div>
+ </div>
+
+	
