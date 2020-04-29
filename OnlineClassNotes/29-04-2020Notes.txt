@@ -1,0 +1,173 @@
+	Order of  Columns in Grid 
+- Bootstrap provides class for arranging the cols in order.
+- Without bootstrap we have to use
+	     article
+	     {
+	      grid-column : 2;
+	     }
+- Bootstrap can change the order by using the class
+ 	         ".order-value"
+- Values from 1 to 12   or   first and last
+
+Syntax:
+	<div class="col  order-last"> </div>
+	<div class="col  order-1"> </div>
+
+	       Bootstrap Colors
+	       -------------------------
+-Bootstrap provides pre-defined color classes 
+-You can define for text or background.
+- The predefined color classes use attributes like:
+	primary
+	secondary
+	dark
+	light
+	success
+	warning
+	danger
+	info
+- To apply for text you can use the classes
+	.text-primary
+	.text-secondary
+	.text-dark
+	.text-light
+	.text-success
+	.text-warning
+	.text-danger
+	.text-info
+	.text-white
+- To appy for background you can use the classes
+	.bg-primary
+	.bg-success
+	.bg-warning etc...
+	.bg-white
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body class="container">
+    <h2  class="bg-dark text-white">Text Colors</h2>
+    <div class="text-primary">Primary Color</div>
+    <div class="text-secondary">Secondary Color</div>
+    <div class="text-success">Sucess Message</div>
+    <div class="text-warning">Warning Message</div>
+    <div class="text-danger">Error Message</div>
+    <div class="text-info">Info Message</div>
+    <h2>Background Colors</h2>
+    <div class="bg-primary">Primary Color</div>
+    <div class="bg-secondary">Secondary Color</div>
+    <div class="bg-success">Sucess Message</div>
+    <div class="bg-warning">Warning Message</div>
+    <div class="bg-danger">Error Message</div>
+    <div class="bg-info">Info Message</div>
+</body>	    
+
+	         Bootstrap Images
+	         -------------------------
+- Bootstrap provides pre-defined class for Images
+- These class make images more responsive and interactive.
+- Images classes are
+		a)  .img
+		b)  .img-fluid
+		c)  .img-thumbnail
+
+.img-fluid  : It makes responsive image.
+.img-thumbnail: It presents with pre-defined border
+	          and size effects.
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body class="container">
+    <h2>Images in Bootstrap</h2>
+    <div>
+        <img class="img-thumbnail bg-primary" src="../Images/jblspeaker.jpg">
+        <img class="img-thumbnail bg-warning" src="../Images/shoe.jpg">
+        <img class="img-thumbnail bg-success" src="../Images/tv.jpg">
+    </div>
+</body>
+
+
+	             Bootstrap Tables
+- Bootstrap provides pre-defined classes for tables.
+- These classes will make table more responsive.
+
+1.  .table   : It is the base class for tables. Table effects
+	  can be defined only after table class.
+
+ Syntax:	
+	   <table  class="table">
+	   </table>
+
+2.  .table-primary  ]
+     .table-sucess   ]   You can use all predefined colors
+     .table-danger   ]
+
+   Syntax:
+	<table class="table table-primary">
+
+3. .thead-dark	]
+    .thead-light	]  Colors for thead section
+    .bg-danger 	]
+    .bg-primary
+
+	<thead  class="thead-dark">
+	<thead  class="bg-primary">
+
+4. .table-striped   :  It defines table with even and odd
+		colors for row occurances.
+
+5. .table-bordered: It defines the table with border.
+
+6. .table-borderless: It defines table without border.
+
+7. .table-hover  : It have mouse over effects.
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <h2>Tables in Bootstrap</h2>
+    <table class="table table-dark table-borderless table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>TV</td>
+                <td>45000.55</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>21000.55</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>Shoe</td>
+                <td>5000.55</td>
+                <td>Available</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
