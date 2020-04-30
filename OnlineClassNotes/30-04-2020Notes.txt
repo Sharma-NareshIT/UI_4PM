@@ -1,0 +1,82 @@
+8. Table Size
+	.table-sm
+	.table-md
+	.table-lg
+	.table-xl
+9. Table Responsive
+           It will adjust the width of table to fit into page and allow to scroll horizontally.
+
+	.table-responsive
+	.table-responsive- sm|lg|md|xl
+
+EX:
+    <div class="table-responsive">
+    <table class="table-sm">
+    </table>
+    </div>
+
+		(or)
+      <table class="table table-hover table-responsive">
+     </table>
+
+
+	            Bootstrap Components
+	            ===================
+- These are pre-defined templates with presentation and functionality. 
+- They use JQuery attributes to control dynamically.
+- In addition CSS classes you have to apply bootstrap attributes to HTML elements.
+- JQuery functions are defined in the library
+	            "bootstrap.js"
+
+	            Bootstrap Alerts
+- Alert is used to display a message box in page
+- Dynamically you can control the message box.
+
+CSS Classes:
+============
+  .alert		 → to show a message box
+  .alert-success	  → to display color
+           -primary
+           -danger etc..
+  .alert-link  	 → to display a hyperlink in alert
+  .alert-heading	 → to display heading style
+  .alert-dismissible     → to show alert in dismiss style.
+  
+JQuery Attributes:
+===============
+ role	→ It specifies the role of element, which
+	    can be alert, dialog, modal etc..
+ data-dismiss → It is used to colse any specific 
+	           element dynamically.
+
+Ex:
+1. Install JQuery for your project
+	> npm install jquery
+
+	node_modules
+	|_jquery
+	   |_dist
+	      |_jquery.js
+	
+
+2. Add a new HTML page
+
+		Alert.html
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container">
+    <h2>Alerts in Bootstrap</h2>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" >x</button>
+        <h2 class="alert-heading">Delete Record</h2>
+        <p>Record will be delete premanently</p>
+        <a class="alert-link" href="#">Click</a> for more help.
+    </div>
+</body>
+
+
+
+ 
