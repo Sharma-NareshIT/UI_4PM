@@ -1,0 +1,126 @@
+	           Bootstrap Badge
+	           ==============
+
+Badge Classes:
+-----------------------
+.badge
+.badge-primary
+            -secondary
+            -success
+            -danger etc.
+.badge-pill  [rounded]
+
+Ex:
+<head>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <h2>Badge</h2>
+    <button> <span class="badge badge-info">4</span> Likes </button>
+    <h2>Badge for List</h2>
+    <ul class="list-unstyled">
+        <li><span class="badge badge-primary">4</span>Electronics</li>
+        <li><span class="badge badge-primary">2</span>Mobiles</li>
+        <li><span class="badge badge-primary">5</span>Watches</li>
+    </ul>
+    <h2>Badge Pills</h2>
+    <a href="#" class="badge badge-primary badge-pill">Home</a>
+    <a href="#" class="badge badge-danger badge-pill" >About</a>
+    <a href="#" class="badge badge-success badge-pill">Contact</a>
+</body>
+
+	    Bootstrap Breadcrumb
+	    ===================
+class name
+----------------
+.breadcrumb
+.breadcrumb-item
+
+You can customize its symbol form "bootstrap.css"
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <h2>Site Map</h2>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">About</a></li>
+        <li class="breadcrumb-item"><a href="#">Contact</a></li>
+    </ol>
+</body>
+
+	          Bootstrap Buttons
+	          ===============
+Button Classes:
+-----------------------
+.btn
+.btn-primary / secondary/ success/ danger
+.btn-outline-primary/ secondary/ success/ danger
+.btn-sm, lg, md, xl
+.btn-block
+.active
+.disabled
+.close   [default close button style]
+
+JQuery Attributes:
+--------------------------
+data-dismiss     ]    Pre-defined event binding for
+data-toggle        ]    button
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <dl>
+        <dt>Button</dt>
+        <dd><button class="btn btn-primary">Home</button></dd>
+        <dt>Colors</dt>
+        <dd><button class="btn btn-danger disabled">Delete</button><button class="btn btn-success">Save</button></dd>
+        <dt>Outline</dt>
+        <dd><button class="btn btn-outline-danger">Delete</button><button class="btn btn-outline-success">Save</button></dd>
+        <dt>Block Style</dt>
+        <dd><button class="btn btn-primary btn-block">Register</button></dd>
+        <dt>Small</dt>
+        <dd><button class="btn btn-primary btn-sm">Home</button></dd>
+        <dt>Close</dt>
+        <dd><button class="close">X</button></dd>
+    </dl>
+</body>
+	  
+	            Bootstrap Button Group
+	            ----------------------------------
+Classes:
+.btn-toolbar	→ Creates a button toolbar
+.btn-group	→ Create a group of buttons in
+		     toolbar.
+.btn-group-sm,lg,xl,md
+.btn-group-vertical
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+</head>
+<body class="container">
+   <h2>Naresh-I-Technologies</h2>
+   <div class="btn-toolbar bg-danger text-white justify-content-between">
+      <div class="btn-group">
+        <a class="btn btn-danger">Home</a>
+        <a class="btn btn-danger">About</a>
+        <a class="btn btn-danger">Contact</a>
+      </div>
+      <div class="btn-group">
+        <input type="text">
+        <button class="btn btn-danger"> <span class="fa fa-search"></span> </button>
+      </div>
+   </div>
+</body>
+
+
+
+
+
+
