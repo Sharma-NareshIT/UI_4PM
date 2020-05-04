@@ -1,0 +1,167 @@
+	Button Toolbar & Button Group
+.btn-toolbar
+.btn-group
+.btn-group-lg
+.btn-group-sm
+.btn-group-vertical
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Naresh-I-Technologies</h2>
+        <div class="btn-toolbar bg-info text-white justify-content-between">
+            <div class="btn-group">
+                <a class="btn btn-info"><span class="fa fa-home"></span>Home</a>
+                <a class="btn btn-info"><span class="fa fa-user"></span>About</a>
+                <a class="btn btn-info"><span class="fa fa-address-card"></span>Contact</a>
+            </div>
+            <div class="btn-group">
+                <input type="text">
+                <a class="btn btn-info"><span class="fa fa-search"></span>Search</a>
+            </div>
+        </div>
+        <div class="btn-toolbar bg-danger" style="width: 100px;margin-top: 30px;">
+            <div class="btn-group-vertical">
+                <button class="btn btn-danger">Electronics</button>
+                <button class="btn btn-danger">Footwear</button>
+                <button class="btn btn-danger">Fashion</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+	         Bootstrap Card
+- A card is a container.
+- It contains flexible content inside.
+- It includes header, footer and body content.
+- The classes used for cards are:
+	.card	       : card container
+	.card-img-top : img placed top
+	.card-body      : between header and footer
+	.card-header   : top margin
+	.card-footer    : bottom margin
+	.card-text        : normal text
+	.card-title        : title
+	.card-subtitle : subtitle
+	.card-link       : links
+	.card-deck     : Display cards - flex
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+    <style>
+        img {
+            width:200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <h2>Amazon Shopping</h2>
+        <div class="card-deck">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h2 class="card-title">JBL Speakers</h2>
+                <p class="card-subtitle">50% Off on all Speakers</p>
+            </div>
+            <div class="card-body">
+                <img src="../Images/jblspeaker.jpg">
+                <p>Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates</p>
+                <a href="#" class="card-link">more..</a>
+            </div>
+            <div class="card-footer">
+                <div class="card-text">
+                    &#8377; 4300.55
+                </div>
+                <button class="btn btn-info text-white btn-block"><span class="fa fa-shopping-cart"></span>Add to Cart</button>
+            </div>
+        </div>   
+        <div class="card">
+            <div class="card-header bg-danger text-white">
+                <h2 class="card-title">Nike Casuals</h2>
+                <p class="card-subtitle">30% Off on all Shoes</p>
+            </div>
+            <div class="card-body">
+                <img src="../Images/shoe.jpg">
+                <p>Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates</p>
+                <a href="#" class="card-link">more..</a>
+            </div>
+            <div class="card-footer">
+                <div class="card-text">
+                    &#8377; 6200.55
+                </div>
+                <button class="btn btn-danger text-white btn-block"><span class="fa fa-shopping-cart"></span>Add to Cart</button>
+            </div>
+        </div>    
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h2 class="card-title">Samsung NeckBand</h2>
+                <p class="card-subtitle">10% Off on Mobile Accessories</p>
+            </div>
+            <div class="card-body">
+                <img src="../Images/neckband.jpg">
+                <p>Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates</p>
+                <a href="#" class="card-link">more..</a>
+            </div>
+            <div class="card-footer">
+                <div class="card-text">
+                    &#8377; 3200.55
+                </div>
+                <button class="btn btn-success text-white btn-block"><span class="fa fa-shopping-cart"></span>Add to Cart</button>
+            </div>
+        </div>  
+       </div> <!--End of Card Deck-->
+       <h2>Mobiles</h2>
+       <div class="card-deck" style="margin-top: 50px;">
+          <div class="card">
+             <img src="../Images/mob1.jpg" class="card-img-top">
+             <div class="card-body">
+                <p class="card-text">Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates</p>
+             </div>
+          </div>
+          <div class="card">
+            <img src="../Images/mob2.jpg" class="card-img-top">
+            <div class="card-body">
+               <p class="card-text">Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates</p>
+            </div>
+         </div>
+         <div class="card">
+            <img src="../Images/mob3.jpg" class="card-img-top">
+            <div class="card-body">
+               <p class="card-text">Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates</p>
+            </div>
+         </div>      
+         <div class="card">
+            <img src="../Images/mob4.jpg" class="card-img-top">
+            <div class="card-body">
+               <p class="card-text">Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates</p>
+            </div>
+         </div>              
+       </div>
+       <div class="card w-25">
+        <div class="card-header bg-info text-white">
+            <h2 class="card-title">JBL Speakers</h2>
+            <p class="card-subtitle">50% Off on all Speakers</p>
+        </div>
+        <div class="card-body">
+            <img src="../Images/jblspeaker.jpg">
+            <p>Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates</p>
+            <a href="#" class="card-link">more..</a>
+        </div>
+        <div class="card-footer">
+            <div class="card-text">
+                &#8377; 4300.55
+            </div>
+            <button class="btn btn-info text-white btn-block"><span class="fa fa-shopping-cart"></span>Add to Cart</button>
+        </div>
+    </div>   
+    </div> <!--End of Container-->
+</body>
+
+
