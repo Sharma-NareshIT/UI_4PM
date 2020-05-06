@@ -1,0 +1,177 @@
+	            Bootstrap Carousel
+- Carousel is used for sliding contents in HTML page.
+- It uses CSS and JavaScript library from bootstrap.
+- The classes required for carousel configuration
+
+CSS Class	Description
+==========================================
+.carousel		It is to define a set of sliding 				contents.
+.carousel-inner	It defines items collection in 
+		carousel.
+.carousel-item	It is used to define individual
+		slide in carousel
+.active		It is used to start carousel 
+		from specific slide.
+.slide		It is used to define the animation
+		as sliding.
+d-block		Keep content in block style
+		like a container with line break
+w-100		width 100% for slide
+
+
+JQuery Attribute	Description
+------------------------------------------------------------------------
+data-ride		Starts the carousel
+		data-ride="carouse"
+
+
+Ex: Basic Carousel
+
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div id="carouselDemo" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../Images/slide1.PNG" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="../Images/slide2.PNG" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="../Images/slide3.PNG" class="d-block w-100">
+            </div>
+        </div>
+    </div>
+</body>
+
+Carousel with Controls:
+ - Controls allow to navigate to the previous and next slides.
+- Bootstrap provides class for designing controls
+
+ClassName	Description
+===========================================
+.carousel-control-prev   It is to design previous button
+.carousel-control-next   It is to design next button
+.carousel-control-prev-icon   It is to display previous
+		              symbol
+.carousel-control-next-icon  It is to display next 		              symbol
+
+JQuery Attribute	Description
+===========================================
+data-slide		It uses "prev & next" values to
+		slide to previous and next.
+		
+		data-slide="prev"
+		data-slide="next"
+
+role		It defines the next and previous
+		controls role as : button.
+
+Note: The controls will work for any specific carousel by using it's "ID".
+           The controls must be placed outside carousel
+            inner and inside the carousel.
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div id="carouselDemo" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../Images/slide1.PNG" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="../Images/slide2.PNG" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="../Images/slide3.PNG" class="d-block w-100">
+            </div>
+        </div> <!--carousel inner ends-->
+        <a href="#carouselDemo" class="carousel-control-prev" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#carouselDemo" class="carousel-control-next" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div> <!--carousel ends-->
+</body>
+
+Carousel Indicators:
+-----------------------------
+ Indicators allow to directly goto any specific slide.
+
+CSS Classes	Description
+=========================================
+.carousel-indicators   It is a collection of indicators
+		  usually it can an ordered list
+		  or unordered list. [ol, ul]
+.active		  It specifies the start of 
+	                    slide, which is defined in
+		  indicator.
+
+JQuery Attribute	Description
+============================================
+data-target	It specifies the ID of carousel.
+data-slide-to=n	It indicates the index number
+		of slide starting with n=0.
+
+Note: Indicators usually are kept inside carousel
+          and above carousel-inner.
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div id="carouselDemo" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselDemo" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselDemo" data-slide-to="1"></li>
+            <li data-target="#carouselDemo" data-slide-to="2"></li>
+        </ol>
+        
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../Images/slide1.PNG" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="../Images/slide2.PNG" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="../Images/slide3.PNG" class="d-block w-100">
+            </div>
+        </div> <!--carousel inner ends-->
+        <a href="#carouselDemo" class="carousel-control-prev" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#carouselDemo" class="carousel-control-next" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div> <!--carousel ends-->
+</body>	
+
+Changing Slide to Fading Effect for Carousel:
+-----------------------------------------------------------------
+The default animation style is sliding , you can use
+	".carousel-fade"
+
+Syntax:
+<div id="carouselDemo" class="carousel slide carousel-fade" data-ride="carousel">
+
+Every Slide in Carousel can have individual timing, which you can define by using the attribute
+	"data-interval=milliseconds"
+
+Syntax:
+<div class="carousel-item" data-interval="2000">
+                <img src="../Images/slide3.PNG" class="d-block w-100">
+</div>
