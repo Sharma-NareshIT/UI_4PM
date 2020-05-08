@@ -1,0 +1,101 @@
+	           Bootstrap Collapse
+- It is used to define a container which can be hidden and displayed dynamically.
+- Bootstrap provides classes 
+
+Class Name	Description
+=======================================
+.collapse		It specifies the area to be 		collapsed
+.collapsing	collapsing is for defining 		animation while collapsing.
+	
+.collapse.show	It is used to show content.
+
+
+JavaScript Attribute	   Description
+========================================
+data-target	It specifies which are to be 
+		collapsed.
+data-toggle	It is used to ON and OFF 		collapse.
+
+Note: You can assign data- target & toggle for button. and data-target for <a> href. 
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Collapse Demo</h2>
+        <a data-toggle="collapse" href="#collapseArea" class="btn btn-link">Show/Hide</a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseArea" >Show/Hide</button>
+        <div class="collapse" id="collapseArea">
+            <h2>Bootstrap</h2>
+            Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+        </div>
+    </div>
+</body>
+
+	        Bootstrap Accordion
+-Accordion is a wrapper used to  enclose a group of containers which can toggle the display.
+- The class ".accordion" is used to configure the container.
+- All containers are attached to accordion by using the attribute "data-parent='#accordionId' "
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="accordion" id="accordionDemo">
+            <div class="card">
+                <div class="card-header" id="htmlTopic">
+                    <h2 class="mb-0">
+                        <button class="btn btn-danger btn-block" type="button" data-toggle="collapse" data-target="#htmlCollapse">HTML Tutorial</button>
+                    </h2>
+                </div>
+                <div class="collapse show" id="htmlCollapse" data-parent="#accordionDemo" >
+                    <div class="card-body">
+                        <h2>HTML</h2>
+                        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="cssTopic">
+                    <h2 class="mb-0">
+                        <button class="btn btn-danger btn-block" type="button" data-toggle="collapse" data-target="#cssCollapse">CSS Examples</button>
+                    </h2>
+                </div>
+                <div class="collapse" id="cssCollapse" data-parent="#accordionDemo">
+                    <div class="card-body">
+                        <h2>CSS</h2>
+                        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="jsTopic">
+                    <h2 class="mb-0">
+                        <button class="btn btn-danger btn-block" type="button" data-toggle="collapse" data-target="#jsCollapse">Java Script Tutorial</button>
+                    </h2>
+                </div>
+                <div class="collapse" id="jsCollapse" data-parent="#accordionDemo">
+                    <div class="card-body">
+                        <h2>JavaScript</h2>
+                        <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+
+
+
