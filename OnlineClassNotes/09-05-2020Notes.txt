@@ -1,0 +1,100 @@
+	        Bootstrap DropDown
+- HTML Dropdown is designed with <select>
+- Always use HTML dropdown for manipulations and dynamic list.
+- Always use Bootstrap dropdown for Navigation and designing toolbar.
+- Bootstrap dropdown is designed with div and <a> elements.
+- Classes required for bootstrap dropdown
+	.dropdown
+	.dropdown-menu
+	.dropdown-menu-left
+	.dropdown-menu-right
+	.dropdown-item
+	.dropdown-item-text
+	.dropdown-divider
+	.dropdown-toggle
+	.dropright
+	.dropleft
+
+JQuery Attributes:
+data-toggle	: for button
+data-target	: for link
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+   
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Amazon Shopping</h2>
+        <div class="btn-toolbar bg-danger">
+        <div class="btn-group">
+          <button class="btn btn-danger">
+            <span class="fa fa-home"></span>
+             Home
+          </button>
+          <div class="dropdown">
+            <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown" >
+                Choose a Category
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Electronics</a>
+                <a class="dropdown-item" href="#">Footwear</a>
+                <a class="dropdown-item" href="#">Fashion</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item active" href="#">Watches</a>
+                <a class="dropdown-item disabled" href="#">Sunglasses</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        .btn-toolbar {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Amazon Shopping</h2>
+        <div class="btn-toolbar bg-danger">
+            <div class="btn-group btn-group-vertical">
+                <div class="dropright">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                        Electronics
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="#">TV</a></li>
+                        <li><a class="dropdown-item" href="#">Mobile</a></li>
+                        <li><a class="dropdown-item" href="#">Watch</a></li>
+                    </ul>
+                </div>
+                <div class="dropright">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                        Footwear
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="#">Casuals</a></li>
+                        <li><a class="dropdown-item" href="#">Boots</a></li>
+                        <li><a class="dropdown-item" href="#">Sneakers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
