@@ -1,0 +1,151 @@
+	          Bootstrap Forms
+1. Display Form Controls
+	<input>, <select> <textarea>
+    The class used for form control is ".form-control"
+    The size for form-control can be adjusted by using
+		.form-control-lg
+		.form-control-sm	
+    The input type "file" can be defined with class
+		.form-control-file
+    The input type "range" can be defined with class
+		.form-control-range
+
+2. Grouping controls 
+    The class ".form-group" is used to group the form controls in order to set margin and padding between groups.
+
+3. Radios and CheckBoxes
+    The classes used for radios and checkboxes are
+    .form-check
+    .form-check-input
+    .form-check-label
+    .form-check-inline
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        form {
+            width:300px;
+            padding:20px;
+            margin:auto;
+            border:2px solid darkcyan;
+            box-shadow: 2px 2px 4px darkcyan;
+            opacity: 0.8;
+            background-color: lightyellow;
+            margin-top: 50px;
+        }
+        body {
+           background-image: url("../Images/shoe.jpg");
+           background-repeat: no-repeat;
+           background-position: center center;
+           background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h2>Register User</h2>
+            <div class="form-group">
+                <label>User Name</label>
+                <div>
+                    <input type="text" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <div>
+                    <input type="password" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Your City</label>
+                <div>
+                    <select class="form-control form-control-sm">
+                        <option>Delhi</option>
+                        <option>Hyd</option>
+                        <option>Chennai</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Upload Photo</label>
+                <div>
+                    <input type="file" class="form-control-file">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Price Range</label>
+                <div>
+                    <input type="range" class="form-control-range">
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label>Choose Gender</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" name="gender">
+                    <label class="form-check-label">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" name="gender">
+                    <label class="form-check-label">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label>Select Hobbies</label>                    
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">Movies</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" >
+                    <label class="form-check-label">Music</label>
+                </div>                
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+Ex: Horizontal Forms
+	".form-row"
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        form {
+            height: 100px;
+            border:2px solid darkcyan;
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: 2px 3px 4px darkcyan;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="User Name">
+                </div>
+                <div class="col">
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-primary btn-block">Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+	
