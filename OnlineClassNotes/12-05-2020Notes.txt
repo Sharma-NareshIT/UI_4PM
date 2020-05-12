@@ -1,0 +1,119 @@
+	        Bootstrap Input Group
+- Input group is used to group a set of controls and display as one element. How ever all controls are individually handled.
+- Bootstrap classes for input group are
+
+Class Name	Description
+=====================================
+.input-group	     It is group of controls
+.input-group-prepend    It is defined for prefix control
+		     [leftside]
+.input-group-append     It is used for suffix 
+		     [right side]
+.input-group-text	     It is for display input group	
+		     text as prepend or append.
+
+Size
+.input-group-sm, lg
+.input-group-prepend-sm, lg
+.input-group-append-sm, lg
+.input-group-text-sm, lg
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+</head>
+<body>
+    <div class="container">
+      <h2>Input group append</h2>
+      <div class="input-group">
+          <input type="email" class="form-control" placeholder="Email Id">
+          <div class="input-group-append">
+              <span class="input-group-text">@gmail.com</span>
+          </div>
+      </div>
+      <h2>Input group prepend</h2>
+      <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">&#8377;</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Enter Price">
+      </div>
+      <h2>Prepend and Append</h2>
+      <div class="input-group">
+          <div class="input-group-prepend">
+            
+                <select>
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Footwear</option>
+                </select>
+           
+          </div>
+          <input type="text" class="form-control">
+          <div class="input-group-append">
+              <button class="btn btn-outline-warning">
+                  <span class="fa fa-search"></span>
+              </button>
+          </div>
+      </div>
+      <h2>Prepend and Apppend</h2>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">&#8377;</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Enter Price">
+        <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+        </div>
+       </div>
+       <h2>Multiple Prepend</h2>
+       <div class="input-group">
+         <div class="input-group-prepend">
+            <span class="input-group-text">First Name</span>
+            <span class="input-group-text">Last Name</span>
+         </div>
+         <input type="text" class="form-control">
+       </div>
+       <h2>Custom Group </h2>
+       <div class="input-group">
+         <input type="text" class="form-control">
+         <div class="input-group-append">
+            <span class="input-group-text">@</span>
+         </div>
+         <input type="text" class="form-control">
+       </div>
+       <h2>Buttons</h2>
+       <div class="input-group">
+         <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary">Your Photo</button>
+         </div>
+         <input type="text" class="form-control" placeholder="Choose File">
+         <div class="input-group-append">
+            <button class="btn btn-outline-secondary">Upload</button>
+         </div>
+       </div>
+    </div>
+</body>
+
+Note: You can customize the appearence of input-group-text.
+
+ <style>
+    .input-group-text {
+        background-color: yellow;
+        color:red;
+     }
+ </style>
+
+	             Bootstrap List Group
+- Bootstrap provides classes to display ordered and unordered list as a group.
+
+.list-group
+.list-group-item
+.active
+.disabled
+.list-group-flush
+.list-group-horizontal
+.list-group-horizontal-sm, lg
+
+
