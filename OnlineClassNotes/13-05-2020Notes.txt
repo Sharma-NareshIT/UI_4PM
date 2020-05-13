@@ -1,0 +1,89 @@
+ListGroup Navigation
+
+<head>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" role="tab" data-toggle="list" href="#list-html">HTML Tutorial</a>
+                    <a class="list-group-item list-group-item-action" role="tab" data-toggle="list" href="#list-css">CSS Examples</a>
+                    <a class="list-group-item list-group-item-action" role="tab" data-toggle="list" href="#list-js">JavaScript</a>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="tab-content" id="content-details">
+                    <div class="tab-pane fade show active" id="list-html" role="tabpanel">
+                        <h2>HTML Tutorial</h2>
+                        <p>This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.</p>
+                    </div>
+                    <div class="tab-pane fade" id="list-css" role="tabpanel">
+                        <h2>CSS Examples</h2>
+                        <p>This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.</p>
+                    </div>
+                    <div class="tab-pane fade" id="list-js" role="tabpanel">
+                        <h2>JavaScript Tutorial</h2>
+                        <p>This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+Modal
+
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container">
+  <h2>Modal in Bootstrap</h2>
+  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteRecord" >Login</button>
+  <div class="modal fade" id="deleteRecord" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+     <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">User Login</h2>
+            <button type="button" class="close" data-dismiss="modal">X</button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label>User Name</label>
+                    <div>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div>
+                        <input type="password" class="form-control">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        </div>
+     </div>
+    </div>
+  </div>
+</body>
