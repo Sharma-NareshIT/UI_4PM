@@ -1,0 +1,104 @@
+	          Bootstrap Navigation
+Basic Navigation
+.nav
+.nav-item
+.nav-link
+.nav-tabs
+.nav-pills
+.nav-fill
+.nav-justified
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Product Details</h2>
+        <ul class="nav nav-tabs nav-justified">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#details">Basic Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  data-toggle="tab" href="#preview">Preview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  data-toggle="tab" href="#features">Features</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="productTabContent">
+          <div class="tab-pane fade show active" id="details" role="tabpanel">
+            <dl>
+                <dt>Name</dt>
+                <dd>JBL Speaker</dd>
+                <dt>Price</dt>
+                <dd>&#8377; 2300.44 /-</dd>
+                <dt>Manufatured</dt>
+                <dd>20-Mar-2020</dd>
+            </dl>
+          </div>
+          <div class="tab-pane fade" id="preview" role="tabpanel">
+              <img src="../Images/jblspeaker.jpg" width="200" height="200">
+          </div>
+          <div class="tab-pane fade" id="features" role="tabpanel">
+            <p>Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+            </p>
+          </div>
+        </div>
+    </div>
+</body>
+
+Responsive Navigation Bar
+- Navigation is designed by using <nav> element.
+- It must have the role  as "navigation"
+- The classes are
+
+.navbar
+.navbar-expand- {sm, md, lg, xl}
+.navbar-brand
+.navbar-nav
+.navbar-toggler
+.navbar-toggler-icon
+.navbar-text
+.collapse.navbar-collapse
+.nav-item
+.nav-link
+.fixed-top
+.fixed-bottom
+.sticky-top
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+   
+</head>
+<body class="container-fluid">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuItems" >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Naresh-I-Technologies</a>
+    <div class="collapse navbar-collapse" id="menuItems">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+ 
+</body>
