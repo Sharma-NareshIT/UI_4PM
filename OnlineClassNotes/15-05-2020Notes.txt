@@ -1,0 +1,41 @@
+Pagination
+
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Pagination Demo</h2>
+        <nav>
+            <ul class="pagination pagination-lg">
+                <li class="page-item"><a href="#" class="page-link"> &laquo; </a></li>
+                <li class="page-item"><a href="#" class="page-link">1</a></li>
+                <li class="page-item active"><a href="#" class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                <li class="page-item"><a href="#" class="page-link"> &raquo; </a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+Popover:
+
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+       $(function(){
+           $('[data-toggle="popover"]').popover();
+       })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Popover Demo</h2>
+        <button class="btn btn-danger" type="button" data-container="body" data-toggle="popover" data-placement="right" data-content="This action will delete the record permanently">
+            Delete Record
+        </button>
+    </div>
+</body>
