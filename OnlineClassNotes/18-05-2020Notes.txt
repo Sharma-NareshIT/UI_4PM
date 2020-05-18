@@ -1,0 +1,108 @@
+	                   Progress Bar
+- Progress bar is used to show the status of any task performed in page i.e the time elapsed or the time remaining.
+- Bootstrap CSS classes for progress bar
+1.  .progress
+2.  .progress-bar
+
+Syntax:
+  <div class="progress">
+   <div class="progress-bar" style="width:50%" role="progressbar>
+   </div>
+  </div>
+
+ You can also use CSS width like  "w-n" [n=percent], which can be 0, 25, 50, 75 and 100.
+
+Syntax:
+ <div class="progress">
+        <div class="progress-bar w-75" role="progressbar">
+
+        </div>
+    </div>
+
+- Progress can have lables in the progress status.
+
+<div class="progress">
+        <div class="progress-bar w-75" role="progressbar">
+           Downloaded 75%
+        </div>
+</div>
+
+- Progress can be defined with height and various colors using css bg-colors.
+
+Syntax:
+<div class="progress" style="height: 50px;">
+        <div class="progress-bar w-75  bg-success" role="progressbar">
+           Downloaded 75%
+        </div>
+    </div>
+
+- Progress can display multiple bars in single view.
+
+Syntax:
+<div class="progress">
+        <div class="progress-bar bg-success" style="width: 30%;"></div>
+        <div class="progress-bar bg-danger" style="width: 40%;"></div>
+    </div>
+
+
+- Progressbar can be animated
+
+<div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;">
+
+        </div>
+    </div>
+
+	            Bootstrap Spinners
+- Sinners is also used for showing status of any task performed in page.
+
+.spinner-border
+.text-colorName [for various spinner colors]
+.spinner-grow
+.spinner-border-sm, lg
+.spinner-grow-sm, lg
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <h2>Spinner Bordered</h2>
+    <div>
+        <span class="spinner-border"></span>
+        <span class="spinner-border spinner-border-sm text-success"></span>
+    </div>
+    <h2>Spinner Grow</h2>
+    <div>
+        <span class="spinner-grow text-danger"></span>
+    </div>
+    <h2>Buttons</h2>
+    <button class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm"></span>
+        <span>Loading...</span>
+    </button>
+</body>
+
+	          Bootstrap Utilities
+- Bootstrap provides few utilities which are used to controll the css effects like 
+	- border
+	- icons
+	- display
+	- flex
+	- embed
+	- float
+	- image replacements
+	- overflow
+	- position
+	- shadows
+	- sizing
+	- spacing
+	- text options
+	- alignments
+	- visibility
+
+Ex: Close Button with Close Icon
+
+aria-label
+
