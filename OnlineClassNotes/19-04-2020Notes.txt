@@ -1,0 +1,143 @@
+	           Bootstrap Utilities
+- Borders
+	.border
+	.border-top,right,left,bottom
+	.border-top-0
+	.border-right-0
+	.border-primary
+	.border-success etc..
+	.rounded
+	.rounded-top, right, bottom, left, circle, pill
+	.rounded-0
+	.rounded-sm, lg
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        div {
+            width:300px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body class="container">
+    <div class="border border-primary">
+    </div>
+    <img src="../Images/shoe.jpg" width="100" height="100" class="border border-success rounded-circle">
+</body>
+
+	              Bootstrap Colors
+.text-primary, success, danger, etc..
+.bg-primary, success, danger
+
+	              Bootstrap Size
+w - for width
+	.w-25
+	.w-50
+	.w-75
+	.w-100
+	.w-auto
+h - for height
+	.h-25
+	.h-50
+	.h-75
+	.h-100
+	.h-auto
+
+Syntax:
+<img src="../Images/shoe.jpg" class="w-25 h-50 border border-success rounded-circle">
+
+Changing Height and Width Accoding to View Port:
+	.vw-100
+	.vh-100
+ 
+	               Boostrap Spacing
+- It incudes margin or padding.
+
+	m-  for margin
+	p -  for padding
+
+- Directions are defined using
+
+	t - for top
+	b - for bottom
+	l - for left
+	r - for right
+	x - left and right
+	y - top and bottom
+
+- Size can be defined from 0 to 5 points or "auto"
+
+Ex: Margin center horizontally
+	
+       <div class="mx-auto">
+	center
+       </div>
+       
+Ex:  Padding for element
+
+        <div class="p-3">
+        <div class="px-5">
+
+
+	           Bootstrap Text Effects
+- Text Alignment
+   .text-justify
+   .text-left, right
+   .text-sm-left
+   .text-md-left
+   .text-lg-left
+   .text-xl-left
+- Text Wrapping
+   .text-wrap
+   .text-nowrap
+   
+- Text Transform
+   .text-lowercase
+   .text-uppercase
+   .text-capitialize
+
+- Text Style
+   .font-weight-bold
+   .font-weight-bolder
+   .font-weight-normal
+   .font-weight-light
+   .font-weight-lighter
+   .font-italic
+
+Ex:
+ <div class="font-weight-bold text-uppercase">
+        Bootstrap Text Effects.
+    </div>
+    <div class="badge badge-danger text-wrap" style="width: 6rem;">
+        Text Wrapping in Badge
+    </div>
+
+	          Bootstrap Positions
+.position-static
+.position-relative
+.position-absolute
+.position-fixed
+.position-sticky
+.fixed-top
+.fixed-botton
+
+Ex:
+ <div class="fixed-bottom font-weight-bold text-uppercase">
+        Bootstrap Text Effects.
+    </div>
+
+		Bootstrap Display
+- Display can be defined by using "d"
+	.d-none
+	.d-inline
+	.d-block
+	.d-table
+	.d-flex
+  <div class="d-inline">
+  <div  class="d-block">
+  <div  class="d-none">
+
+		JavaScript
+
