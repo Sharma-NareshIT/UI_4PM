@@ -1,0 +1,39 @@
+		JavaScript
+- JavaScript is a light weight, interpreted, Just-in-Time compiled programming language.
+
+- JavaScript support several programming approaches, it is a proto-type based single threaded dynamic language that supports functional programming, structrual programming, object oriented programming etc..
+
+- JavaScript is used
+	Client Side 	with 	HTML
+	Server Side	in	Node JS
+	Database		with 	MongoDb
+	Animations	with	Flash
+
+	        Evolution of JavaScript
+- Internet started with a browser called "Mosaic" and a scripting language called "ECMA Script".
+  [Europen Computer Manufacturers Association]
+- GML & SGML
+- 1990 Tim Berners Lee introduced - Web & HTML
+- 1994  Netscape Communications developed a browser called "Netscape Communicator".
+
+	Netscape 	 - Markup	- HTML
+		 - Script	- ECMA Script
+- 1996 Netscape appointed a scripting expert to design a client side script for their Browser.
+	[Netscape Communication]
+ His name is "Brendan Eich"
+ He developed a script and named it as "Mocha" which was later named as "LiveScript".
+
+- 1996-97  Netscape given responsibility of maintaining the "LiveScript" to a company called "Sun MicroSystems" [Java].
+
+-SunMicrosystem - Re-named LiveScript as "JavaScript".
+
+-JavaScript is a language that follows the standards of ECMA.
+- JavaScript versions are named as ECMAScript
+- JavaScript versions ES5, ES6, ES8 [2018]
+
+
+
+
+
+
+
