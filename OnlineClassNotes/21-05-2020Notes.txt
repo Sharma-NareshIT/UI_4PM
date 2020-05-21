@@ -1,0 +1,74 @@
+- JavaScript is used with HTML to manipulate DOM.
+[HTML Presents DOM - JavaScript Manipulates DOM]
+
+- JavaScript is used for client side validations and handling interactions.
+
+- In web technologies if validations and interactions are handled at server side then it increases burden on server.
+
+- JavaScript is used to reduce burden on server.
+
+- A scripting language doesn't require compilation, they are interpreted.
+
+- JavaScript - ECMA Standards ES8
+
+	ECMAScript 1	- 1997
+	ECMAScript 2	- 1998
+	ECMAScript 3	- 1999
+	ECMAScript 4	- Never Released
+	ECMAScript 5	- 2009
+	ECMAScript 5.1	- 2011
+	ECMAScript ES5	2015 	
+	ECMAScript ES6	2016
+	ECMAScript ES7	2017
+	ECMAScript ES8	2018	
+
+JavaScript DrawBacks
+- It is not strictly typed and not strongly typed.
+- Browser Compatiblity Issues
+- Not secured 
+- JavaScript can be disabled in browser.
+
+		
+How do we know JavaScript enabled or Not in a Browser?
+A. You can use HTML element <noscript>
+
+Ex:
+<body>
+        <h2>Testing JavaScript</h2>
+        <noscript>Please Enable JavaScript on your browser.</noscript>
+</body>
+
+How to integrate JavaScript into HTML Page?
+A. JavaScript can be used in HTML page 
+	a) Inline
+	b) Embeded
+	c) External File
+
+Inline Technique:   In this method javascript functions are written for every element individually. You can't reuse the functions.
+
+Ex:
+<body>
+        <h2>Testing JavaScript</h2>
+       <button onclick="window.print()">
+	Print Page 
+       </button>
+</body>
+
+Embeded:  In this method the javascript functions are defined within the page by using <script> element. So that you can access and re-use the functions.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo</title>
+        <script>
+            function Printing() {
+                window.print();
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Testing JavaScript</h2>
+        <button onclick="Printing()">Print Page</button>
+    </body>
+</html>
