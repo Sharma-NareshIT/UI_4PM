@@ -1,0 +1,90 @@
+1. Inline
+2. Embeded
+3. External File
+    - JavaScript functions are defined in a separate
+      external file.
+    - JavaScript files will have the extention ".js"
+    - So that you can link the file to any HTML page and 
+      access the functions from any page.
+    - Using an external file will increase the number of
+      requests for page and also the page load time.
+
+Ex:
+ 1. Add a new file into project by name
+	"print.js"
+       function Printing() {
+         window.print();
+       }
+2. Goto HTML page and link script file.
+
+  <!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo</title>
+        <script src="print.js">
+          
+        </script>
+    </head>
+    <body>
+        <h2>Testing JavaScript</h2>
+        <button onclick="Printing()">Print Page</button>
+    </body>
+</html>
+
+JavaScript MIME Type:
+===================
+- Multipurpose Internet Mail Extensions
+- It specifies the media type of file.
+- <script> element can be used for both server side and client side script.
+- It is important to define the MIME type of <script> so that browser can easily understand the type.
+- JavaScript MIME type can be defined as
+	"text/javascript"
+	           (or)
+	  language="JavaScript"
+
+Ex:
+<script src="print.js" type="text/javascript"></script>
+                                     (or)
+<script src="print.js" language="JavaScript"> </script>
+
+JavaScript for Legacy Browsers:
+===========================
+- Legacy browsers are OLD version browsers
+- OLD version browser can't understand the new features and unable to identify several JavaScript functions and scripting techniques.
+- Legacy browser can handle only upto HTML 4 and ES3.
+	     "Differential Loading"
+  It is a technique where library will be differentiated and loaded according to browser i.e legacy and modern.
+
+Ex:
+<script type="text/javascript">
+           <!--
+            function Printing() {
+                window.print();
+            }
+            -->
+</script>
+
+JavaScript Strict Mode:
+===================
+- Every Programming language have specific coding standards to follow.
+- JavaScript follows ECMAScript Standards
+- Developers may violate the coding rules while writing the code.
+- Strict Mode will not allow the code that is not according to standards.
+- You can turn on JavaScript strict mode by using
+	"use strict";
+
+Ex:
+  <script type="text/javascript">
+           "use strict";
+           function f1() {           
+              x = 10;	  // Error: x - not defined 
+              document.write("x=" + x);
+           }
+           f1();
+        </script>
+
+Note: In strict mode we have to declare a variable
+	var x;
+	x = 10;
+
+
