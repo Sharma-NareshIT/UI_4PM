@@ -1,0 +1,166 @@
+How JavaScript can refer HTML Elements?
+
+1. JavaScript can refer HTML elements by using DOM hierarchy.
+
+    Syntax:
+      window.document.images[0]
+      window.document.forms[0].elements[0]
+
+   If we change the position of any element in page then we have to update it in the logic everytime.
+
+ Ex:
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Reference</title>
+        <script type="text/javascript">
+            function bodyload() {
+                window.document.images[0].src = "../Images/earpods.jpg";
+                window.document.forms[0].elements[1].value = "Submit";
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <h2>HTML and JavaScript</h2>
+        <div>
+            <img width="100" height="100" border="1">
+        </div>
+        <div>
+            <form>
+                Name:
+                <input type="text">
+                <input type="button">                
+            </form>
+        </div>
+    </body>
+</html>
+
+2. JavaScript can refer HTML elements by using their reference name. [Every HTML element can have a name]
+       - Name can be common for may elements.
+       - You can't directly access a child element without refering to parent element.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reference</title>
+        <script type="text/javascript">
+            function bodyload() {
+               pic.src="../Images/earpods.jpg";
+               frmHome.btnSubmit.value = "Submit";
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <h2>HTML and JavaScript</h2>
+        <div>
+            <img name="pic" width="100" height="100" border="1">
+        </div>
+        <div>
+            <form name="frmHome">
+                Name:
+                <input name="txtName" type="text">
+                <input name="btnSubmit" type="button">
+            </form>
+        </div>
+    </body>
+</html>
+
+3. JavaScript can refer HTML elements by using their ID.
+     - Id allows to access directly any element without
+       following parent and child hierarchy.
+    - Id is unique for elements.
+    - You can access by using the function
+
+       "document.getElementById()"
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reference</title>
+        <script type="text/javascript">
+            function bodyload() {
+              document.getElementById("pic").src="../Images/earpods.jpg";
+              document.getElementById("btnSubmit").value="Submit";
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <h2>HTML and JavaScript</h2>
+        <div>
+            <img id="pic" name="pic" width="100" height="100" border="1">
+        </div>
+        <div>
+            <form id="frmHome" name="frmHome">
+                Name:
+                <input id="txtName" name="txtName" type="text">
+                <input id="btnSubmit" name="btnSubmit" type="button">
+            </form>
+        </div>
+    </body>
+</html>
+
+4. JavaScript can refer HTML elements by using their Tag name.
+
+         "document.getElementsByTagName()"
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reference</title>
+        <script type="text/javascript">
+            function bodyload() {
+              var x = document.getElementsByTagName("div");
+              alert("Total No of Div's=" + x.length);
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <h2>HTML and JavaScript</h2>
+        <div>
+            <img id="pic" name="pic" width="100" height="100" border="1">
+        </div>
+        <div></div>
+        <div>
+            <form id="frmHome" name="frmHome">
+                Name:
+                <input id="txtName" name="txtName" type="text">
+                <input id="btnSubmit" name="btnSubmit" type="button">
+            </form>
+        </div>
+    </body>
+</html>
+
+5. JavaScript can refer HTML Elements by using their class name.
+           "document.getElementsByClassName()"
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reference</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script type="text/javascript">
+            function bodyload() {
+              var x = document.getElementsByClassName("form-group");
+              alert("Total No of Form Group=" + x.length);
+            }
+        </script>
+    </head>
+    <body class="container" onload="bodyload()">
+        <h2>HTML and JavaScript</h2>
+        <div class="form-group">
+            <img id="pic" name="pic" width="100" height="100" border="1">
+        </div>
+        <div></div>
+        <div class="form-group">
+            <form id="frmHome" name="frmHome">
+                Name:
+                <input id="txtName" name="txtName" type="text">
+                <input id="btnSubmit" name="btnSubmit" type="button">
+            </form>
+        </div>
+    </body>
+</html>
