@@ -1,0 +1,187 @@
+1. By using DOM hierarchy
+2. By using Name
+3. By using Id
+4. By using Class Name
+5. By using Tag Name
+6. Access elements that are using common name
+
+	"document.getElementsByName()"
+EX:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reference</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script type="text/javascript">
+            function bodyload() {
+              var x = document.getElementsByName("pay");
+              alert("Total No of Payment Methods=" + x.length);
+            }
+        </script>
+    </head>
+    <body class="container" onload="bodyload()">
+       <fieldset>
+           <legend>Payment Methods</legend>
+           <input type="radio" name="pay"> Credit Card
+           <input type="radio" name="pay"> UPI
+       </fieldset>
+    </body>
+</html>
+
+	      JavaScript input and output     
+
+JavaScript Output Properties and Methods:
+--------------------------------------------------------------
+1. innerHTML
+2. innerText
+3. outerHTML
+4. alert()
+5. confirm()
+6. console.log(), warn(), error(), info() debug()
+
+
+
+		  alert()
+- Alert is a message box used to display a message dynamically in the browser window.
+- It will not allow the user to perform any another task until or unless he confirms the alert.
+- User can't event cancel it. It is mandatory to confirm.
+	esc  	= OK
+	enter	= OK
+
+ Syntax:
+	alert("string message");
+	alert(expression); 
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script type="text/javascript">
+            function DeleteClick(){
+                alert("Record will be deleted Permanently " + (2+1) + " attempts left");
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <h2>Delete Record</h2>
+        <button onclick="DeleteClick()" class="btn btn-danger" type="button">Delete</button>
+    </body>
+</html>
+
+		confirm()
+
+- Confirm is similar to alert but allows to cancel.
+- User can continue with "Yes-OK" or can "Cancel".
+- By default there is no functionality defined for cancel, hence it works as OK.
+- Confirm box will return boolean
+	true	= on OK click
+	false	= on Cancel click
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script type="text/javascript">
+            function DeleteClick(){
+                var x = confirm("Are you sure, want  to Delete?");
+                if(x==true) {
+                alert("Record Deleted");
+                } else {
+                    alert("Action Canceled..");
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <h2>Delete Record</h2>
+        <button onclick="DeleteClick()" class="btn btn-danger" type="button">Delete</button>
+    </body>
+</html>
+
+	        innerHTML & innerText
+- These are the output properties used to display message inside any container element of HTML, which can display text.
+     <div> <span> <p> <blockquote> <h2>
+     <dd> <td>  <dt> <li> etc..
+
+- innerText can display a message with out any HTML formats. i.e it will not allow any tags in the message. [RC Data Elements]
+
+- innerHTML can display a message with HTML formats i.e it will allow tags to format message.
+
+
+Ex: InnerText
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script type="text/javascript">
+            function DeleteClick(){
+                var x = confirm("Are you sure, want  to Delete?");
+                if(x==true) {
+                   document.getElementById("msg").innerText = "<b><font size='5'>Record Deleted Successfully..</font></b>";
+                } else {
+                    alert("Action Canceled..");
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <h2>Delete Record</h2>
+        <div class="form-group">
+            <button onclick="DeleteClick()" class="btn btn-danger" type="button">Delete</button>
+        </div>
+        <div class="form-group">
+            <div id="msg" class="text-primary text-center"></div>
+        </div>
+    </body>
+</html>
+
+Ex: innerHTML
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script type="text/javascript">
+            function DeleteClick(){
+                var x = confirm("Are you sure, want  to Delete?");
+                if(x==true) {
+                   document.getElementById("msg").innerHTML = "<b><font size='5'>Record Deleted Successfully..</font></b>";
+                } else {
+                    alert("Action Canceled..");
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <h2>Delete Record</h2>
+        <div class="form-group">
+            <button onclick="DeleteClick()" class="btn btn-danger" type="button">Delete</button>
+        </div>
+        <div class="form-group">
+            <div id="msg" class="text-primary text-center"></div>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
