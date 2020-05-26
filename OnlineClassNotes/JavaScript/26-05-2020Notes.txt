@@ -1,0 +1,131 @@
+	Output Properties and Methods
+1. alert()
+2. confirm()
+3. innerText
+4. innerHTML
+5. outerHTML
+6. console.log(), info(), debug(), error() etc..
+7. document.write()
+
+	             outerHTML
+It allows to change complete element dynamically including start and end tags. It generates output that can replace complete element.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script type="text/javascript">
+            function DeleteClick(){
+                var x = confirm("Are you sure, want  to Delete?");
+                if(x==true) {
+                   document.getElementById("msg").innerHTML = "<b><font size='5'>Record Deleted Successfully..</font></b>";
+                } else {
+                   document.getElementById("msg").outerHTML = "<h3>Action Canceled.</h3>";
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <h2>Delete Record</h2>
+        <div class="form-group">
+            <button onclick="DeleteClick()" class="btn btn-danger" type="button">Delete</button>
+        </div>
+        <div class="form-group">
+            <h1 id="msg" class="text-primary text-center"></h1>
+        </div>
+    </body>
+</html>
+
+What is difference between innerHTML and outerHTML?
+A. innerHTML - prints the output with in the existing
+                        element. i.e between start and end tag.
+    outerHTML - prints the output completely by 	        replacing the existing element with 	        new element.
+
+	         console methods
+- console is a tool present in browser debugger.
+- you can log the messages and test your values while developing or testing application.
+	log()
+	error()
+	debug()
+	warn()
+	info()
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script type="text/javascript">
+            function DeleteClick(){
+                console.info("You Clicked Delete Button");
+                var x = confirm("Are you sure, want  to Delete?");
+                if(x==true) {
+                   console.warn("Record will be deleted - You Selected YES");
+                   document.getElementById("msg").innerHTML = "<b><font size='5'>Record Deleted Successfully..</font></b>";
+                   console.error("Record Deleted Successfully..");
+                } else {
+                   document.getElementById("msg").outerHTML = "<h3>Action Canceled.</h3>";
+                   console.log("Record Deletion Canceled - You Clicked Cancel");
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <h2>Delete Record</h2>
+        <div class="form-group">
+            <button onclick="DeleteClick()" class="btn btn-danger" type="button">Delete</button>
+        </div>
+        <div class="form-group">
+            <h1 id="msg" class="text-primary text-center"></h1>
+        </div>
+    </body>
+</html>
+	          document.write()
+It is an output function used to display the output on a new screen [not a new page].
+
+ SyntaX:
+	document.write("message/expression");
+
+
+	        Input in JavaScript
+- JavaScript language can allow input of values by using
+	a) prompt()
+	b) HTML form input elements
+	c) using QueryString
+
+
+		prompt()
+- It is a method of window object , which will alert an input box in the browser. So that user can input a value into page.
+- prompt() is mostly used when input is not regular in page.
+
+          -user may click OK without value 
+	 * then it submits empty i.e represented 	   by using " ".
+          -user may click OK with value
+	 * then it submits the value.
+          -user may  click cancel with or without value
+	 * then it submits "null".
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function CreateFolder() {
+           foldername = prompt("Enter Folder Name");
+           if(foldername=="") {
+              document.write("Please Provide a Name");
+           }
+           else if(foldername==null) {
+              document.write("You Canceled..");
+           } else {
+           document.getElementById("msg").innerHTML = "Folder Created : " + foldername;
+           }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <h2>Input Demo</h2>
+    <button type="button" onclick="CreateFolder()" class="btn btn-primary">Create New Folder</button>
+    <p id="msg"></p>
+</body>
