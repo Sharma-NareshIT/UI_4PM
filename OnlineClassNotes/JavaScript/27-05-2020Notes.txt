@@ -1,0 +1,99 @@
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        .productForm {
+            width: 300px;
+            border:2px solid darkcyan;
+            box-shadow: 2px 3px 4px darkcyan;
+            border-radius: 10px;
+            padding:20px;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+        }
+    </style>
+    <script type="text/javascript">
+       function RegisterClick() {
+           document.getElementById("lblName").innerHTML = document.getElementById("txtName").value;
+           document.getElementById("lblPrice").innerHTML = document.getElementById("txtPrice").value;
+           document.getElementById("lblStock").innerHTML = frmRegister.stock.value;
+           document.getElementById("lblShipped").innerHTML = document.getElementById("lstShippedTo").value;
+       }
+    </script>
+</head>
+<body class="container-fluid">
+  <div class="productForm">
+    <form name="frmRegister">
+    <h2>Register Product</h2>
+    <div class="form-group">
+        <label>Name</label>
+        <div>
+            <input type="text" id="txtName" class="form-control">
+        </div>
+     </div>
+     <div class="form-group">
+       <label>Price</label>
+       <div>
+           <input type="text" id="txtPrice" class="form-control">
+       </div>
+     </div>
+     <div class="form-group">
+       <label>Is In Stock</label>
+       <div>
+           <input type="radio" name="stock" value="Available"> Yes
+           <input type="radio" name="stock" value="Out of Stock">No
+       </div>
+     </div>
+     <div class="form-group">
+       <label>Shipped To</label>
+       <div>
+           <select id="lstShippedTo" class="form-control">
+               <option value="Delhi">Delhi</option>
+               <option value="Hyderabad">Hyderabad</option>
+           </select>
+       </div>
+     </div>
+     <div class="form-group">
+       <button onclick="RegisterClick()" type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#productDetailsModal">Register Product</button>
+     </div>
+    </form>
+  </div>
+  <div class="modal" id="productDetailsModal" tabindex="-1" role="dialog">
+     <div class="modal-dialog">
+        <div class="modal-content">
+         <div class="modal-header">
+          <h3 class="modal-title">Product Details</h3>
+          <button type="button" class="close" data-dismiss="modal">X</button>
+         </div>
+         <div class="modal-body">
+            <table class="table table-hover">
+                <colgroup span="1" class="bg-warning"></colgroup>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td id="lblName"></td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td id="lblPrice"></td>
+                    </tr>
+                    <tr>
+                        <td>Stock</td>
+                        <td id="lblStock"></td>
+                    </tr>
+                    <tr>
+                        <td>Shipped To</td>
+                        <td id="lblShipped"></td>
+                    </tr>
+                </tbody>
+            </table>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+         </div>
+        </div>
+     </div>
+  </div>
+</body>
