@@ -1,0 +1,198 @@
+		Language Basics
+1. Variables
+2. DataTypes
+3. Operators
+4. Statements
+5. Functions
+
+	                Variables in JavaScript
+	                ----------------------------------
+- Variables are storage locations in memory where you can store a value and use it as a part of any expression.
+
+- Variables are configured in 3 methods
+	a) Declaration
+	b) Assignment / Rendering
+	c) Initialization
+
+   Declaration : It is the process of defining a variable.
+
+	       Syntax:	
+		var x;
+
+   Rendering  : It is the process of assigning a value into
+	       declared variable.
+
+	      Syntax:
+	              var x ;	→ Declaring
+	              x = 10;	→ Rendering
+
+   Initialization: It is the process of assigining value into a
+	        variable while declaring.
+
+	     Syntax:
+	             var x = 10;     → Initialization
+
+- JavaScript allows to render a variable without declaring. i.e declaration is not required in JavaScript if it is not in strict mode.
+
+Syntax:
+<script>
+    function f1() {
+        x=10;		// valid
+        document.write("x=" + x);
+    }
+    f1();
+</script>
+
+- Variable declaration or initialization is mandatory when JavaScript is in Strict Mode.
+
+Syntax:
+<script>
+    "use strict";
+    function f1() {
+        x=10;		// invalid  x- is not defined
+        document.write("x=" + x);
+    }
+    f1();
+</script>
+
+- JavaScript variables can be declared by using
+	a) var
+	b) let
+	c) const
+
+		         var
+		 ============
+  a) It is used to define a function scope  variable.
+  b) You can declare in any block and access from any another block within the function.
+  c) var allows declaring, rendering and initalization.
+
+Ex:
+ <script>
+    "use strict";
+    function f1() {
+        var x;          // declaring
+        x = 10;         // rendering
+        if(x==10) {
+            var y = 20; // initialization
+        }
+        document.write("x=" + x + "<br>" + "y=" + y);
+    }
+    f1();
+</script>
+ 
+   d) var allows shadowing.  It is the process of re-defining
+        or re-declaring the same name variable again in scope.
+
+Ex:
+<script>
+    "use strict";
+    function f1() {
+        var x;          // declaring
+        x = 10;         // rendering
+        if(x==10) {
+            x=30;       // rendering
+            var x; // re-defining : shadowing
+            x=40;
+            var y = 20; // initialization
+        }
+        document.write("x=" + x + "<br>" + "y=" + y);
+    }
+    f1();
+</script>
+
+   e) var allows hoisting. It is a technique where you can declare the variable after using it in the logic.
+
+ Ex:
+<script>
+    "use strict";
+    function f1() {
+        x=10;
+        document.write("x=" + x);
+        var x;  // x is hoisted by var
+    }
+    f1();
+</script>
+
+		        let
+	                    ========
+ a) It is used to define block scope variable. It is accessible only within the block where it is declared or initialized.
+
+ b) let allows declaring, rendering and initialization
+
+Ex:
+<script>
+    "use strict";
+    function f1() {
+        var x;
+        x=10;
+        if(x==10) {
+            let y;
+            y=20;
+        }
+        document.write("x=" + x + "<br>" + "y=" + y); 
+	// error: y not defined
+    }
+    f1();
+</script>
+
+Ex:
+<script>
+    "use strict";
+    function f1() {
+        var x;
+        x=10;
+        if(x==10) {
+            let y;
+            y=20;
+            document.write("x=" + x + "<br>" + "y=" + y);
+        }        
+    }
+    f1();
+</script> 
+
+  c) let will not support shadowing. Block scope variables can't be re-defined with in the scope.
+
+Ex:
+<script>
+    "use strict";
+    function f1() {
+        var x;
+        x=10;
+        if(x==10) {
+            let y=40;
+            let y=50;	// invalid - y already defined
+            document.write("x=" + x + "<br>" + "y=" + y);
+        }
+    }
+    f1();
+</script>
+
+  d) let will not support hoisting
+
+Ex:
+<script>
+    "use strict";
+    function f1() {
+       x = 10;
+       document.write("x=" + x);
+       let x;       // invalid
+    }
+    f1();
+</script>
+
+		     const
+		=========
+ a) const is also block scope
+ b) const supports only initialization. you can't declare and render.
+ c) const will not support shadowing
+ d) const will not support hoisting
+
+Ex:
+<script>
+    "use strict";
+    function f1() {
+       const x = 10;
+       document.write("x=" + x);
+    }
+    f1();
+</script>
