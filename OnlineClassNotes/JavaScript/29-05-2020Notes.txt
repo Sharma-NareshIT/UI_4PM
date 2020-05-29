@@ -1,0 +1,89 @@
+		Variables
+-Variable Naming conventions
+	* Variable name can be alpha numeric with underscore.
+	* Name must start with alphabet or _ 
+	* Name can't start with number or any another
+	  special char.
+	* Always name must be in camel case.
+		txtName
+	* Variable name can't be more than 255 chars.
+
+Ex:
+	var  sales_2020 = 4000;	// valid
+	var  _sales = 4000;		// valid
+	var 2020_sales= 4000;	// invalid
+	var sales20May = 4000;	// valid
+
+
+
+		JavaScript DataTypes
+		==================
+- DataType determines the type of value that you can store in a variable.
+
+- JavaScript is implicitly typed language i.e the datatype of variable will be determined according to the value assigned.
+	
+	var x = 10;	// x is number
+	var x = true;	// x is boolean
+	
+- JavaScript don't have explicit datatype for any variable.
+
+- Problem with JavaScript language is, the variables are not Strongly typed i.e they allow contraditionary data.
+
+	var x = 10;	initialized to number
+	x="A";		rendering text is valid
+
+- JavaScript datatypes are classified into 2 groups
+
+	1. Primitive Types
+	2. Non-Primitive Types
+
+Primitive Data Types:
+==================
+- Primitive data types are allocated with Stack Memory
+- It uses the mechanism Last in-First Out [LIFO]
+- Primitive types have a fixed range for values.
+- JavaScript primitive types are
+	1. Number
+	2. Boolean
+	3. String
+	4. Null
+	5. Undefined
+
+Number Type:
+- A number type is used to store numeric value.
+- A numeric value in JavaScript can be
+	- signed integer
+	        var x = -10;   var x = +10;
+	- unsigned integer
+	        var x = 10;
+	- floating point
+	        var x = 4.5;	      → <2.<2
+	- double
+	         var x = 457.560;       digits.fractions
+			      →   >2 . >2
+	- decimal
+	         var x = 4.55679795;     29 decimal places
+	- exponent
+	         var x = 2e3;	    2x10[3] = 2000
+
+	- binary		]
+	- hexadecimal	] from ES5 Version
+	- octal		]
+
+	var x = 0b1010;  	// x = 10  - Binary
+	var x = 0xf00d;	// x = 61453 - Hexadecimal
+	var x = 0o744;	// x = 484  - Octal
+		
+ Note : The values form form input elements are by default string  type. You have to convert into a number type. 
+           JavaScript provides the following conversion methods:
+	a) parseInt()	
+	b) parseFloat()
+
+      <input type="text"  value="10">
+      <option value="40">
+
+
+
+
+
+
