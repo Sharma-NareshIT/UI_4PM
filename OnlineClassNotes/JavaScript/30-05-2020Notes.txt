@@ -1,0 +1,125 @@
+Primitive Type
+- number
+		boolean type
+- A boolean type is used to store a boolean value, which can be true or false.
+- Boolean type are used in decision making.
+- In JavaScript boolean type can handle a numeric value while using over conditions and operations.
+	         	true	= 1
+	 	false	= 0
+
+	var x = 0;	// number
+	var x = false;  //boolean but returns a number over
+		        condition and operation.
+
+	true + true	= 2
+	false + true	= 1
+
+- It is recomended to use the boolean condition always using true or false keywords not 0 or 1.
+
+Ex:
+<script>
+    "use strict";
+    function f1() {
+      var x = true;
+      if(x==1) {
+          document.write("X is True");
+      } else {
+          document.write("X is False");
+      }
+    }
+    f1();
+</script>
+
+- Checkbox and Radio are the HTML elements that by default return a boolean true or false based on Checked Property.
+- The value of CheckBox and Radio will be always "On" if no value is defined.
+
+Ex: Check Box
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+         function SubmitClick(){
+            var stock = document.getElementById("inStock").checked;
+            document.write((stock==true)?"Available":"Out of Stock");
+         }
+        </script>
+    </head>
+    <body>
+        <div>
+            <label>Is In Stock </label>
+            <div>
+                <input id="inStock"  type="checkbox"> Yes
+            </div>            
+        </div>
+        <div>
+            <button onclick="SubmitClick()" type="button">Submit</button>
+        </div>
+    </body>
+</html>
+
+EX: Radio 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+         function SubmitClick(){
+             var maleRadio = document.getElementById("optMale");
+             var femaleRadio = document.getElementById("optFemale");
+             if(maleRadio.checked) {
+                 document.write("Selected Gender :" + maleRadio.value);
+             }
+             if(femaleRadio.checked) {
+                document.write("Selected Gender : " + femaleRadio.value);
+             }
+         }
+        </script>
+    </head>
+    <body>
+        <div>
+            <label>Choose Gender</label>
+            <div>
+                <input type="radio" id="optMale" name="gender" value="Male"> Male
+                <input type="radio" id="optFemale" name="gender" value="Female">Female
+            </div>            
+        </div>
+        <div>
+            <button onclick="SubmitClick()" type="button">Submit</button>
+        </div>
+    </body>
+</html>
+
+		String Type
+		=========
+- String is a literal with group of characters enclosed in
+	a) Double Quotes	" "
+	b) Single Quotes	'  '
+	c) Back Ticks	` `   → ES5 version
+- A string literal can contain alpha numeric and special chars
+
+	var name = "John";
+	var name = 'John';
+	var name = `John`;
+
+- Always use single and double quotes to swap between inner and outer string.
+
+ var msg = "<a href='../home.html'>Home</a>";
+
+ var msg = '<a href="../home.html">Home</a>';
+
+- Backtick is new into JavaScript from ES5 and it is a string which can embed expression.
+
+- Expression is defined by using "${ }"
+
+
+Ex:
+<script>
+    function f1(){ 
+        var name = "John";
+        var age = 23;
+        document.write("Hello !"+ " " + name+" " + "You will be"+" "+(age+1)+" " +"Next Year <br>");
+        document.write(`Hello ! ${name} You will be ${age+1} Next Year`);
+    }
+    f1();
+</script>
