@@ -1,0 +1,167 @@
+Escaping Characters in String:
+=========================
+- A string literal can contain special characters.
+- Few special characters are ignored by compiler and they escape printing.
+- Any escaping character can be defined with "\". It will prevents escaping and prints the non-printable characters.
+	
+	\ \	→ Prints \
+	\"	→ Print " 
+
+Ex:
+<script>
+    function f1(){ 
+      var path= "\"C:\\Images\\Cars\\Audi.jpg\"";
+      document.write(`Path=${path}`);
+    }
+    f1();
+</script>
+
+O/P:
+Path="C:\Images\Cars\Audi.jpg"
+
+
+String with Markup:
+=================
+- JavaScript String can use markup
+- It allows a string to format and present using markup.
+- It is mostly used to apply the formats for presentation.
+
+
+Ex:
+<script>
+    function f1(){ 
+      var login = `
+       <dl>
+        <dt>User Name</dt>
+        <dd><input type="text"></dd>
+        <dt>Password </dt>
+        <dd><input type="password"></dd>
+       </dl>
+       <button>Login</button>
+      `;
+      document.write(login);
+    }
+    f1();
+</script>
+
+Dynamically handing String:
+=======================
+JavaScript provides a set of methods that are used to manipulate and format the string dynamically.
+
+String Methods for Manipulations:
+1. charAt()	: It returns the character at specified
+		  index.
+
+	var name = "john";
+	name.charAt(0);   // j
+
+
+2. charCodeAt()	: It returns teh Unicode of character
+		  at specified index.
+		  [A=65, Z=90] [a=97, z=122]
+
+	var  name = "Ajay";
+	name.charCodeAt(0); // 65
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+         function VerifyName(){
+             var username = document.getElementById("txtName").value;
+             var msg = document.getElementById("msg");
+             var code = username.charCodeAt(0);
+             if(code>=65&&code<=90) {
+                 msg.innerHTML=`Hello ! ${username}`;
+             } else {
+                 msg.innerHTML=`Please Enter Name starting with Uppercase Letter `;
+             }
+         }
+        </script>
+    </head>
+    <body>
+        Your Name:
+        <input type="text" id="txtName">
+        <button onclick="VerifyName()" type="button">Submit</button>
+        <h3 id="msg"></h3>
+    </body>
+</html>
+
+3. indexOf() 	: It can search for a word or character
+		  in given string and return its index
+		  number. If character not found then
+		  it returns -1.
+		  It gets the index of first occurance.
+
+	var msg = "Welcome";
+	msg.indexOf("e");	// 1
+	msg.indexOf("a");	// -1
+
+
+4. lastIndexOf() 	:It returns the last occurance index 
+		 number.
+
+	var msg = "Welcome";
+	msg.lastIndexOf("e");  // 6
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+          function SubmitClick(){
+            var email = document.getElementById("txtEmail").value;
+            var msg = document.getElementById("msg");
+            var atIndex = email.indexOf("@");
+            if(atIndex==-1) {
+                msg.innerHTML="Error: @ required in Email";
+            } else {
+                msg.innerHTML=`Your Email ${email} Verified..`;
+            }
+          }
+        </script>
+    </head>
+    <body>
+        Verify Email:
+        <input type="text" id="txtEmail">
+        <button onclick="SubmitClick()" type="button">Submit</button>
+        <h2 id="msg"></h2>
+    </body>
+</html>
+
+5. startsWith()
+
+6. endsWith()
+
+7. concat()
+
+8. localeCompar()
+
+9. match()
+
+10. repeat()
+
+11. replace()
+
+
+12. search()
+
+13. slice()
+
+14. split()
+
+15. substring()
+
+16. substr()
+
+17. toLowerCase()
+
+18. toUpperCase()
+
+19. trim()
+
+20. toString()
+
+
+
