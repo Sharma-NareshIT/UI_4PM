@@ -1,0 +1,192 @@
+5. startsWith()	: It verifies whether the string starts 
+		  with specified char(s) and returns 
+		  true/false.
+6. endsWith()	: It verifies whether the string ends
+		  with specified char(s) and returns
+		  true/false.
+
+Ex:
+<script>
+    function f1() {
+        var className = "text-primary";
+        if(className.startsWith("text")){
+            document.write("The class you defined will apply Text Effect");
+        } else if (className.startsWith("form")) {
+            document.write("You defined form effect");
+        } else {
+            document.write("The class you defined is some Miscelaneous");
+        }
+    }
+    f1();
+</script>
+
+Ex:
+<script>
+    function f1() {
+        var className = "bg-primary";
+        if(className.endsWith("primary")){
+            document.write("This is primary color");
+        } else if (className.endsWith("danger")) {
+            document.write("This is Error  Color");
+        } else {
+            document.write("This is Miscelaneous Color");
+        }
+    }
+    f1();
+</script>
+
+
+7. concat()	: It joins 2 or more strings and returns
+		  a new string.
+
+Ex:
+<script>
+    function f1() {
+        var msg1 = "Hello ! ";
+        var msg2 = "How are You?"
+        var msg3 = "Welcome to JavaScript";
+        var msg = msg1.concat(msg2, msg3);
+        document.write(msg);
+    }
+    f1();
+</script>
+
+
+8. localeCompare(): It is used to compare 2 strings. It retuns	
+		a number 0 if both strings are equal.
+		It returns 1 if not equal and after the
+	 	sort.
+		It returns -1 if not equal and before the
+		sort.
+
+		str1="ab"
+		str2="ab"	   // returns 0
+		str2="cd"    // returns -1 as ab come
+			      before cd.
+Ex:
+<script>
+    function f1() {
+        var password = "1234";
+        var confirmPassword= "1234";
+        if(password.localeCompare(confirmPassword)==0) {
+            document.write("Password Verified");
+        }  else {
+            document.write("Password Mismatch");
+        }
+    }
+    f1();
+</script>
+			    		
+
+9. match() 	: It verfies whether the given string
+		  is matching with a regular expression
+		  and returns true of false.
+
+Note: Regular Expression in HTML is written as
+	      <input type="text" pattern="\+91[0-9]{10}">
+
+          Regular Expression in JavaScript is written in "/ /"
+	       var exp = /[A-Z]{4,10}/;
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+           function SubmitClick(){
+             var mobile = document.getElementById("txtMobile").value;
+             var msg = document.getElementById("msg");
+             var regExp = /\+91[0-9]{10}/;
+             if(mobile.match(regExp)) {
+                 msg.innerHTML=`${mobile} Mobile Verified`;
+             } else {
+                 msg.innerHTML="Invalid Mobile";
+             }
+           }
+        </script>
+    </head>
+    <body>
+        Your Mobile:
+        <input type="text" placeholder="eg: +91 and 10 digits" id="txtMobile">
+        <button onclick="SubmitClick()">Submit</button>
+        <h2 id="msg" align="center"></h2>
+    </body>
+</html>
+
+10. repeat() : It will copy the current string and add within 
+	     the current string with specified number of
+	     copies.
+
+Ex:
+<script>
+    function f1(){
+        var str="Welcome to JavaScript<br>";
+        document.write(str.repeat(4));
+    }
+    f1();
+</script>
+
+11. replace()	: It can search for a given string and
+		  replace it with a new string.
+
+Ex:
+<script>
+    function f1(){
+        var str="Welcome to JavaScript";
+        var newStr = str.replace("JavaScript","TypeScript");
+        document.write(`${str}<br>${newStr}`);
+    }
+    f1();
+</script>
+
+12. search()  : It can search for specified chars and return
+	       the starting index. It returns -1 if not found.
+	      It can use a string or regular expression for
+	      searching.
+Ex:
+<script>
+    function f1(){
+        var str="Welcome to JavaScript";
+        document.write(str.search("JavaScript"));
+    }
+    f1();
+</script>
+
+
+13. slice(): It is used to extract a portion of string based on
+	 specified index and return as new string.
+
+Ex:
+<script>
+    function f1(){
+        var str="Welcome to JavaScript";
+        document.write(str.slice(0,7));
+    }
+    f1();
+</script>
+
+14. split()
+
+
+
+15. substring()
+
+
+
+16. substr()
+
+
+
+17. toLowerCase()
+
+
+
+18. toUpperCase()
+
+
+
+19. trim()
+
+
+
+20. toString()
