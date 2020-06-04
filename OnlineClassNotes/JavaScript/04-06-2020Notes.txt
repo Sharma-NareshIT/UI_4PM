@@ -1,0 +1,120 @@
+substring() : It is used to extract  specified chars between given index. It can read towards left and right starting with specified index.
+ 
+ Syntax:
+	string.substring(start, end)
+ Ex:
+	string.substring(0,7);
+	string.substring(7,0);
+	
+substr() : It is used to extract specified chars between given index. It can read towards right not left.
+
+Syntax:
+	string.substr(start, end)
+	string.substr(0,7);	//valid
+	string.substr(7,0);    // invalid
+
+Note: "slice()" it can extract and return a new string array.
+
+
+toUpperCase()	: Converts text into Uppercase letters
+
+toLowerCase()	: Converts text into lowercase letters.
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+           function ChangeCase() {
+               var username = document.getElementById("txtName").value;
+               document.getElementById("txtName").value = username.toUpperCase();
+           }
+        </script>
+    </head>
+    <body>
+        Your Name:
+        <input onblur="ChangeCase()" type="text" id="txtName" placeholder="Name in Block Letters">
+    </body>
+</html>
+
+Ex: Convert the text into Sentence Case
+
+<script type="text/javascript">
+  function f1() {
+    var msg = "weLCOme to JAVAscript";
+    document.write(`Actual Message= ${msg}<br>`);
+    var firstChar = msg.charAt(0);
+    var restChars = msg.substring(1);
+    var sentence = firstChar.toUpperCase() + restChars.toLowerCase();
+    document.write(`Sentence Case=${sentence}`);
+  }
+  f1();
+</script>
+
+
+split()	: It splits the string at given char and returns an
+	  array of strings.
+
+Syntax:
+	string.split('separator');
+
+Ex:
+<script type="text/javascript">
+  function f1() {
+    var product="TV-40000-Available";
+    var collection = product.split('-');
+    //collection[0]=TV, collection[1]=40000, collection[2]=Available
+    document.write(`Price=${collection[1]}`);
+  }
+  f1();
+</script>
+
+Task: Write logic to Print given sentence in Title Case. [Every word first letter should be uppercase]
+  ex:
+	actual : welcome to javascript
+	print : Welcome To JavaScript
+
+trim()	: It is used to remove the leading spaces in a 
+	  string.
+	
+EX:
+<script type="text/javascript">
+  function f1() {
+     var password = " john";
+     if(password.trim()=="john") {
+         document.write("Verified..");
+     } else {
+         document.write("Invalid Password");
+     }
+  }
+  f1();
+</script>
+
+String Formatting Functions:
+big()		Large font size
+small()		Small font size
+fontsize('size')	Apply specific font size
+fontcolor('color')	Apply specific font color
+bold()		Apply bold effect
+italic()		Apply italic effect
+sup()		Apply superscript
+sub()		Apply subscript
+
+
+
+Ex:
+<script type="text/javascript">
+  function f1() {
+     var msg = "Welcome to JavaScript";
+     document.write(msg.fontcolor("green").bold().fontsize(7));
+  }
+  f1();
+</script>
+
+
+
+
+
+
+
+
