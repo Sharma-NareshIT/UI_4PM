@@ -1,0 +1,75 @@
+Primitive Types
+- Number
+- String
+- Boolean
+- Undefined
+- Null
+
+		Undefined
+- It is a type defined for variables where value is not defined.
+- Compile uses "undefined" as type for variable that are not defined with value.
+- You check whether value is defined or not by using "undefined" keyword.
+
+Ex:
+<script type="text/javascript">
+ function f1() {
+     var name = "Samsung TV";
+     var price;
+     if(price==undefined) {
+         document.write(`Name=${name}`);
+     } else {
+     document.write(`Name=${name}<br>Price=${price}`);
+     }
+ }
+ f1();
+</script>
+		Null Type
+- Null is a type defined for variable when value is not defined during time.
+- Variable is not supplied with a value during runtime and you are trying to use the variable. Then it returns null.
+- Null is an exception type used to tell that there is no value.
+- You can verify the Null type by using the keyword "null".
+
+Ex:
+<script type="text/javascript">
+ function f1() {
+    var name = prompt("Enter Name");
+    if(name==null) {
+        document.write("You canceled..");
+    } else if(name=="") {
+        document.write("Name can't be Empty");
+    } else {
+    document.write(`Hello ! ${name}`);
+    }
+ }
+ f1();
+</script>
+
+	        Non-Primitive Types
+- Non Primitive types used memory heap.
+- Memory heap is cache memory of borwser.
+- They are stored in memory heap.
+- They don't have any fixed range for value.
+- The value range will change according to the available memory.
+- JavaScript non-primitive types are
+	1. Array
+	2. Object
+	3. Regular Expression
+
+	               Array Type
+	              ==========
+- Arrays in computer programming are used to reduce overhead and complexity.
+- Arrays reduce over head by storing values in sequential order.
+- Arrays reduce complexity by storing multiple values under one name.
+- Arrays can store various types of values. Some technologies have problem in allocating different types of memories in sequential order. Hence they restricted array to store same type of value.
+- JavaScript array can handle any type of value.
+- JavaScript array is not similar type of values.
+- JavaScript array size can be changed dynamically.
+- Array in JavaScript will have the behavior of  stack, queue, hashtable [dictionary collection] etc..
+- Array allows to access from any location i.e the elements are accessbile in random.
+
+
+
+
+
+
+
