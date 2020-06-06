@@ -1,0 +1,106 @@
+Declaring Array and Initialize Memory:
+================================
+
+- Memory for Array can be initialized by using
+	a) Array Meta character "[ ]"
+
+	Ex: var products = [];
+	
+	b) Array Constructor "Array()"
+
+	Ex: var products = new Array();
+
+- Array meta character [ ] allows different type of values.
+- Array constructor "Array()" can restrict the value to similar type explicity.
+
+Initialize or Assign Values into Array:
+===============================
+
+Syntax:
+var products = ["TV", "Mobile", "Shoes"];
+
+Syntax:
+        var products = [];
+        products[0] = "TV";
+        products[1] = "Mobile";
+        products[2] = "Shoe";
+
+Reading Values from an Array:
+=========================
+
+- You can read value from array by using the array properties.
+- Array properties are string type.
+- HTML elements can directly interact with their properties without convertion.
+Ex:
+<script>
+    function f1(){
+        var products = ["TV", "Mobile", "Shoe"];
+        document.write(`${products["0"]}<br>${products[1]}`);
+    }
+    f1();
+</script>
+	
+Ex:
+<script>
+    function f1(){
+        var products = ["TV", "Mobile", "Shoe"];
+        for(var property in products) {
+            document.write(`${property}[${typeof property}]-${products[property]}<br>`);
+        }
+    }
+    f1();
+</script>
+
+O/P:
+0[string]-TV
+1[string]-Mobile
+2[string]-Shoe
+
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+    <script type="text/javascript">
+        var products = ["../Images/tv.jpg","../Images/shoe.jpg","../Images/mob1.jpg","../Images/jblspeaker.jpg","../Images/earpods.jpg"];
+        function ChangeImage(){
+           var sliderValue = document.getElementById("slider").value;
+           document.getElementById("pic").src= products[sliderValue];
+        }
+        function bodyload(){
+            document.getElementById("pic").src= products[0];
+        }
+        var count=0;
+        function PreviousClick(){
+            count--;
+            document.getElementById("pic").src = products[count];
+            document.getElementById("slider").value = count;
+        }
+        function NextClick(){
+            count++;
+            document.getElementById("pic").src = products[count];
+            document.getElementById("slider").value = count;
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()" >
+  <div class="card">
+    <div class="card-header text-center">
+        <h2>Amazon Products</h2>
+    </div>
+    <div class="card-body text-center">
+        <button onclick="PreviousClick()" class="btn btn-outline-primary">
+            <span class="fa fa-chevron-circle-left"></span>
+        </button>
+        <img id="pic" width="400" height="300">
+        <button onclick="NextClick()" class="btn btn-outline-primary">
+            <span class="fa fa-chevron-circle-right"></span>
+        </button>
+    </div>
+    <div class="card-footer text-center">
+        <input onchange="ChangeImage()" type="range" min="0" max="4" value="0" id="slider"> 
+    </div>
+  </div>
+</body>
+
+
