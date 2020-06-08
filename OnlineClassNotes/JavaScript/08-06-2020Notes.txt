@@ -1,0 +1,174 @@
+		Array Manipulations
+JavaScript "Array" object provides a set of properties and methods that are used to manipulate array.
+
+1. Reading Values from an Array:
+
+
+Method		Description
+---------------------------------------------------------------------------------------
+toString()		It reads and returns the array elements
+		into a string separated with ",".
+
+join()		It reads and returns the array elements
+		into a string separated with user 		defined delimeter [own separator].
+
+for..of		It is an iterator used to read and return
+		all elements in an array.
+
+find()		It can search for a value by using any 			condition and return the first occurance
+		value.
+
+filter()		It can search for a value(s) by using
+		a condition and return all values that
+		are matching the condition.
+
+
+Ex:  toString() & join()
+
+<script>
+    function f1() {
+        var products = ["TV", "Mobile", "Shoe"];
+        document.write(`ToString = ${products.toString()}<br>`);
+        document.write(`Join= ${products.join('-->')}`);
+    }
+    f1();
+</script>
+
+Ex: for..of
+
+<script>
+    function f1() {
+        var products = ["TV", "Mobile", "Shoe"];
+        for(var item of products) {
+            document.write(`${item}<br>`);
+        }
+    }
+    f1();
+</script>
+
+Ex: find()
+       collection.find(function(value){ return value|condition})
+
+<script>
+    function f1() {
+        var sales = [12000, 40000, 35000, 2000, 6000];
+        document.write(`${sales.find(function(val){
+            return val>=30000;
+        })}`);
+    }
+    f1();
+</script>
+
+O/P:   40000
+
+Ex: filter()
+collection.filter(function(val){ return val|condition})
+
+<script>
+    function f1() {
+        var sales = [12000, 40000, 35000, 2000, 6000];
+        document.write(`${sales.filter(function(val){
+            return val<=30000;
+        })}`);
+    }
+    f1();
+</script>
+
+Ex:
+<script>
+    function f1() {
+        var sales = [12000, 40000, 35000, 2000, 6000];
+        function search(val){
+            return val>=30000;
+        }
+        document.write(`${sales.filter(search)}`);
+    }
+    f1();
+</script>
+
+2. Adding Values into Array
+
+Method		Description
+=================================================
+push()		It adds a new element into Array as last
+		element.
+unshift()		It adds a new element as First element.
+
+splice()		It adds new elements at specified index.
+
+Ex:
+    collection.push("newitem", "newitem2"...);
+    collection.unshift("newitem", "newitem2"..);
+    collection.splice(startindex, countofItemsToRemove, "newItem", "newItem2"..);
+
+
+<script>
+    function f1() {
+        var products = ["TV","Mobile","Shoe"];
+        function PrintList() {
+            document.write(`Products=${products.toString()}<br>`);
+        }
+        PrintList();
+        products.push("Watch","Sunglasses");
+        PrintList();
+        products.unshift("Laptop");
+        PrintList();
+        products.splice(2,0,"Earpods");
+        PrintList();
+    }
+    f1();
+</script>
+
+3. Removing Values from Array
+
+Method		Description
+==================================================
+pop()		It removes and returns the last item.
+
+shift()		It removes and returns the first item.
+
+splice()		It removes any item based of specified
+		index.
+
+
+Ex: Removes first item [TV]
+<script>
+    function f1() {
+        var products = ["TV","Mobile","Shoe"];
+        function PrintList() {
+            document.write(`Products=${products.toString()}<br>`);
+        }
+        PrintList();
+        document.write(`${products.shift()} Removed <br>`);
+        PrintList();
+    }
+    f1();
+</script>
+
+Ex: Removes last item [shoe]
+<script>
+    function f1() {
+        var products = ["TV","Mobile","Shoe"];
+        function PrintList() {
+            document.write(`Products=${products.toString()}<br>`);
+        }
+        PrintList();
+        document.write(`${products.pop()} Removed <br>`);
+        PrintList();
+    }
+    f1();
+</script>
+
+Ex:
+<script>
+    function f1() {
+        var products = ["TV","Mobile","Shoe"];
+        function PrintList() {
+            document.write(`Products=${products.toString()}<br>`);
+        }
+        PrintList();
+        document.write(`${products.splice(1,1)} Removed <br>`);
+        PrintList();
+    }
+    f1();
+</script>
