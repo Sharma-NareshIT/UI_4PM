@@ -1,0 +1,146 @@
+Searching for Elements in Array:
+
+IndexOf()		It can search for any element and
+		get the index. If not found returns -1
+
+LastIndexOf()	It can search for element as last 
+		occurance.
+
+find()		It can search using a condition
+		and return first occurance
+
+filter()		It can search using condition and
+		return all occurances.
+
+
+Syntax:
+	arrayName.indexOf("Value");
+
+
+Sorting Array Elements
+
+sort()		It arranges elements in ascending order
+
+reverse()		It arranges in reverse order i.e from
+		bottom to top.
+
+
+Ex:
+<script>
+    function f1() {
+        var products = ["A", "C", "D", "B"];
+        products.sort();
+        products.reverse();
+        document.write(products.toString());
+    }
+    f1();
+</script>
+
+
+Creating and Adding Elements Dynamically into HTML:
+- JavaScript provides are library of pre-defined objects like Image, anchor, form etc..
+- You can use these objects and create a new element.
+
+ Syntax:
+	var pic = new Image();
+	var opt = new Option();
+
+- You can use the element name and create dynamically.
+
+Syntax:
+	var  table = document.createElement("table");
+	var opt = document.createElement("option");
+
+- You can add the element into HTML page by using the function
+	"appendChild()"
+
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+         function AddPicture() {
+             var pic = new Image();
+             pic.width= 200;
+             pic.height= 200;
+             pic.src="../Images/jblspeaker.jpg";
+             pic.border=1;
+             document.getElementById("container").appendChild(pic);
+         }
+        </script>
+    </head>
+    <body>
+        <button onclick="AddPicture()">Add Picture</button>
+        <div id="container" style="margin-top: 20px;">
+
+        </div>
+    </body>
+</html>
+
+
+Ex: Adding Items into DropDownList
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            function bodyload() {
+                var products = ["Select a Product","Samsung TV", "Mobile", "Nike Casuals"];
+                var lstProducts = document.getElementById("lstProducts");
+                for(var item of products) {
+                    var opt = document.createElement("option");
+                    opt.value = item;
+                    opt.text = item;
+                    lstProducts.appendChild(opt);
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid" onload="bodyload()">
+        <h2>Select Products</h2>
+        <select id="lstProducts" class="form-control">
+        </select>
+    </body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            var products = ["Samsung TV", "Nike Casuals", "HP Laptop", "Fossil Watch"];
+            function bodyload() {
+               var lstProducts = document.getElementById("lstProducts");
+
+               for(var item of products) {
+                   var li = document.createElement("li");
+                   li.innerHTML = item;
+                   lstProducts.appendChild(li);
+               }
+            }
+            function AddClick() {
+                document.getElementById("lstProducts").innerHTML="";
+                var newName = document.getElementById("txtName").value;
+                products.push(newName);
+                alert("Product Added");
+                bodyload();
+                document.getElementById("txtName").value="";
+            }
+        </script>
+    </head>
+    <body class="container-fluid" onload="bodyload()">
+        <div class="form-group form-inline" style="margin-top: 20px;">
+            <label>New Product</label>
+            <input type="text" class="form-control" id="txtName">
+            <button class="btn btn-primary" onclick="AddClick()">Add Product</button>
+        </div>
+        <h2>Products</h2>
+        <ol id="lstProducts">
+
+        </ol>
+    </body>
+</html>
+
