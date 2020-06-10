@@ -1,0 +1,136 @@
+Object Types 
+- Object comprises of data and logic.
+- Data is stored in Properties and Logic in Functions.
+- The properties and functions with in object can be accessed  by using "this".
+- Outside the object you can access them by using object name.
+
+       Syntax:
+	    var  objectName = {
+		PropertyName: value,
+		FunctionName: function() { }
+	     };
+
+- Properties can contain both primitive or non-primitive type data.
+
+Ex:
+<style>
+    dl {
+        border:2px solid darkcyan;
+        border-radius: 10px;
+        padding: 20px;
+        float: left;
+        margin-left: 20px;
+    }
+    dt {
+        background-color: gray;
+        color:white;
+    }
+
+</style>
+<script>
+    function f1() {
+        var product = {
+            Name: "",
+            Price: 0,
+            IsInStock:true,
+            Qty:0,
+            ShippedTo:[],
+            Total: function(){
+                return this.Qty * this.Price;
+            },
+            Print: function(){
+                document.write(`<dl><dt>Name</dt><dd>${this.Name}</dd><dt>Price</dt><dd>${this.Price}</dd><dt>IsInStock</dt><dd>${(this.IsInStock==true)?"Available":"Out of Stock"}</dd><dt>Quantity</dt><dd>${this.Qty}</dd><dt>Shipped To</dt><dd>${this.ShippedTo.toString()}</dd><dt>Total</dt><dd>${this.Total()}</dd></dl>`);
+            }
+        }
+        product.Name = "Samsung TV";
+        product.Price= 43000.44;
+        product.IsInStock = true;
+        product.ShippedTo = ["Delhi","Hyd"];
+        product.Qty = 2;
+        product.Print();
+        
+        product.Name = "Nike Casuals";
+        product.Price = 4000.55;
+        product.IsInStock = false;
+        product.ShippedTo = ["Mumbai","Hyd","Chennai"];
+        product.Qty = 3;
+        product.Print();
+    }
+    f1();
+</script>
+
+	            	[ ] → Array
+		{ } → Object
+		[{ }, { }] → Array of Objects - JSON
+
+	JavaScript Object Notation
+
+var products = [
+	          {
+		Name: " ",
+		Price: 0,
+		Photo: " "
+	          },
+	          {
+	          }
+	        ]
+    products[0].Name
+    products[0].Price
+
+Ex:
+<head>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+    <script type="text/javascript">
+        var products = [{Name:"Samsung TV", Price: 34000.44, Photo:"../Images/tv.jpg"},{Name:"Nike Casuals", Price: 3000.44,Photo:"../Images/shoe.jpg"},{Name:"Mobile",Price:12000.33,Photo:"../Images/mob1.jpg"},{Name:"JBL Speaker", Price: 3000.44,Photo:"../Images/jblspeaker.jpg"},{Name:"Earpods", Price: 4000.44,Photo:"../Images/earpods.jpg"}];
+
+        function GetDetails(index) {
+            document.getElementById("prodName").innerHTML = products[index].Name;
+            document.getElementById("prodPrice").innerHTML ="&#8377;" + products[index].Price;
+            document.getElementById("pic").src= products[index].Photo;
+        }
+
+        function ChangeImage(){
+           var sliderValue = document.getElementById("slider").value;
+           GetDetails(sliderValue);
+        }
+        function bodyload(){
+           GetDetails(0);
+        }
+        var count=0;
+        function PreviousClick(){
+            count--;
+            GetDetails(count);
+            document.getElementById("slider").value = count;
+        }
+        function NextClick(){
+            count++;
+            GetDetails(count);
+            document.getElementById("slider").value = count;
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()" >
+  <div class="card">
+    <div class="card-header text-center">
+        <h2>Amazon Products</h2>
+    </div>
+    <div class="card-body text-center">
+        <button onclick="PreviousClick()" class="btn btn-outline-primary">
+            <span class="fa fa-chevron-circle-left"></span>
+        </button>
+        <h2 id="prodName"></h2>
+        <img id="pic" width="400" height="300">
+        <h3 id="prodPrice"></h3>
+        <button onclick="NextClick()" class="btn btn-outline-primary">
+            <span class="fa fa-chevron-circle-right"></span>
+        </button>
+    </div>
+    <div class="card-footer text-center">
+        <input onchange="ChangeImage()" type="range" min="0" max="4" value="0" id="slider"> 
+    </div>
+  </div>
+</body>
+
+  
+
