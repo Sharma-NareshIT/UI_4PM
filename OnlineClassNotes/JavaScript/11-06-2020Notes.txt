@@ -1,0 +1,121 @@
+Non-Primitive Types
+- Array
+- Object
+- RegularExpression
+   A regular expression define a pattern used to verify the format of any value.
+  A regular expression is built by using meta characters and quantifiers.
+  It is enclosed with in "/ /".
+	Syntax:
+	      var regExp = /\+91[0-9]{10}/;
+  Regular expression is verified with your value by using "match()" function. It returns boolean true or false.
+
+	 yourValue.match(regExp);  // true-false
+
+EX:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            function VerifyPassword() {
+                var password = document.getElementById("txtPwd").value;
+                var regExp =/(?=.*[A-Z])\w{4,15}/;
+                var msg = document.getElementById("msg");
+
+                function ShowStatus(min, max, value, low, high){
+                    var status = document.getElementById("status");
+                    status.min = min;
+                    status.max = max;
+                    status.value = value;
+                    status.low = low;
+                    status.high = high;
+                }
+
+                if(password.match(regExp)){
+                    msg.className="text-success";
+                    msg.innerHTML="Strong Password";
+                    ShowStatus(1,100,100,0,0);
+                } else {
+                    if(password.length<4) {
+                        msg.className="text-danger";
+                        msg.innerHTML="Poor Password";
+                        ShowStatus(1,100,100,60,80);
+                    } else {
+                        msg.className="text-warning";
+                        msg.innerHTML="Weak Password";
+                        ShowStatus(1,100,100,40,80);
+                    }
+                }
+            }
+        </script>
+        <style>
+            meter {
+                height: 50px;
+                width: 300px;
+            }
+          
+        </style>
+    </head>
+    <body class="container-fluid">
+        <h2>Verify Password</h2>
+        <div class="form-group">
+            <label>Password</label>
+            <div>
+                <input onkeyup="VerifyPassword()" type="password" id="txtPwd" class="form-control" placeholder="4 to 15 chars with at least 1 uppercase letter">
+                <meter id="status" min="1" max="100"></meter> <br>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            function VerifyPassword() {
+                var password = document.getElementById("txtPwd");
+                var regExp =/(?=.*[A-Z])\w{4,15}/;
+               
+                if(password.value.match(regExp)){
+
+                   password.className="successStyle";
+
+                } else {
+                    if(password.value.length<4) {
+                      password.className = "errorStyle";
+                    } else {
+                       password.className = "warnStyle";
+                    }
+                }
+            }
+        </script>
+        <style>
+           .errorStyle {
+               border:1px solid red;
+               box-shadow: 2px 2px 4px red;
+           }
+           .successStyle {
+               border:1px solid green;
+               box-shadow: 2px 2px 4px green;
+           }
+           .warnStyle {
+               border:1px solid yellow;
+               box-shadow: 2px 2px 4px yellow;
+           }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <h2>Verify Password</h2>
+        <div class="form-group">
+            <label>Password</label>
+            <div>
+                <input onkeyup="VerifyPassword()" type="password" id="txtPwd" class="form-control" placeholder="4 to 15 chars with at least 1 uppercase letter">
+               
+            </div>
+        </div>
+    </body>
+</html>
+
