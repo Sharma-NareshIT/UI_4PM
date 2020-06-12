@@ -1,0 +1,137 @@
+		     Date Type
+
+var product = { 
+	         Name: " ",         → string
+	         Price : 0.0,	→ number
+	         Stock: true	→ boolean
+	         Mfd: ?	→ how to define date
+	      }
+
+	       Mfd : "12-06-2020",  → Not date - It is string
+	       Mfd : 12-06-2020,      → Not valid
+	
+In order to store a date value in memory and use in your application. You have to define date type memory by using JavaScript "Date()" constructor.
+
+	        var Mfd = new Date();
+
+The default "Date()" constructor will load the current date into memory.
+
+You configure custom date into memory by using a date value enclosed in double quotes with the format 
+	                  "YY-MM-DD"
+
+                           var Mfd = new Date("YY-MM-DD");
+
+You can also configure the date value separated with coma
+
+	       var Mfd = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+
+Ex:
+<script>
+    function f1() {
+        var product = {
+            Name: "Samsung TV",
+            Price: 45000.55,
+            Mfd: new Date("2020-02-10")
+        };
+        document.write(`Name=${product.Name}<br>Price=${product.Price}<br>Manufactured=${product.Mfd}`);
+    }
+    f1();
+</script>
+
+ 	        Date Object Methods to Read Date
+
+Method		Description
+------------------------------------------------------------------------------------
+getHours()	It returns the hours number in 24hr
+		format.
+		0 to 23
+getMinutes()	It returns the minutes number. (0-59)
+
+getSeconds()	It returns the seconds number. (0-59)
+
+getMilliseconds()	It returns the milliseconds (0 to 999)
+
+getMonth()	It returns month number (0 to 11)
+		0 = January
+
+getDay()		It returns the weekday number (0-6)
+		0 = Sunday
+
+getYear()		It returns year number as per Y2K.
+		[obsolete - no longer in use]
+		1999 -  99
+		2000 -  100
+		2020 -   120
+
+getFullYear()	It returns full year number. 
+
+toDateString()	Reutrns only Date 
+
+toLocaleDateString()   Returns date in short format.
+
+toLocaleTimeString()  Returns time in short format.
+
+toString()		  Converts date into string
+
+Ex:
+<script>
+    function f1() {
+        var product = {
+            Name: "Samsung TV",
+            Price: 45000.55,
+            Mfd: new Date("2020-06-12")
+        };
+        var months = ["January","February", "March","April","May","June","July","Aug"];
+        var weekdays = ["Sun","Mon","Tue","Wed","Thu","Friday","Sat"];
+
+        document.write(`Name=${product.Name}<br>Price=${product.Price}<br>Manufactured=${product.Mfd.toLocaleDateString()}<br>`);
+        document.write(`Manufactured Month: ${months[product.Mfd.getMonth()]}<br>WeekDay=${weekdays[product.Mfd.getDay()]}<br>Manufactured Date=${product.Mfd.getDate()}<br>Manufactured Year=${product.Mfd.getFullYear()}`);
+    }
+    f1();
+</script>
+
+	JavaScript Date functions to Set a New Value
+	------------------------------------------------------------------
+
+setDate()		It sets the day of the month
+setFullYear()	It sets the year of date
+setHours()	It sets the hour number of date
+setMinutes()	It sets minutes
+setSeconds()	It sets seconds
+setMilliseconds()	It sets milliseconds
+setMonth()	It sets month of date
+setTime()		Sets the time value
+
+
+Ex:
+<script>
+    function f1() {
+        var now = new Date();
+        now.setDate(13);
+        now.setFullYear(2021);
+        now.setMonth(7);
+        document.write(`Date=${now.toDateString()}`);
+    }
+    f1();
+</script>
+
+
+	       JavaScript Timer Events
+setInterval()
+setTimeout()
+clearInterval()
+clearTimeout()
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
