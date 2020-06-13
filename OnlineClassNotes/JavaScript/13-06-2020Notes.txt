@@ -1,0 +1,111 @@
+	          Operators in JavaScript
+- Operator is an object used to configure an expression in order to evaluate an value.
+- Operator uses operands and a sign to evaluate value.
+	              a + b;	
+	a is left operand
+	b is right operand
+	+ is a sign
+- Data is present in operands and value is evaluated according to the sign defined.
+- Based to the number of operands an operator can handle
+  they are classified into 3 types:
+
+	a) Unary Operator  : one operand
+		x++, --x
+	b) Binary Operator : two operands
+		x + y
+	c) Ternary Operator : three operands
+		(condition)?true:false
+
+- Based on the type of value an operator returns they are further classified into several types.
+	
+	1. Assignment Operators
+	2. Comparision Operators
+	3. Arithematic Operators
+	4. Bitwise Operators
+	5. Logical Operators
+	6. String Operators
+	7. Special Operators
+	8. Comma operator
+	9. Unary Operators
+	10. Relational Operators
+
+Arithematic Operators
+
+Operator		Description
+---------------------------------------------------------------
++		Addition
+-		Subtraction
+*		Multiplication
+/		Division
+%		Modulus Division remainder
+**  [new from ES5]	Exponent [Power] 
+++		Increment
+--		Decrement
+
+
+Ex:
+<script>
+    function f1() {
+        var x = 2;
+        var y = 3;
+        document.write(`X**Y= ${x**y} <br>`);
+        document.write(`Power=${Math.pow(x,y)}`);
+    }
+    f1();
+</script>
+
+Ex: Increment  and Decrement
+	++	--
+  x++      Post Increment
+  x--        Post Decrement
+
+POST :  The value is first assigned to left operand and then the increment or decrement will happen.
+
+	x=10;		O/P:  x=11
+	y=x++		         y=10
+
+	y=x--		O/P:  x=9
+			         y=10
+
+
+  ++x      Pre Increment
+  --x        Pre decrement
+
+PRE :  The increment or decrement is first performed and
+            then assigned to left operand.
+
+             X=10;		O/P:       X=11
+             Y=++X		              Y=11
+
+             Y=--X		O/P        X= 9
+			              Y=  9
+
+Addition Operator: It is used to find the sum of given values.
+
+ string+string = string
+ string+number = string
+ string+boolean = string
+ string+null        =  string     x="A",y=null   x+y = "Anull"
+ 
+ number+number = number
+ number+boolean = number
+ number+string=      string
+ number+null = 	number	 x = 10, y=null  x+y = 10
+ 
+ boolean+number = number
+ boolean+boolean = number
+ boolean+string = string
+ boolean+null    = number
+ 
+  null + null       = number         always zero 0
+
+
+  Anything with Undefined type will return NaN (Not a Number) except string type. String uses concatination.
+
+	string + undefined = string
+	number + undefined = NaN
+	boolean+ undefined = NaN
+	undefined + undefined = NaN
+
+
+
