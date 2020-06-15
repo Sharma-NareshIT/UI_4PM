@@ -1,0 +1,231 @@
+Assignment Operators
+=	Assign
++=	Add and Assign
+-=	Subtract and Assign
+*=	Multiply and Assign
+/=	Divide and Assign
+%=	Modulus division and Assign
+**=	Exponent and Assign
+
+Syntax:
+	var x  = 10;
+	x + = 5; → 	x = x + 5 
+			x = 10+5
+			x = 15
+
+
+Comparision Operators
+
+==	Equal to
+===	Identical Equal
+!=	Not equal
+!==	Not identical equal
+>	Greater than
+<	Less than
+>=	Greater than or Equal
+<=	Less than or Equal
+
+ All comparision operators return boolean true or false.
+
+ "==" can compare value of two different types, it can also
+  implicitly convert the value.
+
+Ex:
+<script>
+    function f1() {
+        var x = 10;
+        var y = "10";
+        document.write(`x==y ? ${x==y}`);	 // returns "true"
+    }
+    f1();
+</script>	    
+
+"===" is to compare only the values of same type. It can't implicitly convert the values. If different types of value are compare then it always return "false".
+
+Ex:
+<script>
+    function f1() {
+        var x = 10;
+        var y = "10";
+        document.write(`x===y ? ${x===y}`); // "false"
+    }
+    f1();
+</script>
+
+
+		Logical Operators
+
+&&	Logical AND
+||	Logical OR
+!	Logical NOT
+
+	(condition1) && (condition2) = true only when 
+			                 both condition true
+
+	(condition1) || (condition2) = true when any one
+			              condition true.
+
+	var x = true;
+	var y = !x;			y=false
+
+
+		Bitwise Operators
+&	AND
+|	OR
+~	NOT
+^	XOR
+<<	Zero fill left shift
+>>	Sized right Shift
+>>>	Zero fill right shift
+
+		Special Operators
+1. Ternary operator	[?:]
+     It is similar to simple condition "if..else"
+
+	(codition)?statement_true:statement_false
+
+2. typeof  operator: It returns the data type of value stored
+	                in memory reference.
+
+Ex:
+<script>
+    function f1() {
+        var product = {
+            Name: "TV",
+            Price: 45000.55,
+            InStock:true,
+            Cities:['Delhi', 'Hyd'],
+            Print: function(){}
+        }
+        document.write(`Name is ${typeof product.Name} <br>Price is ${typeof product.Price}<br>InStock is ${typeof product.InStock}<br>Cities is ${typeof product.Cities}<br>Print is ${typeof product.Print}`);
+    }
+    f1();
+</script>
+
+O/P:
+Name is string
+Price is number
+InStock is boolean
+Cities is object
+Print is function
+
+3. instanceof operator:  It checks whether the given object is derived from specific parent type or class and return boolean true or false.
+
+Ex:
+<script>
+    class Employee {
+
+    }
+    function f1() {
+       var cities = new Array();
+       var emp = new Employee();
+       document.write(`Cities is from Array:${cities instanceof Array}<br>Cities is from Employee:${cities instanceof Employee}<br>Emp is from Employee:${emp instanceof Employee}`);
+    }
+    f1();
+</script>
+
+O/P:
+Cities is from Array:true
+Cities is from Employee:false
+Emp is from Employee:true
+
+4. delete operator: It is used to delete any property of an
+		object. You can't delete properties of 
+		built-in objects of JavaScript as  they
+		are readonly.
+
+Ex:
+<script>
+    function f1() {
+      var product = {
+          Name: "TV",
+          Price: 45000.44
+      };
+      delete product.Price;
+      if(product.Price==undefined) {
+          document.write(`Name=${product.Name}`);
+      } else {
+      document.write(`Name=${product.Name}<br>Price=${product.Price}`);
+      }
+    }
+    f1();
+</script>
+
+	   Ex:    delete  Math.PI;   // invalid
+	             var pic = new Image();
+	             delete pic.src;	// invalid
+
+5. in operator : It is used to search for a property in any object and return true if property found.
+
+Ex:
+<script>
+    function f1() {
+      var product = {
+          Name: "TV",
+          Price: 45000.44
+      };
+      document.write(`Name is Available in Product : ${"Name" in product}<br>Stock Available in Product: ${"Stock" in product}`);
+    }
+    f1();
+</script>
+
+O/P:
+Name is Available in Product : true
+Stock Available in Product: false
+
+
+6. of operator:  It is used to read all values of a collection
+	         over iteration and return values. [for]
+
+Ex:
+<script>
+    function f1() {
+       var products = ["TV", "Mobile", "Shoe"];
+       for(var item of products) {
+           document.write(item + "<br>");
+       }
+    }
+    f1();
+</script>
+
+7. new operator:  It is dynamic memory allocating operator.
+	            It allocates memory for any object and 
+		loads its members into memory.
+
+ Syntax:
+	var now = new Date();
+	var names = new Array();
+
+Ex:
+<head>
+    <script>
+        function CreateClick() {
+            var pic = new Image();
+            pic.height = 100;
+            pic.width= 100;
+            pic.src= "../Images/jblspeaker.jpg";
+            document.getElementById("container").appendChild(pic);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="CreateClick()">Create Image</button>
+    <br>
+    <div id="container">
+
+    </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
