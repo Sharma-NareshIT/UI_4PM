@@ -1,0 +1,49 @@
+void operator : It is used to define that element will not return any functionality.
+
+Ex:
+<a href="javascript:void(document.body.style.backgroundColor='Yellow')">Home</a>
+
+	         Statements in JavaScript
+Statement is used to control the execution flow. The statements are classified into various groups:
+
+Type			Keywords
+================================================
+ Selection Statements	if, else, switch, case, default
+
+ Iteration and Looping 	for, while, do while
+
+ Jump Statements		break, continue, return
+
+ Exception Handling		try, catch, throw, finally
+
+		
+		Selection Statements
+		==================
+Selection statements are used in decision making. They control the execution flow based on given condition.
+
+The "If" statement:  It is a decision making statement it executes are set of statements when condition evaluates to true and another set of statements when it evaluates to false.
+
+Syntax: Forward Jump - In this it continues to execute the statements only when condition evaluates to true. There is no else block.
+		if(condition)
+		{
+		 statements if true;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
