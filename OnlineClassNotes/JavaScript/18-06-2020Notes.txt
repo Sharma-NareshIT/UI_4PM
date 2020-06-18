@@ -1,0 +1,164 @@
+Simple  If
+	if(condition)
+	{
+	 statements if true;
+	}
+	else
+	{
+	statements if false;
+	}
+
+EX:
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../Fonts/css/all.css">
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script>
+            function LoginClick(){ 
+                var userdetails = [
+                    {UserName: "john_nit", Password:"12345"},
+                    {UserName: "david", Password:"david123"},
+                    {UserName: "raj", Password:"raj12$"}
+                ];
+                var username = document.getElementById("txtName").value;
+                var password = document.getElementById("txtPassword").value;
+                var msg = document.getElementById("msg");
+
+                for(var user of userdetails) {
+                    if(user.UserName==username && user.Password==password) {
+                        location.href="../home.html";
+                    } else {
+                        msg.innerHTML="Invalid UserName / Password";
+                    }
+                }
+
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <h2>Amazon Shopping</h2>
+        <div class="btn-toolbar bg-danger justify-content-between">
+            <div class="btn-group">
+                <button class="btn btn-danger">Home</button>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-danger" data-toggle="modal" data-target="#loginModal" ><span class="fa fa-user"></span> Signin</button>
+            </div>
+        </div>
+        <div class="modal fade" id="loginModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>User Login</h3>
+                        <div id="msg" class="text-danger"></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>User Name</label>
+                            <div>
+                                <input class="form-control" type="text" id="txtName">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <div>
+                                <input class="form-control" type="password" id="txtPassword">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="LoginClick()" class="btn btn-success">Login</button>
+                        <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+Ex: Multi Level Conditions
+
+ <script>
+            function LoginClick(){ 
+                var userdetails = [
+                    {UserName: "john_nit", Password:"12345"},
+                    {UserName: "david", Password:"david123"},
+                    {UserName: "raj", Password:"raj12$"}
+                ];
+                var username = document.getElementById("txtName").value;
+                var password = document.getElementById("txtPassword").value;
+                var msg = document.getElementById("msg");
+
+                for(var user of userdetails) {
+                   if(user.UserName==username) {
+                      if(user.Password==password) {
+                          location.href="../home.html";
+                      } else {
+                          msg.innerHTML="Invalid Password";
+                      }
+                      break;
+                   } else {
+                       msg.innerHTML="Invalid User Name";
+                   }
+                }
+
+            }
+        </script>
+
+
+Multiple conditions:
+
+Syntax:
+	if(condition1)
+	{
+	    statements if condition1 is true;
+	}
+	else if(condition2)
+	{
+	    statements if condition2 is true;
+	} 
+	else
+	{
+	  statements if all conditions are false;
+	}
+
+
+Ex:
+<script>
+            function LoginClick(){ 
+                var userdetails = [
+                    {UserName: "john_nit", Password:"12345", Mobile:"9988776655"},
+                    {UserName: "david", Password:"david123", Mobile:"9876543210"},
+                    {UserName: "raj", Password:"raj12$",Mobile:"987654123"}
+                ];
+                var username = document.getElementById("txtName").value;
+                var password = document.getElementById("txtPassword").value;
+                var msg = document.getElementById("msg");
+
+                for(var user of userdetails) {
+                   if(user.UserName==username) {
+                      if(user.Password==password) {
+                          location.href="../home.html";
+                      } else {
+                          msg.innerHTML="Invalid Password";
+                      }
+                      break;
+                   } else if(user.Mobile==username) {
+                       if(user.Password==password){
+                       location.href="../home.html";
+                       } else {
+                           msg.innerHTML="Invalid Password";
+                       }
+                       break;
+                   } else {
+                       msg.innerHTML="Invalid Mobile"
+                   }
+                }
+
+            }
+        </script>
+	
