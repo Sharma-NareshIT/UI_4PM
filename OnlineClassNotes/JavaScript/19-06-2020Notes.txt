@@ -1,0 +1,139 @@
+switch : It is a conditional statement that executes only the block that matches the given condition.
+
+syntax:
+	switch(value/expression)
+	{
+	case value:
+	 statements;
+	 break;
+	default:
+	 statements;
+	 break;
+	}
+	
+
+Ex:
+<head>
+    <style>
+    </style>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        var categories = ["Select a Category", "Electronics", "Fashion"];
+        var electronics = ["Select Electronic Product", "Earpods", "JBL Speaker"];
+        var fashion =["Select Fashion Product", "Shirt", "Jeans"];
+
+        var data = [
+            {Name:"Earpods", Price:4500.55, Photo:"../Images/earpods.jpg"},
+            {Name:"JBL Speaker", Price:6000.55, Photo:"../Images/jblspeaker.jpg"},
+            {Name:"Shirt", Price:2000.33, Photo:"../Images/shirt.jpg"},
+            {Name:"Jeans", Price:3000.44, Photo:"../Images/jeans.jpg"}
+        ];
+        var cartItems = [];
+        var cartItem = {
+            Name:"",
+            Price:0,
+            Photo:""
+        };
+        function bodyload(){
+            for(var item of categories) {
+                var option = document.createElement("option");
+                option.text = item;
+                option.value= item;
+                document.getElementById("lstCategories").appendChild(option);
+            }
+        }
+        function CategoryChanged(){
+            var categoryName = document.getElementById("lstCategories").value;
+            var lstProducts = document.getElementById("lstProducts");
+            function LoadProducts(collection){
+                lstProducts.innerHTML="";
+                for(var item of collection){
+                    option = document.createElement("option");
+                    option.text=item;
+                    option.value=item;
+                    lstProducts.appendChild(option);
+                }
+            }
+            switch(categoryName){
+                case "Electronics":
+                LoadProducts(electronics);
+                break;
+                case "Fashion":
+                LoadProducts(fashion);
+                break;
+                default:
+                lstProducts.innerHTML="";
+                break;
+            }
+        }
+        var searchResult=[]; //[0].Name, [0].Price, [0].Photo
+        function ProductChanged(){
+            var productName = document.getElementById("lstProducts").value;
+            searchResult = data.filter(function(product){return product.Name==productName});
+            document.getElementById("prodName").innerHTML = searchResult[0].Name;
+            document.getElementById("prodImage").src=searchResult[0].Photo;
+            document.getElementById("prodPrice").innerHTML="&#8377;" + searchResult[0].Price;
+        }
+        function AddToCartClick(){
+            cartItem = {
+                Name: searchResult[0].Name,
+                Price: searchResult[0].Price,
+                Photo: searchResult[0].Photo
+            };
+            cartItems.push(cartItem);
+            alert("Item Added to Cart");
+            document.getElementById("itemsCount").innerHTML=`[${cartItems.length}]`;
+        }
+    </script>
+</head>
+<body onload="bodyload()" class="container-fluid">
+   <div class="row" style="margin-top: 30px;">
+      <div class="col-3">
+        <h2>Amazon Shopping</h2>
+    <div class="form-group">
+      <label>Select a Category</label>
+      <div>
+          <select onchange="CategoryChanged()" id="lstCategories" class="form-control">
+  
+          </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Select a Product</label>
+      <div>
+          <select onchange="ProductChanged()" id="lstProducts" class="form-control">
+  
+          </select>
+      </div>
+    </div>
+    <div>
+        <label>Product Details</label>
+        <div class="card">
+            <div class="card-header">
+                <h2 id="prodName"></h2>
+            </div>
+            <div class="card-body">
+                <img width="200" height="200" id="prodImage">
+            </div>
+            <div class="card-footer">
+                <h2 id="prodPrice"></h2>
+                <button onclick="AddToCartClick()" class="btn btn-danger btn-block"><span class="fa fa-shopping-cart"></span>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+      </div>
+      <div class="col-6">
+
+      </div>
+      <div class="col-3">
+         <button class="btn btn-success">
+             <span id="itemsCount"></span>
+             <span class="fa fa-shopping-cart"></span>
+             Your Cart Items
+         </button>
+      </div>
+   </div>
+</body>
