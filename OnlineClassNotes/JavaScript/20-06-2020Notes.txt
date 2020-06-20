@@ -1,0 +1,106 @@
+Loops and Iterations
+
+- Looping is the process of executing a set of statements repeatedly until the given condition satisfied. You can create loops by using "for, while, do..while".
+- It requires initialization, condition and counter.
+
+Syntax: 
+     for(var i=0; i<length; i++) 
+     {
+     }
+
+Syntax:
+     while(condition) {
+       statements;
+       counter;
+     }      
+
+Syntax:
+     do {
+         statements;
+         counter;
+     } (condition);
+
+- Iteration is the process of accessing elements from a collection in sequential order.
+- Doesn't require any condition, initialization and counter.
+
+Syntax:
+	for..in
+	for..of
+
+Ex: Loops
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var data = [{Category:"Electronics", Products:["Earpods","JBL Speaker"]},{Category:"Fashion", Products:["Shirt","Jeans"]}];
+            function bodyload(){
+                var lstItems= document.getElementById("lstItems");
+                for(var i=0; i<data.length; i++) {
+                    var categoryLi = document.createElement("li");
+                    categoryLi.innerHTML = data[i].Category;
+                    lstItems.appendChild(categoryLi);
+                    for(var j=0; j<data[i].Products.length;j++) {
+                        var ul = document.createElement("ul");
+                        var li = document.createElement("li");
+                        li.innerHTML = data[i].Products[j]
+                        ul.appendChild(li);
+                        categoryLi.appendChild(ul);
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <h2>Amazon Shopping</h2>
+        <ol id="lstItems">
+
+        </ol>
+    </body>
+</html>
+	
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var data = [{Name:"Speakers", Price:4500.44},{Name:"Shirt",Price:2300.44},{Name:"Shoe",Price:5400.44}];
+            function bodyload(){
+                var tbody = document.getElementById("tbody");
+                for(var i=0; i<data.length; i++) {
+                    var tr = document.createElement("tr");
+                    for(var j=0; j<1; j++) {
+                        var td1 = document.createElement("td");
+                        var td2 = document.createElement("td");
+                        td1.innerHTML = data[i].Name;
+                        td2.innerHTML = data[i].Price;
+                        tr.appendChild(td1);
+                        tr.appendChild(td2);
+                    }
+                    tbody.appendChild(tr);
+                }
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <h2>Amazon Shopping</h2>
+        <table width="400" border="1">
+            <thead>
+                <th>Name</th>
+                <th>Price</th>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </body>
+</html>
+
